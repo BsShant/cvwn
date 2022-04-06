@@ -1,0 +1,90 @@
+.main-menu{
+    color: black;
+    margin-bottom: 0;
+    border: none;
+    width: 100%;
+    
+
+    .navBar{
+       padding: 0;
+        .navbar{
+           color: black;
+           justify-content: flex-end;
+           padding-top: 4px !important;
+           padding-bottom: 0px !important;
+           border: none;
+           margin: 0;
+
+          
+           .nav-item{
+               padding: 7px 0 ;
+               margin: 0;
+               a{
+                   color: black;
+                   font-size: 18px;
+                   font-weight: 500;
+                   padding-left: 19px;
+                   border-bottom: 2px solid white;
+                   margin-bottom: 0 !important;
+                  padding-bottom: 13px;
+                  
+                   
+               }
+               a:hover{
+                   color: gray;
+                   border-bottom: 2px solid var(--web-theme) ;
+                   transition: 1s;
+                   background-color: white;
+               }
+               
+              
+               .dropdown-menu{
+                padding: 0 ;
+                border: none;
+                   a{
+                       transition: 0s;
+                       //color: black;
+                       background-color: white;
+                       color: black;
+                       border-bottom: 1px solid lightgray ;
+                       font-size: 15px;
+                       font-weight: 400;
+                       padding: 10px;
+                       
+                   }
+               }
+               .dropdown-menu a:hover{
+               
+                    transition: 0s;
+                    //color: black;
+                    background-color: var(--web-theme);
+                    opacity: 0.5;
+                    color: white;
+                    border:  none;
+                    
+               
+            }
+           }
+        }
+    }
+
+   
+}
+@media(min-width:600px){
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+}
+@media(max-width:900px){
+    .nav-item{
+        a{
+            font-size: 17px !important; 
+            padding-right: 2px !important;
+            
+
+            .con{
+                padding-right: 0px !important;
+            }
+        }
+    }
+}

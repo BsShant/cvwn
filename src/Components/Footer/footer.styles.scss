@@ -1,0 +1,101 @@
+.footer-section{
+    background-color: var(--web-theme);
+    
+    
+
+    .footer-info{
+        background-color: var(--web-theme);
+        color: white;
+        text-align: start;
+        
+
+        .details{
+            color: white;
+            margin-bottom: 20px;
+           
+        }
+
+        .newsletter-section{
+            background-color: #1B1B1B;
+            padding-bottom: 20px;
+        .newsletter{
+            width: 100%;
+           text-align: center;
+
+           form{
+               margin-top: 10px;
+               margin-bottom: 20px;
+               margin-left: 30px;
+               display: flex;
+               
+               input{
+                background-color: #1B1B1B;
+                border: 3px solid var(--web-theme);
+                padding: 5px 5px;
+                margin-right: 5px;
+               }
+               input[type="email"]:focus-visible {
+                
+                outline: none;
+            }
+               
+               
+           }
+
+           .newsletter-txt{
+               color: white;
+             font-size: 15px;
+             padding-left: 20px;
+           }
+
+           .social-icon{
+               margin-bottom: 20px;
+               a{
+                   text-decoration: none;
+               }
+               i{
+                   color: white;
+                   border-radius: 50%;
+                   border: 2px solid lightgray;
+                   padding: 12px;
+                   margin-right: 4px;
+                   cursor: pointer;
+                   transition: 1s;
+               }:hover{
+                   color: var(--web-theme);
+                   border-color: var(--web-theme);
+                   transition: 1s;
+               }
+               .facebook{
+                   padding: 12px 15px;
+               }
+           }
+        }
+    }
+    }
+    .img-fluid{
+        width: 60%;
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:999px){
+    form{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            margin-bottom: 15px;
+           
+        }
+    }
+}
+
+@media(max-width:400px){
+   
+}
