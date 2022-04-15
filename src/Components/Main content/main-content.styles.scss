@@ -1,11 +1,11 @@
 .mainContent{
-    margin-top: 30px;
+    margin-top: 0px;
     padding-top: 30px;
     margin-bottom: 30px;
 
     h2{
-        padding-bottom: 80px;
-        padding-top: 50px;
+        padding-bottom: 35px;
+        padding-top: 10px;
         font-weight: 700;
         font-size: 44px;
        // font-style: italic;
@@ -14,33 +14,46 @@
     }
         .project-container{
             height: 300px !important;
+            position: relative;
             width: 100%;
             overflow: hidden;
             padding-bottom: 20px;
            // margin-bottom: 10px;
            
-
+           
             img{
-                height: 220px;
+                height: 100%;
                 object-fit: cover;
                 width: 100%;
                 box-sizing: content-box;
-                transition: 1.5s;
+                transition: 500ms;
+               // position: absolute;
+               // transform: translate(-50%, -50%);
+               
     
             }:hover{
-                transition: 1.5s;
+                transition: 500ms;
                 transform: scale(1.1);
                 opacity: 0.9;
 
                
             }
-        
+           
          .project-txt{
+             position: absolute;
+             bottom: 30%;
                color: white;
                 width: 100%;
-                
-                background-color: rgba(0, 0, 0, 0.8);
+                transition: 0s;
+                text-align: center;
+
+               
+               // background-color: rgba(0, 0, 0, 0.8);
                 padding: 7px 5px;
+                font-size: 28px;
+                font-weight: 900;
+                opacity: 0;
+                z-index: 999;
                 
             a{
                 color: white;
@@ -49,20 +62,46 @@
                
             }:hover{
                 transform: scale(1);
-                text-decoration: underline;
+               
             }
        
+    }
+    .project-container:hover .project-txt{
+        bottom: 30%;
+        opacity: 1;
+        transition: all 500ms linear;
+        transition-delay: 500ms;
+        text-shadow: 1px 1px 8px grey;
+    }
+    .project-container::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 138.5%;
+        background: var(--web-theme);
+        cursor: pointer;
+        
+        top: -200%;
+        z-index: 1;
+        opacity: 0.7;
+        transform: matrix(1);
+        transform-origin: center top 0;
+        transition: .6s;
+    }
+    .project-container:hover::before{
+        top: -45%;
+        
     }
     
 
    
 }
 .Event-section{
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     
     h2{
-        padding-bottom: 80px;
-        padding-top: 80px;
+        padding-bottom: 50px;
+        padding-top: 60px;
         font-weight: 700;
         font-size: 44px;
         
@@ -76,13 +115,15 @@
     }
             
     .event1{
-        width: 45%;
-        height: 250px;
+        width: 100%;
+        height: 220px;
         background-color: #F3F3F3;
         display: flex;
         padding-top: 30px;
         box-shadow: 1px 1px 6px grey;
-        
+        position: relative;
+        cursor: pointer;
+        transition: .5s;
 
         .carousel-indicators [data-bs-target] {
    
@@ -92,6 +133,7 @@
             margin-top: 15px;
             margin-right: 4px;
             margin-left: 4px;
+            background-color: orange;
             
         }
         .Carousel-img{
@@ -104,15 +146,17 @@
         }
         .Carousel-detail{
             width: 90%;
-            padding-right: 10px;
+            padding-left: 20%;
            
             .title{
                 border-bottom: 1px dotted grey;
                 margin-bottom: 20px;
                 padding-bottom: 20px;
+                
                 h5{
                     font-weight: bold;
                     font-size: 16px;
+                   
                 }
             }
 
@@ -124,15 +168,181 @@
             padding-bottom: 50px;
             
         }
+       
+    }
+    .event1:hover{
+        background-color: rgba(237, 88, 43, 0.09);
+        box-shadow: none;
     }
 
     .event2{
-        width: 45%;
-        height: 250px;
+        //width: 45%;
+        height: 220px;
         background-image: url('https://www.voicesofwomenmedia.org/wp-content/uploads/2022/03/WEBBANNER_WIL_frontpage-01.jpg');
-        background-size: cover;
+        background-size: contain;
         box-shadow: 1px 1px 6px grey;
        // margin-top: 97px;
+       cursor: pointer;
+    }
+    .event2:hover{
+        background-color: rgba(237, 88, 43, 0.09);
+        box-shadow: none;
     }
     
+}
+
+@media(max-width:992px){
+    .event-row{
+        display: flex;
+        flex-direction: column;
+        .event1{
+            width: 80%;
+            height: 270px;
+            margin-left: 10%;
+            margin-right: 10%;
+
+            .Carousel-img{
+                width: 250px;
+               
+            }
+        }
+        .event2{
+            margin-top: 20px;
+            width: 80%;
+            background-size: cover;
+            margin-left: 10%;
+            margin-right: 10%;
+            height: 270px;
+        }
+    }
+    .title{
+        margin-left: 24% ;
+    } 
+    .footer{
+        margin-left: 25% ;
+    }
+}
+@media(max-width:576px){
+    .event-row{
+       
+        
+        
+       
+        .event1{
+            width: 95%;
+            margin-left: 8px;
+            margin-right: 5px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            height: 250px;
+            padding: auto;
+            
+
+            .Carousel-img{
+                width: 150px;
+                height: 150px !important;
+               // margin-left: 20%;
+
+            }
+            .Carousel-detail{
+             width: 100% !important;
+             margin-top: 0 !important;
+             padding-left: 0px !important;
+                .title{
+                   // margin-left: 20%;
+                    //margin-top: 10px;
+                }
+            }
+            .footer{
+               
+            }
+        }
+
+        .event2{
+            height: 200px;
+            width: 95%;
+        }
+    }
+}
+@media(max-width:500px){
+    .event-row{
+        display: flex;
+        flex-direction: column;
+
+        .event1{
+            width: 100%;
+            margin-left: 8px;
+            margin-right: 5px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            height: 450px;
+            padding: auto;
+
+            .Carousel-img{
+                width: 190px;
+                height: 190px !important;
+                margin-left: 20%;
+
+            }
+            .Carousel-detail{
+                .title{
+                    //margin-left: 40%;
+                    margin-top: 10px;
+                }
+            }
+            .footer{
+                margin-left: 38%;
+            }
+        }
+        .event2{
+            width: 95%;
+            height: auto;
+            margin-left: 8px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media(max-width:300px){
+    .event-row{
+        display: flex;
+        flex-direction: column;
+
+        .event1{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            height: 450px;
+            padding: auto;
+
+            .Carousel-img{
+                width: 190px;
+                height: 190px !important;
+                margin-left: 4%;
+
+            }
+            .Carousel-detail{
+                .title{
+                    margin-left: 27%;
+                    margin-top: 10px;
+                }
+            }
+            .footer{
+                margin-left: 27%;
+            }
+        }
+        .event2{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 10px;
+            //height: 450px;
+        }
+    }
 }

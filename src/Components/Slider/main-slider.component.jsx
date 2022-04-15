@@ -1,18 +1,20 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import image1 from '../../assets/1.jpg';
-import image2 from '../../assets/2.jpg';
-import image3 from '../../assets/3.jpg';
+import slider1 from '../../assets/slider4.jpg';
+import slider2 from '../../assets/slider1.jpg';
+import image3 from '../../assets/slider3.jpg';
+import image4 from '../../assets/3.jpg';
 import './main-slider.styles.scss'
 
 
 const MainSlider = () => {
     return (<div className='myCarousel' >
         <Carousel interval={3000} loop={true} fade>
-        <Carousel.Item  >
+        <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block  w-100  slide "
-      src="https://www.voicesofwomenmedia.org/wp-content/uploads/2014/05/frontbanner8_vow.jpg"  
+      src={slider1} 
       alt="First slide"
      height="510"
     />
@@ -27,10 +29,10 @@ const MainSlider = () => {
     
     
   </Carousel.Item>
-  <Carousel.Item >
+  <Carousel.Item className='sliderOverlay'>
     <img
       className="d-block w-100 "
-      src="https://www.voicesofwomenmedia.org/wp-content/uploads/2014/05/frontbanner1_vow.jpg"
+      src={image1}
       alt="Second slide"
       height="510"
     />
@@ -44,10 +46,10 @@ const MainSlider = () => {
     
   </Carousel.Item>
   
-  <Carousel.Item >
+  <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block w-100"
-      src={image1}
+      src={image3}
       alt="Third slide"
       height="510"
     />
@@ -60,10 +62,10 @@ const MainSlider = () => {
      </div>
     
   </Carousel.Item>
-  <Carousel.Item >
+  <Carousel.Item className='sliderOverlay'>
     <img
       className="d-block w-100"
-      src="https://www.voicesofwomenmedia.org/wp-content/uploads/2014/05/frontbanner4_vow.jpg"
+      src={slider2}
       alt="Fourth slide"
       height="510"
     />
@@ -76,10 +78,10 @@ const MainSlider = () => {
      </div>
     
   </Carousel.Item>
-  <Carousel.Item >
+  <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block w-100"
-      src={image3}
+      src={image4}
       alt="Fifth slide"
       height="510"
     />

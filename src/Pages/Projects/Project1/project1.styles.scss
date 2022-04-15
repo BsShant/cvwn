@@ -1,0 +1,20 @@
+.strengtheningProject{
+    padding-bottom: 40px;
+    .projectImgSection{
+        object-fit: cover;
+        
+        img{
+            width: 100%;
+            height: 87vh;
+        }
+    }
+    h6{
+        color: var(--web-theme);
+        font-weight: 600;
+        font-size: 24px;
+        margin: 40px auto 15px auto;
+        text-align: center;
+        
+    }
+}
+

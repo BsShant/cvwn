@@ -1,0 +1,104 @@
+.eventPage{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0;
+    background-color: rgb(249, 247, 247);
+    //sbackground-image: url('../../assets/background.png');
+    h2{
+        
+        padding-top: 30px;
+        margin-bottom: 40px;
+        color: var(--web-theme);
+        font-weight: 700;
+        font-size: 44px;
+        text-shadow: 1px 1px 5px lightpink;
+
+    }
+    h6{
+        color: var(--web-theme);
+        font-weight: 600;
+        font-size: 24px;
+        margin: 40px auto 15px auto;
+        text-align: center;
+        padding-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+.eventSection{
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 10px rgb(196, 195, 195);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+    .imgSection{
+        border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+       object-fit: cover;
+       overflow: hidden;
+       cursor: pointer;
+       img{
+           size: cover;
+           width: 100%;
+           height: 300px;
+           transition: 1s;
+       }:hover{
+        transform: scale(1.2);
+        transition: 1s;
+        
+    }
+       //margin-bottom: 20px;
+    }
+    .detail{
+        text-align: start;
+        width: 100%;
+       padding: 20px 10px;
+       // background-color: rgb(244, 242, 242);
+       p{
+           font-size: 13px;
+          
+       }
+       h5{
+           font-weight: 600;
+           cursor: pointer;
+       }
+       h5:hover{
+        color: var(--web-theme);
+    }
+    }
+}
+
+
+@media(max-width:600px){
+    .eventSection{
+        width: 98% ;
+        margin: 10px auto;
+    }
+    .detail{
+       // width: 75% !important;
+    }
+}
+
+.eventBtn{
+    
+    .myButton{
+        background-color:rgb(232, 56, 2) ;
+        color: white;
+        border: 2px solid var(--web-theme);
+        padding: 7px 10px 8px 10px;
+        transition: 1s;
+        text-decoration: none;
+
+    }:hover{
+        background-color:rgb(83, 20, 1) ;
+        border: 2px solid var(--web-theme);
+        transition: 1s;
+        
+    }
+}

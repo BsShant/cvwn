@@ -1,0 +1,88 @@
+.menutoggle{
+    display: none;
+    a{
+        text-align: center;
+        color: black;
+        font-size: 36px;
+        font-weight: 700;
+        padding-left: 19px;
+        border-bottom: 2px solid grey;
+        
+       padding-bottom: 23px;
+       padding-top: 23px;
+        
+    }
+    a:hover{
+        color:#F1BA79;
+        border-bottom: 2px solid var(--web-theme) ;
+        transition: 1s;
+        background-color: white;
+    }
+    
+}
+.dropdown-menu{
+    padding: 0 ;
+    border: none;
+       a{
+           transition: 0s;
+           //color: black;
+           background-color: white;
+           color: black;
+           border-bottom: 1px solid lightgray ;
+           font-size: 15px;
+           font-weight: 400;
+           padding: 10px;
+           
+       }
+   }
+   .dropdown-menu a:hover{
+   
+        transition: 0s;
+        //color: black;
+        background-color: var(--web-theme);
+        opacity: 0.5;
+        color: white;
+        border:  none;
+        
+   
+}
+.myButton{
+    border: none;
+    background-color: white;
+    .canvasToggler{
+        i{
+            font-size: 28px;
+        }
+    }
+}
+.offcanvas-header{
+    justify-content: right;
+    
+}
+.offcanvas-end {
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    border-left: 1px solid rgba(0,0,0,.2);
+    transform: translateX(100%);
+    padding: 18px 20px;
+}
+
+
+@media(max-width:766px){
+    .menutoggle{
+        display: block;
+        padding-right: 30px;
+    padding-top: 20px;
+    }
+    .collapse:not(.show) {
+         display: block; 
+    }
+}
+
+@media(max-width:500px){
+    .menutoggle{
+        padding-top: 0 !important;
+    }
+}

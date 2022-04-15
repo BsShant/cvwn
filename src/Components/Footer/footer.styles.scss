@@ -18,21 +18,28 @@
         .newsletter-section{
             background-color: #1B1B1B;
             padding-bottom: 20px;
+            
         .newsletter{
             width: 100%;
            text-align: center;
+           display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 21px 0 15px 0;
+    /* height: 309px; */
+    justify-content: center;
 
            form{
                margin-top: 10px;
                margin-bottom: 20px;
-               margin-left: 30px;
+              // margin-left: 20px;
                display: flex;
                
                input{
                 background-color: #1B1B1B;
                 border: 3px solid var(--web-theme);
                 padding: 5px 5px;
-                margin-right: 5px;
+               margin-right: 5px;
                }
                input[type="email"]:focus-visible {
                 
@@ -45,7 +52,7 @@
            .newsletter-txt{
                color: white;
              font-size: 15px;
-             padding-left: 20px;
+            // padding-left: 20px;
            }
 
            .social-icon{
@@ -83,7 +90,27 @@
         margin-top: 50px;
     }
 }
+@media(min-width:1400px){
+    .form{
 
+        margin-left: 50px !important;
+        input{
+            
+           
+        }
+    }
+}
+@media(max-width:1250px){
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px !important;
+        input{
+            margin-bottom: 15px;
+           
+        }
+    }
+}
 @media(max-width:999px){
     form{
         display: flex;
@@ -96,6 +123,17 @@
     }
 }
 
-@media(max-width:400px){
-   
+@media(max-width:430px){
+   .footer-section{
+       p{
+           font-size: 12px;
+       }
+   }
+   .details{
+    font-size: 11px;
+   }
+   .newsletter-txt{
+    font-size: 11px !important;
+    
+   }
 }
