@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../Components/Custom button/custom-button.component'
+import CustomButton from '../Custom button/custom-button.component'
 import './donation.form.styles.scss'
 
 export default function DonationForm() {
@@ -28,7 +28,7 @@ export default function DonationForm() {
                 <span className='title'>Phone*</span>
             </div>
             <div className="col-lg-9">
-                <input type="number" name='number' />
+                <input type="text" name='number' />
             </div>
         </div>
         <div className="row inputRow">
@@ -44,7 +44,7 @@ export default function DonationForm() {
                 <span className='title'>Country*</span>
             </div>
             <div className="col-lg-9">
-                <input type="country" name='country' />
+             <input type='text' name='country'/>
             </div>
         </div>
 
@@ -73,10 +73,19 @@ export default function DonationForm() {
         {/*----------info div-------------*/}
 
         <div className='infoContainer'>
-            <p>Please share your personal <span className='highlightedTxt'>Email ID, Mobile Number and Address </span>. so that we can send you the reciept certificate
-                 & share updates on our programmes with you.
-               <span className='highlightedTxt'> To know more please sms SF to 56161</span>
-                (Registration No. - 6382)
+            <p>Please share your personal <span >Email ID, Mobile Number and Address </span>. so that we can send you the reciept certificate
+                 & share updates on our programmes with you.<br></br>
+               <span > To know more please sms SF to 56161</span><br></br>
+               <span> (Registration No. - 6382)</span>
+            </p>
+        </div>
+
+        {/*----------contact div-------------*/}
+
+        <div className='contactContainer'>
+            <p>For more information contact:<br></br>
+                Email:<span> cvwnnepal@gmail.com </span><br></br>
+                Phone: +01 16555, Mob: +977 9841485364
             </p>
         </div>
     </div>

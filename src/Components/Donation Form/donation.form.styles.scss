@@ -1,0 +1,91 @@
+.donationform{
+    text-align: start;
+    margin-bottom: 30px;
+
+    h4{
+        color: var(--web-theme);
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .donationSection{
+        border: 1px dotted black;
+        padding: 20px 10px;
+        
+        .inputRow{
+            margin-bottom: 10px;
+            
+           
+        }
+        .title{
+            font-size: 13px;
+            font-weight: 700;
+        }
+        input{
+            width: 90%;
+        }
+        input[type=text]:focus{
+            outline: none;  
+            border: 1.5px solid var(--web-theme);  
+            border-radius: 3px;
+          }
+          input[type=email]:focus{
+            outline: none;  
+            border: 1.5px solid var(--web-theme);  
+            border-radius: 3px;
+          }
+          input[type=country]:focus{
+            outline: none;  
+            border: 1.5px solid var(--web-theme);   
+            border-radius: 3px;
+          }
+          input[type=date]:focus{
+            outline: none;  
+            border: 1.5px solid var(--web-theme);   
+            border-radius: 3px;
+          }
+          
+    }
+
+    .Checkbox{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+       
+        input{
+            margin: 5px;
+        }
+        label{
+            font-size: 12px;
+        }
+        
+    }
+   
+    .infoContainer{
+        margin-top: 20px;
+        border: 1px dotted black;
+        padding: 20px 10px;
+        p{
+            font-size: 13px;
+
+            span{
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .contactContainer{
+        margin-top: 20px;
+        p{
+            font-size: 13px;
+            font-weight: bold;
+            span{
+                font-size: 12px;
+                font-weight: 500;
+                
+            }
+        }
+    }
+    
+}
