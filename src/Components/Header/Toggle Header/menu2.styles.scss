@@ -13,7 +13,7 @@
         
     }
     a:hover{
-        color:#F1BA79;
+        color:red;
         border-bottom: 2px solid var(--web-theme) ;
         transition: 1s;
         background-color: white;
@@ -62,25 +62,31 @@
 .offcanvas-end {
     top: 0;
     right: 0;
-    width: 80%;
-    height: 100vh;
+    width: 51%;
+    height: 85vh;
     border-left: 1px solid rgba(0,0,0,.2);
     transform: translateX(100%);
+    background-color: #e83802;
     padding: 18px 20px;
 }
 
 
-@media(max-width:766px){
+@media(max-width:857px){
     .menutoggle{
-        display: block;
-        padding-right: 30px;
-    padding-top: 20px;
+        display: block!important;
+        padding-top: 45px;
+        margin-left:95%;
     }
     .collapse:not(.show) {
          display: block; 
     }
 }
 
+@media(max-width:768px){
+    .menutoggle{
+        margin-left:34%;
+    }
+}
 @media(max-width:500px){
     .menutoggle{
         padding-top: 0 !important;

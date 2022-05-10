@@ -1,0 +1,56 @@
+.uploadPhotoContainer {
+    height: 335px;
+      aspect-ratio: 1/1;
+      max-width: 100%;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  th.ant-table-cell{
+    /* background: linear-gradient( 300deg, rgba(255, 15, 135, 0.6) 0%, rgba(70, 18, 204, 0.6) 100% ) !important; */
+  background: rgba(0, 66, 93, 1)!important;
+  color: white !important;
+  }
+  .buttonNormal{
+    border-color: transparent;
+    border-radius:10px;
+    color: white !important;
+    background: linear-gradient( 300deg, rgba(255, 15, 135, 0.6) 0%, rgba(70, 18, 204, 0.6) 100% ) !important;
+  }
+  .buttonNormal:hover{
+    transform: scale(0.9);
+  
+  }
+  .tableLarge {
+    display: none !important;
+  }
+  .tableSmall {
+    display: block !important;
+  }
+  @media only screen and (min-width: 992px) {
+    .tableLarge {
+      display: block !important;
+    }
+    .tableSmall {
+      display: none !important;
+    }
+  }
+  .ant-table-cell{
+    background-color: rgba(0,0,0,0.26);
+  }
+  .tableSmallContainer {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .buttonTable{
+    border-radius: 10px;
+    color:white;
+    /* box-shadow: 0 3px 20px -8px #95abbb!important; */
+    border-color: transparent;
+    background: linear-gradient( 300deg, rgba(255, 15, 135, 0.6) 0%, rgba(70, 18, 204, 0.6) 100% ) !important;
+  }
+  .buttonTable:hover{
+    transform: scale(0.9);
+  }

@@ -5,78 +5,60 @@
     width: 100%;
     margin-top: 0;
     background-color: rgb(249, 247, 247);
-
-
-    .volunteerContainer{
-        margin-top: 30px;
-        padding-bottom: 30px;
-    }
-    h2{
-        
-        padding-top: 30px;
-        margin-bottom: 40px;
-        color: var(--web-theme);
-        font-weight: 700;
-        font-size: 44px;
-        text-shadow: 1px 1px 5px lightpink;
-
-    }
-
-    p{
-        text-align: left;
-        font-size: 14px;
-
-        span{
-            font-weight: 600;
-            color: var(--web-theme);
-        }
-        
-    }
-    .custBtn{
-        align-items: center;
-        display: flex;
-        padding-left: auto;
-        padding-right: auto;
-        
-        
-     }
-
-    .volunteers{
-     border-top: 3px solid var(--web-theme);
-     margin: 30px auto;
-     box-shadow: 1px 1px 10px rgb(196, 195, 195);
-        .imgSection{
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            overflow: hidden;
-            margin: 10px auto;
-           
-            img{
-                height: 200px;
-            width: 200px;
-            }
-        }
-
-        .detailSection{
-            background-color: var(--web-theme);
-            
-            h5{
-                font-weight: 900;
-                color: black;
-                padding-top: 15px;
-            }
-            p{
-                text-align: center;
-                font-size: 15px;
-                font-weight: 500;
-                padding: 0;
-            }
-            h6{
-                padding-bottom: 15px; 
-                font-weight: 600;
-            }
-        }
-    }
+    padding-bottom:3%;
+    padding-top:2%;
 }
+h2{
+    color:#e83802;
+}
+.Intel{
+    margin-top:10%;
+}
+.post{
+  display: inline;
+    border-top:2px solid red;
+}
+.social-media{
+    margin-top:5%;
+}
+
+.items{
+color: black !important;
+margin-top:5%;
+
+  }
+  .items .social svg{
+    margin-right: 17px;
+    font-size: 15px;
+    color: grey!important;
+   }
+  .items .social{
+    background: transparent;
+    color:#282c34;
+    opacity: 1;
+    margin-right: 10;
+  }
+
+  .volunteerContainer{
+      margin:auto;
+      width:80%;
+  }
+  .items .facebook:hover svg{
+    color: #4267B2 !important;
+  }
+  .items .twitter:hover svg{
+      color:#00acee!important;
+  }
+  .items .linkedin:hover svg{
+    color: #0e76a8 !important;
+}
+  .items .instagram:hover svg{
+    color: #d62976!important;
+}
+
+  
+  @media(max-width:768px){
+    .items .social svg{
+        margin-right:0px;
+    }  
+  }

@@ -1,104 +1,118 @@
-.eventPage{
-    text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 0;
-    background-color: rgb(249, 247, 247);
-    //sbackground-image: url('../../assets/background.png');
+.eventCarousel{
+    padding-top:  0px ;
+    margin: 30px auto;
     h2{
-        
-        padding-top: 30px;
-        margin-bottom: 40px;
-        color: var(--web-theme);
+        display:flex;
+        justify-content:center;
+        padding-bottom: 35px;
+        padding-top: 10px;
         font-weight: 700;
         font-size: 44px;
+       // font-style: italic;
+        color: var(--web-theme);
         text-shadow: 1px 1px 5px lightpink;
+    }
+.item{
+    margin: 5px;
+    background-color: rgb(252, 250, 250);
+    box-shadow: 1px 1px 6px grey;
+    padding-top: 20px;
+    cursor: pointer;
+
+    .Carousel-img{
+        width: 150px;
+        height: 190px !important;
+        padding-left: 20px;
+        img{
+            size: cover;
+        }
+    }
+    .Carousel-detail{
+        width: 90%;
+        padding-left: 20%;
+       
+        .title{
+            border-bottom: 1px dotted grey;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            
+            h5{
+                font-weight: bold;
+                font-size: 16px;
+               
+            }
+        }
 
     }
-    h6{
-        color: var(--web-theme);
-        font-weight: 600;
-        font-size: 24px;
-        margin: 40px auto 15px auto;
-        text-align: center;
-        padding-top: 30px;
-        margin-bottom: 40px;
-    }
-}
-
-.eventSection{
-    
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    box-shadow: 1px 1px 10px rgb(196, 195, 195);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    
-    .imgSection{
-        border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-       object-fit: cover;
-       overflow: hidden;
-       cursor: pointer;
-       img{
-           size: cover;
-           width: 100%;
-           height: 300px;
-           transition: 1s;
-       }:hover{
-        transform: scale(1.2);
-        transition: 1s;
+    .footer{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        padding-bottom: 50px;
         
     }
-       //margin-bottom: 20px;
+}
+.item:hover{
+    background-color: rgba(237, 88, 43, 0.09);
+        box-shadow: none;
     }
-    .detail{
-        text-align: start;
-        width: 100%;
-       padding: 20px 10px;
-       // background-color: rgb(244, 242, 242);
-       p{
-           font-size: 13px;
-          
-       }
-       h5{
-           font-weight: 600;
-           cursor: pointer;
-       }
-       h5:hover{
-        color: var(--web-theme);
-    }
-    }
+
 }
 
 
+@media(max-width:745px){
+    .Carousel-detail{
+        padding-left: 10% !important;
+    }
+}
+
+@media(max-width:663px){
+    .Carousel-detail{
+        padding-left: 2% !important;
+    }
+}
+@media(max-width:611px){
+    .Carousel-img{
+        width: 120px !important;
+    }
+    .Carousel-detail{
+        padding-left: 0 !important;
+    }
+}
 @media(max-width:600px){
-    .eventSection{
-        width: 98% ;
-        margin: 10px auto;
+    .Carousel-img{
+        width: 200px !important;
     }
-    .detail{
-       // width: 75% !important;
+    .Carousel-detail{
+        padding-left: 0 !important;
+        margin-left: 0px !important;
     }
 }
-
-.eventBtn{
-    
-    .myButton{
-        background-color:rgb(232, 56, 2) ;
-        color: white;
-        border: 2px solid var(--web-theme);
-        padding: 7px 10px 8px 10px;
-        transition: 1s;
-        text-decoration: none;
-
-    }:hover{
-        background-color:rgb(83, 20, 1) ;
-        border: 2px solid var(--web-theme);
-        transition: 1s;
-        
+@media(max-width:576px){
+    .Carousel-img{
+        width: 150px!important;
+        margin-left: 25% !important;
+        max-height: 150px !important;
+    }
+    .Carousel-detail{
+        //padding-left: 10% !important;
+        margin-left: .25% !important;
+    }
+    .footer{
+        padding-left: 10%;
+    }
+}
+@media(max-width:300px){
+    .Carousel-img{
+        width: 150px!important;
+        margin-left: 15% !important;
+        max-height: 150px !important;
+    }
+    .Carousel-detail{
+        //padding-left: 10% !important;
+        margin-left: .5% !important;
+    }
+    .footer{
+        padding-left: 5%;
     }
 }

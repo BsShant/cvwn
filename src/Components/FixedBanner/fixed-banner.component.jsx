@@ -1,4 +1,6 @@
 import './fixed-banner.styles.scss'
+import DonationForm from '../Donation Form/donation.form.component'
+
 import React from 'react'
 
 export default function Fixedbanner() {
@@ -13,7 +15,7 @@ export default function Fixedbanner() {
           </div>
         </div>
         <div class="col-lg-12 col-md-12 mt-lg-0 mt-4">
-          <button class="main-btnn">Donate Now!</button>
+          <button class="main-btnn">Donate Now!  </button>
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@
                     transition: 0.5s;
                     font-size: 14px;
                 }:hover{
-                    color: lightgray;
+                    color:#f1592f;
                     
                     transition: 0.5s;
                 }
@@ -74,7 +74,9 @@
                 align-items: center !important;
                 i{
                     padding-right: 12px;
-                } 
+                } :hover{
+                    color:#f1592f;
+                }
             }
 
             .social{
@@ -141,7 +143,7 @@
     }
 }
 
-@media(max-width:999px){
+@media(max-width:992px){
     
     .top-section{
         justify-content: left !important;
@@ -174,9 +176,10 @@
         }
         .social{
             justify-content: left !important;
-            padding-left: 12%;
+            // padding-left: 3%;
+            margin-left:-4%;
             i{
-                margin-left: 20px !important;
+                margin-left: 17px !important;
                 font-size: 14px;
             }
         }
@@ -215,15 +218,15 @@
         }
     }
 }
-@media(max-width:800px){
+@media(max-width:857px){
     .logo-section{
         img{
             height: 83% !important;
         }
     }
     .top-section{
-        justify-content: left !important;
-        margin-left: 2px;
+        display: none!important;
+   
         .mail{
             width: 35%;
             font-size: 13px;
@@ -251,13 +254,15 @@
         }
         .social{
             justify-content: left !important;
+            // margin-left:-3%;
             //padding-left: 7% !important;
             i{
-                margin-left: 10px !important;
+                margin-left: 25px !important;
                 font-size: 14px !important;
             }
         }
-    } 
+    }
+   
 }
 @media(max-width:767px){
     .info {

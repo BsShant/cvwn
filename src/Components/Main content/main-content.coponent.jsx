@@ -1,7 +1,10 @@
 import React from 'react'
 import './main-content.styles.scss'
-import event1 from '../../assets/event1.jpg'
-import event4 from '../../assets/event4.jpg'
+import Project1 from '../../assets/project-1.JPG'
+import Project4 from '../../assets/project-4.jpg'
+import Project3 from '../../assets/project-3.jpg'
+import Project2 from '../../assets/project-2.JPG'
+
 
 export default function MainContent() {
   return (
@@ -13,7 +16,7 @@ export default function MainContent() {
             <div className='row'>
                <div className='col-lg-3 col-md-6 col-sm-6 project ml-2'>
                    <div className='project-container'  data-aos="fade-right">
-                   <a  href='#'>  <img src={event1}  alt='project image' className='img-fluid'/> </a>
+                   <a  href='#'>  <img src={Project1}  alt='project image' className='img-fluid'/> </a>
                    <div className='project-txt'><a href='#'> MT&J Educational Outreach Program</a></div>
                    </div>
                    
@@ -21,19 +24,19 @@ export default function MainContent() {
                </div>
                <div className='col-lg-3 col-md-6 col-sm-6'>
                <div className='project-container'>
-                   <a href='#'><img src='https://www.voicesofwomenmedia.org/wp-content/uploads/2020/04/junkiri-library-400x317.jpg' alt='project image' /></a> 
+                   <a href='#'><img src={Project2} alt='project image' /></a> 
                    <div className='project-txt'><a href='#'> Junkiri : The Feminist Library</a></div>
                 </div>
                </div>
                <div className='col-lg-3 col-md-6 col-sm-6'>
                <div className='project-container'>
-                  <a href='#'> <img src='https://www.voicesofwomenmedia.org/wp-content/uploads/2020/04/sheisthestory_lastshot-825x510-400x247.jpg' alt='project image' height='250px' /></a>
+                  <a href='#'> <img src={Project3} alt='project image' height='250px' /></a>
                    <div className='project-txt'><a href='#'> She is the Story – II Edition</a></div>
                 </div>
                </div>
                <div className='col-lg-3 col-md-6 col-sm-6'>
                <div className='project-container' >
-               <a href='#'>  <img src={event4} alt='project image'/></a>
+               <a href='#'>  <img src={Project4} alt='project image'/></a>
                   
                    <div className='project-txt'><a href='#'>  Women  in Technology</a></div>
                </div>

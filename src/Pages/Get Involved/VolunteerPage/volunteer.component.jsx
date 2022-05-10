@@ -1,13 +1,16 @@
 import React from 'react'
 import CustomButton from '../../../Components/Custom button/custom-button.component'
 import './volunteer.styles.scss'
+import VolunteerComponent from './volunteerComponent'
+
 
 export default function VolunteerPage() {
   return (
     <div className='volunteerSection'>
         <h2>Volunteers</h2>
         <div className="row">
-            <div className="col-lg-8 col-md-8 col-sm-7">
+            {/* <div className="col-lg-8 col-md-8 col-sm-7"> */}
+            <div className="col-lg-12 col-md-12 col-sm-12">
                 <p>
                     <span>CVWN</span> believes that unless members of the civil society are involved proactively in the process
                      of development, sustainable change will not happen. We encourage and invite individuals for <strong>volunteer opportunities</strong> 
@@ -17,7 +20,9 @@ export default function VolunteerPage() {
                      sensitizing the society towards the cause. <strong>Volunteer for NGO</strong>, volunteer to serve, spread some smiles!
                 </p>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-5 custBtn">
+            </div>
+            <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 custBtn">
                 <CustomButton children={'Click here for Indivudual Registration '} />
             </div>
         </div>
@@ -25,103 +30,35 @@ export default function VolunteerPage() {
         {/*     2nd row     */}
 
         <div className="row volunteerContainer">
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://th.bing.com/th/id/R.34b0e5bc273b02353b4d5367f65eb570?rik=uvlxac2N95tPAQ&pid=ImgRaw&r=0'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/>
                 </div>
+             
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/>
             </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://www.cheatsheet.com/wp-content/uploads/2019/07/Tom-Holland-4-1024x936.jpg?x53037'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/> 
             </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://th.bing.com/th/id/OIP.WxRM2zJBtpopOf7S-Z7ULgHaIy?pid=ImgDet&rs=1'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
+            <VolunteerComponent/>
+            </div> */}
+</div>
+<div className="row volunteerContainer" style={{marginTop:"4%"}}>
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/>
             </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://english.onlinekhabar.com/wp-content/uploads/2020/10/Rajesh-Hamal--768x502.jpg'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Individual Partnership</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/>
             </div>
+            <div className="col-lg-4 col-md-4 col-sm-6">
+            <VolunteerComponent/>
 
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://th.bing.com/th/id/R.34b0e5bc273b02353b4d5367f65eb570?rik=uvlxac2N95tPAQ&pid=ImgRaw&r=0'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
             </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://www.cheatsheet.com/wp-content/uploads/2019/07/Tom-Holland-4-1024x936.jpg?x53037'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://th.bing.com/th/id/OIP.WxRM2zJBtpopOf7S-Z7ULgHaIy?pid=ImgDet&rs=1'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Intern</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="volunteers">
-                    <div className="imgSection">
-                        <img src='https://english.onlinekhabar.com/wp-content/uploads/2020/10/Rajesh-Hamal--768x502.jpg'/>
-                    </div>
-                    <div className="detailSection">
-                        <h5>Cristiano Ronaldo</h5>
-                        <p>Individual Partnership</p>
-                        <h6>CVWN</h6>
-                    </div>
-                </div>
-            </div>
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
+               
+             <VolunteerComponent/>
+            </div> */}
         </div>
     </div>
   )

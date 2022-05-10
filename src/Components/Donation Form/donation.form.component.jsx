@@ -9,7 +9,7 @@ export default function DonationForm() {
         <div className="donationSection">
         <div className="row inputRow">
             <div className="col-lg-3">
-                <span className='title'>Name*</span>
+                <span className='title'>Name<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
                 <input type="text" name='name' />
@@ -17,7 +17,7 @@ export default function DonationForm() {
         </div>
         <div className="row inputRow">
             <div className="col-lg-3">
-                <span className='title'>Email*</span>
+                <span className='title'>Email<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
                 <input type="email" name='email' />
@@ -25,7 +25,7 @@ export default function DonationForm() {
         </div>
         <div className="row inputRow">
             <div className="col-lg-3">
-                <span className='title'>Phone*</span>
+                <span className='title'>Phone<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
                 <input type="text" name='number' />
@@ -33,7 +33,7 @@ export default function DonationForm() {
         </div>
         <div className="row inputRow">
             <div className="col-lg-3">
-                <span className='title'>Address*</span>
+                <span className='title'>Address<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
                 <input type="text" name='address' />
@@ -41,7 +41,7 @@ export default function DonationForm() {
         </div>
         <div className="row inputRow">
             <div className="col-lg-3">
-                <span className='title'>Country*</span>
+                <span className='title'>Country<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
              <input type='text' name='country'/>
@@ -51,7 +51,7 @@ export default function DonationForm() {
 
         <div className="row">
             <div className="col-lg-3">
-                <span className='title'>Date of Birth*</span>
+                <span className='title'>Date of Birth<span style={{color:"red"}}>*</span></span>
             </div>
             <div className="col-lg-9">
             <input type="date" name="dob"/>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import image1 from '../../assets/1.jpg';
-import slider1 from '../../assets/slider4.jpg';
-import slider2 from '../../assets/slider1.jpg';
-import image3 from '../../assets/slider3.jpg';
-import image4 from '../../assets/3.jpg';
+import Hero1 from '../../assets/hero-1.jpg';
+import Hero2 from '../../assets/hero-2.jpg';
+import Hero3 from '../../assets/hero-3.jpg';
+import Hero4 from '../../assets/hero-4.jpg';
+import Hero5 from '../../assets/hero-5.jpg';
+import Hero6 from '../../assets/hero-6.jpg';
+
 import './main-slider.styles.scss'
 
 
@@ -14,7 +16,7 @@ const MainSlider = () => {
         <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block  w-100  slide "
-      src={slider1} 
+      src={Hero1} 
       alt="First slide"
      height="510"
     />
@@ -32,7 +34,7 @@ const MainSlider = () => {
   <Carousel.Item className='sliderOverlay'>
     <img
       className="d-block w-100 "
-      src={image1}
+      src={Hero2}
       alt="Second slide"
       height="510"
     />
@@ -49,7 +51,7 @@ const MainSlider = () => {
   <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block w-100"
-      src={image3}
+      src={Hero3}
       alt="Third slide"
       height="510"
     />
@@ -65,7 +67,7 @@ const MainSlider = () => {
   <Carousel.Item className='sliderOverlay'>
     <img
       className="d-block w-100"
-      src={slider2}
+      src={Hero4}
       alt="Fourth slide"
       height="510"
     />
@@ -81,10 +83,26 @@ const MainSlider = () => {
   <Carousel.Item className='sliderOverlay' >
     <img
       className="d-block w-100"
-      src={image4}
+      src={Hero5}
       alt="Fifth slide"
       height="510"
     />
+    <div class="content">
+              <div class="container">
+                <div class="content-box">
+                     <h2 className="animate__animated animate__fadeInDown">Storytelling is a medium<br/> for social change</h2>
+                 </div>
+              </div>
+     </div>
+    
+  </Carousel.Item>
+  <Carousel.Item className='sliderOverlay' >
+    <img
+      className="d-block w-100"
+      src={Hero6}
+      alt="Fifth slide"
+      height="510"
+    />yyt666766667777
     <div class="content">
               <div class="container">
                 <div class="content-box">

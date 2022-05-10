@@ -22,6 +22,7 @@ import Event2Component from './Pages/Event/event2/event2.component';
 import AnnouncementPage from './Pages/Get Involved/Announcement/announcement.components';
 import VolunteerPage from './Pages/Get Involved/VolunteerPage/volunteer.component';
 import DonatePage from './Pages/Get Involved/Donate Page/donate.components';
+import Articlepage from './Pages/Resources/Article/article';
 
 function App() {
   useEffect(()=>{
@@ -40,7 +41,7 @@ function App() {
       <Route path="/events/event2" element={<Event2Component/>} />
       <Route path="/resources/annual_report" element={<AnnualReportPage/>} />
       <Route path="/resources/case_study_report" element={<CaseStudyReportPage/>} />
-      <Route path="/resources/article" element={<Eventpage/>} />
+      <Route path="/resources/article" element={<Articlepage />} />
       <Route path="/get-involved/announcement" element={<AnnouncementPage/>} />
       <Route path="/get-involved/volunteer" element={<VolunteerPage/>} />
       <Route path="/get-involved/donate" element={<DonatePage/>} />

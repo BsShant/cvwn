@@ -13,7 +13,6 @@ export default function HomePage() {
     <MainSlider/>
     <MainContent/>
     <Fixedbanner/>
-    
     <EventCarousel/>
     
     </div>

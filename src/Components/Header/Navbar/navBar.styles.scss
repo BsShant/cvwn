@@ -34,12 +34,28 @@
                    
                }
                a:hover{
-                   color: var(--web-theme);
+                   color:  var(--web-theme);
                    border-bottom: 3px solid var(--web-theme) ;
                    transition: 0.3s;
                    background-color: white;
                }
-               
+               .nav-link{
+                padding-left: 0px!important;
+                padding-right: 0px!important;
+                margin-right:20px;
+               }
+               .nav-link:focus{
+                color:  var(--web-theme);
+                border-bottom: 3px solid var(--web-theme) ;
+                transition: 0.3s;
+                background-color: white;
+               }
+               .nav-link:active{
+                color:  var(--web-theme)!important;
+                border-bottom: 3px solid var(--web-theme) !important;
+                transition: 0.3s;
+                background-color: white;
+               }
                .dropdown-menu{
     
                
@@ -48,8 +64,8 @@
                        //text-align: center;
                        transition: 0s;
                        //color: black;
-                       background-color: white;
-                       color: black;
+                       background-color: #f1592f;
+                       color: white;
                        border-bottom: 1px solid lightgray ;
                        font-size: 15px !important;
                        font-weight: 400;
@@ -65,9 +81,9 @@
                
                     transition: 0s;
                     //color: black;
-                    background-color: var(--web-theme);
+                    background-color: white;
                     opacity: 0.8;
-                    color: white;
+                    color: black;
                     border:  none;
                    
                     
@@ -78,6 +94,8 @@
                         }
                     }
                }
+              
+             
 
               
               
@@ -96,7 +114,7 @@
     }
    
 }
-@media(max-width:765px){
+@media(max-width:857px){
     .main-menu{
         display: none;
     }
