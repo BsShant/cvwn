@@ -2,8 +2,10 @@
     padding-top:  0px ;
     margin: 30px auto;
     h2{
-        display:flex;
-        justify-content:center;
+        width:85%;
+        margin:auto;
+        // display:flex;
+        // justify-content:center;
         padding-bottom: 35px;
         padding-top: 10px;
         font-weight: 700;
@@ -13,6 +15,7 @@
         text-shadow: 1px 1px 5px lightpink;
     }
 .item{
+    width:85%;
     margin: 5px;
     background-color: rgb(252, 250, 250);
     box-shadow: 1px 1px 6px grey;
@@ -29,7 +32,7 @@
     }
     .Carousel-detail{
         width: 90%;
-        padding-left: 20%;
+        padding-left: 39px;
        
         .title{
             border-bottom: 1px dotted grey;
@@ -118,5 +121,12 @@
 }
 .w-100{
     height:100%;
+    width: 115% !important;
     object-fit: cover;
+}
+
+@media (min-width: 1400px){
+.container {
+    max-width: 1265px;
+}
 }

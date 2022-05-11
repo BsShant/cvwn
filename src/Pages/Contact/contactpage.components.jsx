@@ -6,7 +6,7 @@ import ContactForm from '../../Components/ContactForm/contactform.component'
 export default function Contactpage() {
   return (
     <div className='aboutPage'>
-       <SimpleMap/>
+       {/* <SimpleMap/> */}
         <div className='my-5'>
         <ContactForm/>
         </div>

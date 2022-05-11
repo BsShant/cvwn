@@ -13,6 +13,7 @@ export default function MainContent() {
         <div className="row">
         <div className="col-lg-12 col-md-12">
             <h2>OUR PROJECTS</h2>
+            <div className='container'>
             <div className='row'>
                <div className='col-lg-3 col-md-6 col-sm-6 project ml-2'>
                    <div className='project-container'  data-aos="fade-right">
@@ -41,6 +42,7 @@ export default function MainContent() {
                    <div className='project-txt'><a href='#'>  Women  in Technology</a></div>
                </div>
                </div>
+            </div>
             </div>
             
         </div>

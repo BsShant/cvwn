@@ -8,7 +8,8 @@ export default function EventCarousel() {
   return (
     <div className='eventCarousel container-fluid'>
         <h2>Events</h2>
-        <OwlCarousel className='owl-theme' loop margin={10}  responsiveClass={true} nav={false}
+        <div className='container'>
+        <OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
          responsive= {{
             0: {
                 items: 1,
@@ -109,6 +110,7 @@ export default function EventCarousel() {
     </div>
    
 </OwlCarousel>
+</div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import './map.styles.scss'
+import waveHi from '../../assets/wave-hi.gif'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -29,10 +30,15 @@ class SimpleMap extends Component {
             //       />
             //     </GoogleMapReact>
             //   </div>
-            <div className='googleMap'>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28263.48129929145!2d85.31864798715819!3d27.68839876538011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1649661329824!5m2!1sen!2snp" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div style={{display:"flex", justifyContent:"center",alignItems:"center"}}>
+            <h1 >SAY HELLO!</h1>
+        
+            <img src={waveHi} style={{height:"100px", width:"100px"}}></img>
             </div>
+            // <div className='googleMap'>
+
+            //     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28263.48129929145!2d85.31864798715819!3d27.68839876538011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1649661329824!5m2!1sen!2snp" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            // </div>
         );
     }
 }

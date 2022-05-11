@@ -5,7 +5,7 @@ function ProjectSection({title, duration, about}) {
   return (
     <div className='projectSection'>
      <div className='projectTitle'>
-     <h2> {title}</h2>
+     <h3> {title}</h3>
      </div>
       
       

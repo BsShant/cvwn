@@ -11,7 +11,8 @@ export default function Eventpage() {
   return (
     <div className='eventCarousel container-fluid'>
         <h2>Our Events</h2>
-        <OwlCarousel className='owl-theme' loop margin={10}  responsiveClass={true} nav={false}
+        <div className='container'>
+        <OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
          responsive= {{
             0: {
                 items: 1,
@@ -69,7 +70,7 @@ export default function Eventpage() {
             />
             </div>
           </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
+          <div className='col-lg-6 col-md-6 col-sm-6'>
           <div className='Carousel-detail'>
           <div className='title'>
           <h5>Celebrating Women in Leadership</h5>
@@ -112,7 +113,9 @@ export default function Eventpage() {
     </div>
    
 </OwlCarousel>
-<OwlCarousel className='owl-theme' loop margin={10}  responsiveClass={true} nav={false}
+</div>
+<div className='container'>
+<OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
          responsive= {{
             0: {
                 items: 1,
@@ -213,6 +216,7 @@ export default function Eventpage() {
     </div>
    
 </OwlCarousel>
+</div>
     </div>
   )
 }

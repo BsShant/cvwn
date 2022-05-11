@@ -44,7 +44,7 @@ export default function Footer() {
                         <span className='newsletter-txt'>
                         Stay Upto Date With VOW News, Programs And Appeals
                         </span>
-                        <form>
+                        <form className='mail'>
                             <input type='email' placeholder='Your email address' name='email'/>
                            <CustomButton children="Subscribe"/>
                         </form>

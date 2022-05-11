@@ -13,8 +13,10 @@
             margin-bottom: 20px;
             padding: 8px 10px;
             font-size: 10px;
-            border: 1.5px solid #212529;
-            border-color:rgba(0,0,0,0.5);
+            background-color: #e8380226;
+            border:none;
+            // border: 1.5px solid #212529;
+            // border-color:rgba(0,0,0,0.5);
             border-radius: 5px;
             width: 100%;
             
@@ -35,10 +37,12 @@
         margin-top: 10px;
         padding-top: 10px;
         padding-left: 10px;
-        border: 1.5px solid #212529;
+        border:none;
+        background-color: #e8380226;
+        // border: 1.5px solid #212529;
         border-color:rgba(0,0,0,0.5);
 
-        border-radius: 5px;
+        // border-radius: 5px;
     }
     .textAreazcont{
         width: 100%;
