@@ -1,8 +1,10 @@
 import React from 'react'
+import Image1 from './project-2.JPG'
 
 function Project1About() {
   return (
     <div>
+
         <p>This project seeks to address the injustice and grievances experienced by conflict-affected
 women due to the impact of conflict. These injustices and grievances are not only limited to the
 political space but in the social and economic spaces as well. For this, we want to build the

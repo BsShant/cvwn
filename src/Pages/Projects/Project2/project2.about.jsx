@@ -3,6 +3,7 @@ import React from 'react'
 function Project2About() {
   return (
     <div>
+
         <p>This is a short term project funded by United Nations Development Programme (UNDP). The
 project consist of 4 programs i.e. Orientation to stakeholders, Livelihood training to conflict
 victim, Enterprise plan development training and Experience and Knowledge Sharing Program.

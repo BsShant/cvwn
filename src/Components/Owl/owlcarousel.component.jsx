@@ -1,6 +1,7 @@
 import React from 'react'
 import OwlCarousel from 'react-owl-carousel';
-import './owlcarousel.styles.scss'
+import './owlcarousel.styles.scss';
+import image1 from '../../assets/event4.jpg'
 
 
 export default function EventCarousel() {
@@ -34,7 +35,7 @@ export default function EventCarousel() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src="https://www.voicesofwomenmedia.org/wp-content/uploads/2022/03/celebrating-95x100.jpg"
+             src={image1}
             alt="First slide"
             />
             </div>
@@ -60,7 +61,7 @@ export default function EventCarousel() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src="https://www.voicesofwomenmedia.org/wp-content/uploads/2022/03/celebrating-95x100.jpg"
+             src={image1}
             alt="First slide"
             />
             </div>
@@ -86,7 +87,7 @@ export default function EventCarousel() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src="https://www.voicesofwomenmedia.org/wp-content/uploads/2022/03/celebrating-95x100.jpg"
+             src={image1}
             alt="First slide"
             />
             </div>

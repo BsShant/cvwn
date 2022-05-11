@@ -54,3 +54,32 @@
     }
    
 }
+.announcementCard{
+    text-align:left;
+}
+.announcementRow{
+    margin-bottom:3%;
+}
+hr{
+    margin:0px 0px 10px 0px;
+    color:#e83802;
+}
+.title{
+    color:#e83802;
+    font-size:19px;
+}
+.title:hover{
+
+}
+.base-title{
+    font-size:12px;
+padding-bottom:1%;
+    color:#e83802;
+}
+.announcementCol{
+    width:80%;
+    margin:auto;
+}
+.announcementRow:hover{
+    background-color: rgba(237, 88, 43, 0.09);
+}

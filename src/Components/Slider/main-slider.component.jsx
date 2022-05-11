@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import Hero1 from '../../assets/hero-1.jpg';
+import Hero4 from '../../assets/hero-1.jpg';
 import Hero2 from '../../assets/hero-2.jpg';
 import Hero3 from '../../assets/hero-3.jpg';
-import Hero4 from '../../assets/hero-4.jpg';
+import Hero1 from '../../assets/hero-4.jpg';
 import Hero5 from '../../assets/hero-5.jpg';
 import Hero6 from '../../assets/hero-6.jpg';
 
