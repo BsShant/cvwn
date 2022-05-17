@@ -1,118 +1,45 @@
 import React from 'react'
-import { Carousel } from 'react-bootstrap';
+import OwlCarousel from 'react-owl-carousel';
 import './main-content.styles.scss';
 import image1 from '../../assets/events/event1.jpg';
 import image2 from '../../assets/events/event2.jpg';
 import image3 from '../../assets/events/event3.jpg'
+import EventCard from '../eventcardComponent/eventCard';
 
 
-export default function EventSection() {
+export default function EventSectionFront() {
   return (
       <div className='container'>
     <div className=" Event-section ">
        
             <h2>EVENTS</h2>
             
-            <div className='row event-row'>
-            <div className='event1 col-lg-12 col-md-12 col-sm-12 '>
-                
-                    <Carousel interval={null} arrow={false} className='eventOverlay'>
-  
-             <Carousel.Item >
-         <div className='row'>
-          <div className='col-lg-5 col-md-5 '>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image1}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 '>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
+            <OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
+         responsive= {{
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            700: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
     
-  </Carousel.Item>
-  <Carousel.Item  className='eventOverlay'>
-      <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-      <img
-      className="d-block w-100"
-      src={image2}
-      />
-      </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-      
-      
-    
-    
-  </Carousel.Item>
-  <Carousel.Item >
-  <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-      <img
-      className="d-block w-100"
-      src={image3}
-      alt="Third slide"
-      />
-      </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Shared Journeys Virtual Exhibition -2021</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    
-  </Carousel.Item>
-                    </Carousel>
-              
-               
-            </div>
-            
-            <div className='event2 col-lg-3 col-md-6 col-sm-12'>
-                <img src=''/>
-            </div>
-            <div className='event2 col-lg-3 col-md-6 col-sm-12'>
-                <img src=''/>
-            </div>
-            </div> 
+            }
+        }}
+        >
+  <EventCard image={image2} title="Women in Leadership" date="1 April 2022" sponser="Tata"/>
+  <EventCard image={image3} title="१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण" date="1 April 2022" sponser="Tata"/>
+  <EventCard image={image1} title="Strengthening Women Voice" date="1 May 2022" sponser="Login"/>
+ 
+   
+</OwlCarousel>
         
             </div>
         </div> 

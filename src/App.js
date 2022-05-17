@@ -23,6 +23,7 @@ import AnnouncementPage from './Pages/Get Involved/Announcement/announcement.com
 import VolunteerPage from './Pages/Get Involved/VolunteerPage/volunteer.component';
 import DonatePage from './Pages/Get Involved/Donate Page/donate.components';
 import Articlepage from './Pages/Resources/Article/article';
+import EventDescription from './Components/eventcardComponent/EventDescription/eventDescription';
 
 function App() {
   useEffect(()=>{
@@ -39,8 +40,9 @@ function App() {
       <Route path="/events" element={<Eventpage/>} />
       <Route path="/events/event-page" element={<Event1Component/>} />
       <Route path="/events/event2" element={<Event2Component/>} />
-      <Route path="/resources/annual_report" element={<AnnualReportPage/>} />
-      <Route path="/resources/case_study_report" element={<CaseStudyReportPage/>} />
+      <Route path="/resources/annual-report" element={<AnnualReportPage/>} />
+      <Route path="/events/events-description/:id" element={<EventDescription/>}/>
+      <Route path="/resources/case-study-report" element={<CaseStudyReportPage/>} />
       <Route path="/resources/article" element={<Articlepage />} />
       <Route path="/get-involved/announcement" element={<AnnouncementPage/>} />
       <Route path="/get-involved/volunteer" element={<VolunteerPage/>} />

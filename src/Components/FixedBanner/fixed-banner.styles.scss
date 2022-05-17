@@ -15,20 +15,18 @@ background-position:center;
    z-index: 1;
 
    .main-btnn{
-       background-color: var(--web-theme);
-       color: white;
-       border: 1px solid var(--web-theme);
-    //    border-radius: 50px;
-       padding-left: 5%;
-       padding-right: 5%;
-       padding-top: 10px;
-       padding-bottom: 13px;
-       margin-top: 30px;
-       z-index: 999;
+    background-color:rgb(232, 56, 2) ;
+    color: white;
+    border: 2px solid var(--web-theme);
+    padding: 7px 10px 8px 10px;
+    transition: 1s;
+    margin-bottom:5%;
+    height:100%;
    }
    .main-btnn:hover{
-       background-color: #1E1E1E;
-       border-color: white;
+    background-color:rgb(83, 20, 1) ;
+    border: 2px solid var(--web-theme);
+    transition: 1s;
    }
    
 }

@@ -5,8 +5,9 @@ import OwlCarousel from 'react-owl-carousel';
 import image1 from '../../assets/events/event1.jpg';
 import image2 from '../../assets/events/event2.jpg';
 import image3 from '../../assets/events/event3.jpg'
+import EventCard from '../../Components/eventcardComponent/eventCard';
 
-
+import { eventData } from '../../assets/dummyData/eventsData';
 
 export default function Eventpage() {
   return (
@@ -33,85 +34,10 @@ export default function Eventpage() {
             }
         }}
         >
-    <div class='item'>
-        
-        <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5 '>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image1}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
-    <div class='item'>
-    <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image2}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-6 col-md-6 col-sm-6'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
-    <div class='item'>
-    <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image3}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
+  <EventCard id={eventData[0].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login"/>
+  <EventCard id={eventData[1].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
+  <EventCard id={eventData[2].id} image={image3} title="Shared Journeys Virtual Exhibition -2021" date="1 April 2022" sponsor="Tata" />
+ 
    
 </OwlCarousel>
 </div>
@@ -136,85 +62,10 @@ export default function Eventpage() {
             }
         }}
         >
-    <div class='item'>
-        
-        <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5 '>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image3}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
-    <div class='item'>
-    <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image2}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
-    <div class='item'>
-    <div className='row'>
-          <div className='col-lg-5 col-md-5 col-sm-5'>
-          <div className='Carousel-img'>
-             <img
-              className="d-block w-100"
-             src={image1}
-            alt="First slide"
-            />
-            </div>
-          </div>
-          <div className='col-lg-7 col-md-7 col-sm-7'>
-          <div className='Carousel-detail'>
-          <div className='title'>
-          <h5>Celebrating Women in Leadership</h5>
-          </div>
-          <div className='footer'>
-          <span><i className='fas fa-globe px-2'/>VOW media</span>
-          <span><i className='fas fa-calendar-week px-2'/>4 April 2022</span>
-          </div>
-          
-          
-      </div>
-          </div>
-      </div>
-    </div>
+  <EventCard id={eventData[3].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
+  <EventCard id={eventData[4].id} image={image3} title="१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण" date="1 April 2022" sponsor="Tata" />
+  <EventCard id={eventData[5].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login" />
+ 
    
 </OwlCarousel>
 </div>

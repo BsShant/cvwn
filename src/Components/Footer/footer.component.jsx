@@ -8,19 +8,20 @@ export default function Footer() {
   return (
     <div className='container-fluid footer-section'>
         <div className='container footer-info'>
-            <div className="row" style={{paddingBottom:"15px"}}>
+            <div className="row" >
                 <div className="col-lg-8 col-md-8">
                     <div className='row'>
-                        <div className="col-2">
-                         <p>Conflict Victims' Women<br/> National Network</p>
+                        <div className="col-3" style={{paddingBottom:"15px"}}>
+                         <p>Conflict Victims' Women National Network</p>
 
-                           
+                           <div className='container' style={{marginLeft:"0px",width:"80%",paddingLeft:"0px"}}>
 
                             <div className='outer-frame'>
-                                <div className="inner-frame">
+                                {/* <div className="inner-frame"> */}
                                 <img src={Logo} className='img-fluid'style={{backgroundColor:"wihte"}} />
 
-                                </div>
+                                {/* </div> */}
+                            </div>
                             </div>
                                 {/* <div style={{backgroundColor:"blue"}}>
                             <div className='inner-frame' >
@@ -29,7 +30,7 @@ export default function Footer() {
                             </div> */}
                         </div>
 
-                        <div className="col-2">
+                        <div className="col-1">
 {/* 
 <p>STRENGTHENING VOICES</p>
 
@@ -46,7 +47,7 @@ export default function Footer() {
 </div> */}
 </div>
                         
-                        <div className="col-4 touch">
+                        <div className="col-3 touch">
                         <p>GET IN TOUCH</p>
                         
                             <span className='details'>Hanuman Dhoka, Kathmandu, Nepal<br/></span>
@@ -54,7 +55,8 @@ export default function Footer() {
                             <span className='details'>cvwnnepal@gmail.com</span>
                         
                         </div>
-                        <div className="col-4">
+                        <div className="col-1"></div>
+                        <div className="col-3">
                         <p>SITEMAP</p>
                        <div className='sitemap'>
                         <Link  className="nav-link sitemap" id="offcanvasRight" to='/'  aria-expanded="false" >
@@ -116,15 +118,16 @@ export default function Footer() {
           </div>
                        
                         </div>
+                        <div className="col-1"></div>
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-4 newsletter-section">
                     <div className='newsletter'>
                         <p>CONNECT WITH US</p>
                         <div className='social-icon'>
-                        <a href='https://www.facebook.com/cvwnn'> <i className='fab fa-facebook-f facebook'/></a>
-                        <a href='https://www.instagram.com/cvwnnepal/'> <i className='fab fa-instagram instagram'/></a>
-                        <a href='https://twitter.com/Cvwnnepal'> <i className='fab fa-twitter twitter'/></a>
+                        <a href='https://www.facebook.com/cvwnn'> <i className='fab fa-facebook-f facebookicon'/></a>
+                        <a href='https://www.instagram.com/cvwnnepal/'> <i className='fab fa-instagram instagramicon'/></a>
+                        <a href='https://twitter.com/Cvwnnepal'> <i className='fab fa-twitter twittericon'/></a>
                         </div>
                         {/* <span className='newsletter-txt'>
                         Stay Upto Date With VOW News, Programs And Appeals
