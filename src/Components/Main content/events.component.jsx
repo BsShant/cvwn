@@ -1,6 +1,9 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap';
-import './main-content.styles.scss'
+import './main-content.styles.scss';
+import image1 from '../../assets/events/event1.jpg';
+import image2 from '../../assets/events/event2.jpg';
+import image3 from '../../assets/events/event3.jpg'
 
 
 export default function EventSection() {
@@ -21,7 +24,7 @@ export default function EventSection() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src="https://www.voicesofwomenmedia.org/wp-content/uploads/2022/03/celebrating-95x100.jpg"
+             src={image1}
             alt="First slide"
             />
             </div>
@@ -48,8 +51,7 @@ export default function EventSection() {
           <div className='Carousel-img'>
       <img
       className="d-block w-100"
-      src="https://www.voicesofwomenmedia.org/wp-content/uploads/2021/10/Dhanusha5_ZoomPoster-95x100.jpg"
-      alt="Third slide"
+      src={image2}
       />
       </div>
           </div>
@@ -78,7 +80,7 @@ export default function EventSection() {
           <div className='Carousel-img'>
       <img
       className="d-block w-100"
-      src="https://www.voicesofwomenmedia.org/wp-content/uploads/2021/07/2D3CF4B3-346B-420A-9CE6-18238E5E983E-95x100.png"
+      src={image3}
       alt="Third slide"
       />
       </div>

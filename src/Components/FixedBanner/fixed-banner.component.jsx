@@ -2,6 +2,7 @@ import './fixed-banner.styles.scss'
 import DonationForm from '../Donation Form/donation.form.component'
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Fixedbanner() {
   return (
@@ -15,7 +16,7 @@ export default function Fixedbanner() {
           </div>
         </div>
         <div class="col-lg-12 col-md-12 mt-lg-0 mt-4">
-          <button class="main-btnn">Donate Now!  </button>
+          <Link class="main-btnn" to='./get-involved/donate' style={{textDecoration:'none'}}>Donate Now!  </Link>
         </div>
       </div>
     </div>

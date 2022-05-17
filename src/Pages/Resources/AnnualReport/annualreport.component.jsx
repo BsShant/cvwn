@@ -12,7 +12,7 @@ export default function AnnualReportPage() {
   return (
     <div className='annualReport'>
         <h2>Annual Reports</h2>
-
+<div className='container'>
         <div className='row'>
             <div className='col-lg-4 col-md-6 col-sm-6'>
             <div className='report-container'  data-aos="fade-right">
@@ -35,6 +35,7 @@ export default function AnnualReportPage() {
             <div className='col-lg-4 col-md-6 col-sm-6'>
                 <ReportComponent report_type={'Annual Report'} year={2016} image={image6}/>
             </div>
+        </div>
         </div>
     </div>
   )

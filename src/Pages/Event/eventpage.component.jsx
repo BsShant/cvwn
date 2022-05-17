@@ -3,7 +3,8 @@ import EventSection from './event.component'
 import './eventpage.styles.scss'
 import OwlCarousel from 'react-owl-carousel';
 import image1 from '../../assets/events/event1.jpg';
-import image2 from '../../assets/events/event2.jpg'
+import image2 from '../../assets/events/event2.jpg';
+import image3 from '../../assets/events/event3.jpg'
 
 
 
@@ -39,7 +40,7 @@ export default function Eventpage() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src={image2}
+             src={image1}
             alt="First slide"
             />
             </div>
@@ -91,7 +92,7 @@ export default function Eventpage() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src={image2}
+             src={image3}
             alt="First slide"
             />
             </div>
@@ -142,7 +143,7 @@ export default function Eventpage() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src={image1}
+             src={image3}
             alt="First slide"
             />
             </div>
@@ -168,7 +169,7 @@ export default function Eventpage() {
           <div className='Carousel-img'>
              <img
               className="d-block w-100"
-             src={image1}
+             src={image2}
             alt="First slide"
             />
             </div>

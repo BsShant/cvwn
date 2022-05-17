@@ -22,11 +22,12 @@ export default function DonationForm() {
                     <div className="col-lg-12" style={{ margin: "auto" }}>
                         <span className='title tittle'>Donate via your preferred method</span>
                     </div>
-                    <div className="col-lg-12">
+                    <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                         <div className='finance-friends'>
                             <img  onClick={() => setShowEsewa(true)} src={Esewa} height={70} width={70} />
                            <img onClick={() => setShowKhalti(true)} src={Khalti} height={100} width={100} style={{ marginLeft: "40px" }} />
                          <img onClick={() => setShowBank(true)}  src={NicAsia} height={140} width={140} />
+                         {/* <div>Tap on the icon to view descriptions</div> */}
 
                             <Modal
                                 show={showEsewa}
@@ -35,15 +36,24 @@ export default function DonationForm() {
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
                             >
-                                <div className='finance-panel'>
-                                    <div className='image'>
+                                <div className='finance-panel' style={{width:"100%"}}>
+                                   
+<div className='row'style={{margin:"5%"}}>
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6 '>
+    <div className='image'>
                                         <img src={Esewa} height={50} width={50}/>
                                     </div>
-<div style={{margin:"5%"}}>
-You will be redirected to your eSewa account to complete your payment:
+    </div>
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6' style={{borderLeft:"3px solid green",paddingLeft:"8%"}}>
+    <div style={{marginTop:"22%"}}>
+<b>Esewa Credentials</b><br/>
 <br/>
-<br/>
-Login to your eSewa account using your eSewa ID and your Password<br/>
+<p style={{fontSize:"14px"}}><b>
+Esewa Id : 9803666989<br/>
+Name: CVWN</b></p><br/>
+</div>
+
+</div>
 </div>
 
 
@@ -56,11 +66,25 @@ Login to your eSewa account using your eSewa ID and your Password<br/>
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
                             >
-                                <div className='finance-panel'>
-                                    <div className='image'>
+                                <div className='finance-panel'style={{width:"100%"}}>
+                                   
+                                    <div className='row'style={{margin:"5%"}}>
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6 '>
+    <div className='image'>
                                         <img src={Khalti} height={50} width={50}/>
                                     </div>
-  
+    </div>
+
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6' style={{borderLeft:"3px solid purple",paddingLeft:"8%"}}>
+    <div style={{marginTop:"22%"}}>
+
+<b>Khalti Credentials</b><br/>
+<br/><p style={{fontSize:"14px"}}><b>
+Khalti Id : 9803666989<br/>
+Name: CVWN</b></p><br/>
+</div>
+</div>
+</div>
                                     </div>
                             </Modal>
                             <Modal
@@ -70,11 +94,24 @@ Login to your eSewa account using your eSewa ID and your Password<br/>
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
                             >
-                                <div className='finance-panel'>
-                                    <div className='image'>
-                                        <img src={NicAsia} height={50} width={50}/>
+                                <div className='finance-panel'style={{width:"100%"}}>
+                                  
+                                    <div className='row'style={{margin:"5%"}}>
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6 '>
+    <div className='image1' style={{marginTop:"24%",marginLeft:"15%", height:"125px",width:"125px"}}>
+                                        <img src={NicAsia} height={125} width={125}/>
                                     </div>
- 
+    </div>
+    <div className='col-6 col-lg-6 col-sm-6 col-md-6' style={{borderLeft:"3px solid red",paddingLeft:"8%"}}>
+    <div style={{marginTop:"22%"}}>
+
+<b>Bank Credentials</b><br/>
+<br/>
+<p style={{fontSize:"14px"}}><b>Account NO: 9803 6669 8900<br/>
+Name: CVWN</b></p><br/>
+</div>
+</div>
+</div>
                                     </div>
                             </Modal>
 
@@ -82,6 +119,11 @@ Login to your eSewa account using your eSewa ID and your Password<br/>
                         </div>
 
                     </div>
+                    <div className="col-lg-6 col-md-6 col-sm-12 col-12" style={{display:"flex"}}>
+                    <div className='tap-to-view'><i class="fas fa-arrow-left leftarrow d-none d-sm-none d-lg-block d-md-block"></i><i class="fas fa-arrow-up uparrow d-sm-block d-lg-none d-md-none"></i>Tap on the icon to view descriptions</div>
+
+                    </div>
+
                 </div>
                 <h4 style={{marginBottom:"3%",marginTop:"30px",fontSize:"22px"}}>Submit your detail after donating</h4>
                 <div className="row inputRow">
@@ -131,11 +173,12 @@ Login to your eSewa account using your eSewa ID and your Password<br/>
             </div>
             <h6 style={{color:"#e83802"}}>Please drop the screenshot of payment</h6>
 <UploadImage/>
-            <div className='Checkbox'>
-                <input type="checkbox" name="selectedbox" />
-                <label for="selectedbox"> I give my consent for authorized representatives of Smile Foundation
-                    to contact me occasionally by mobile and email for informing on the latest developments and updated offerings.
-                </label>
+<div className='infoContainer'>
+                <p>Please share your personal <span >Email ID, Mobile Number and Address </span>. so that we can send you the reciept certificate
+                    & share updates on our programmes with you.<br></br>
+                    <span > To know more please sms SF to 56161</span><br></br>
+                    <span> (Registration No. - 6382)</span>
+                </p>
             </div>
             <div>
                 <CustomButton children={'Submit'} />
@@ -143,22 +186,10 @@ Login to your eSewa account using your eSewa ID and your Password<br/>
 
             {/*----------info div-------------*/}
 
-            <div className='infoContainer'>
-                <p>Please share your personal <span >Email ID, Mobile Number and Address </span>. so that we can send you the reciept certificate
-                    & share updates on our programmes with you.<br></br>
-                    <span > To know more please sms SF to 56161</span><br></br>
-                    <span> (Registration No. - 6382)</span>
-                </p>
-            </div>
+            
 
             {/*----------contact div-------------*/}
 
-            <div className='contactContainer'>
-                <p>For more information contact:<br></br>
-                    Email:<span> cvwnnepal@gmail.com </span><br></br>
-                    Phone: +01 16555, Mob: +977 9841485364
-                </p>
-            </div>
         </div>
     )
 }

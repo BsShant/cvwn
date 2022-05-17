@@ -3,20 +3,21 @@
 .contactForm{
     
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     padding: 30px 0;
     .inputSection{
         justify-content: space-around;
         width: 100%;
     display: flex;
         input{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 8px 10px;
             font-size: 10px;
-            background-color: #e8380226;
-            border:none;
-            // border: 1.5px solid #212529;
-            // border-color:rgba(0,0,0,0.5);
+            border:1px solid #e83802;
+            // border-color:#e83802;
+            // background-color: #e8380226;
+            // border:none;
+       
             border-radius: 5px;
             width: 100%;
             
@@ -36,11 +37,14 @@
         min-height: 200px;
         margin-top: 10px;
         padding-top: 10px;
+        
         padding-left: 10px;
-        border:none;
-        background-color: #e8380226;
+        // border:none;
+        border:1px solid #e83802;
+        border-radius: 5px;
+        // background-color: #e8380226;
         // border: 1.5px solid #212529;
-        border-color:rgba(0,0,0,0.5);
+        // border-color:rgba(0,0,0,0.5);
 
         // border-radius: 5px;
     }
@@ -54,3 +58,61 @@
     
 }
 }
+
+.googleMap{
+    position: relative;
+
+    
+   
+}
+iframe{
+    z-index: 2;
+    position: relative;
+    padding-right: 10px;
+}
+
+    .map-bg{
+    position: absolute;
+    background-color: orangered;
+    top: -55px;
+    left: 425px;
+    z-index: 1;
+    width: 40%;
+    height: 55%;
+    }
+    .map-container{
+        // background-color: #e83802;
+        // margin-top: -15%;
+        /* margin: 10%; */
+        // padding-right: 50px;
+        // padding-top: 40px;
+        /* width: 50vh; */
+        // height: 50vh;
+    }
+    @media(max-width:992px){
+        .map-bg{
+            left:200px;
+            width:60%;
+        }
+    }
+    @media(max-width:1200px) and (min-width:992px){
+      .map-bg{
+        left:307px;
+        width:45%;
+      }  
+    }
+    @media(max-width:992px){
+        .map-bg{
+            left:382px;
+            width:38%;
+        }
+    }
+    .contact{
+        background-image: url('../../assets/texture.png');
+    }
+    // hr{
+    //     height: 3px!important;
+    //     width: 20%;
+    //     background: #e83802;
+    //     opacity: 1;
+    // }

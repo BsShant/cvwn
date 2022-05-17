@@ -10,7 +10,7 @@ export default function CaseStudyReportPage() {
     <div className='annualReport'>
         <h2>Case Studies Reports</h2>
 
-        <div className='row'>
+        <div className='row' style={{width:"89%",margin:"auto"}}>
             <div className='col-lg-4 col-md-6 col-sm-6'>
             <div className='report-container'  data-aos="fade-right">
             <ReportComponent report_type={'Case Studies Report'} year={2021} image={image1}/>

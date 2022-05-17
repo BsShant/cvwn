@@ -21,7 +21,7 @@ export default function MenuBar() {
             <div className="col-lg-9 col-md-10  col-xl-9  info" style={{marginLeft:"-4%"}}>
                 <div className='row top-section'>
                     <div className='col-lg-4 col-md-4 col-xl-4  mail ' ><i className='fas fa-envelope'></i><span className='mailT'>cvwnnepal@gmail.com</span></div>
-                    <div className='col-lg-4 col-md-5 col-xl-3 contact'><i className='fas fa-phone'></i><span className='mailTt'>+977 9841485364</span></div>
+                    <div className='col-lg-4 col-md-5 col-xl-3 contact' style={{background:"transparent"}}><i className='fas fa-phone'></i><span className='mailTt'>+977 9841485364</span></div>
                     <div className='social col-lg-4 col-md-2 col-xl-3  '>
                         <a href='https://www.facebook.com/cvwnn'><i className='fab fa-facebook-f'></i></a> 
                         <a href='https://www.instagram.com/cvwnnepal/'><i className='fab fa-instagram'></i></a> 

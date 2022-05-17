@@ -12,7 +12,7 @@ export default function Articlepage() {
         
         <h2>Our Articles</h2>
 
-        <div className='row'>
+        <div className='row' style={{width:"89%",margin:"auto"}}>
           <div className='col-lg-4 col-md-6 col-sm-6'>
             <EventSection eventimage={image}
                eventtitle={'Strengthening Access to Justice'}

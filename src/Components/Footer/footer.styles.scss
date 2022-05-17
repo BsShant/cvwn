@@ -57,7 +57,9 @@
            }
 
            .social-icon{
-               margin-bottom: 20px;
+               margin-bottom: 30px;
+               border-bottom:3px solid #e83802;
+               padding-bottom:15px;
                a{
                    text-decoration: none;
                }
@@ -82,7 +84,7 @@
     }
     }
     .img-fluid{
-        width: 60%;
+        width: 100%;
         padding-bottom: 20px;
     }
     p{
@@ -137,4 +139,81 @@
     font-size: 11px !important;
     
    }
+}
+.sitemap{
+    color:white;
+    text-align: left;
+    padding:0px;
+    padding-bottom:0px!important;
+}
+.sitemap .nav-link:hover{
+    display: inline;
+    width: auto;
+}
+.sitemap .nav-link:hover{
+    color:blue;
+}
+.outer-frame{
+    // border-color:black!important;
+    // background-color:white;
+    border:5px solid white;
+    padding:5px;
+}
+.inner-frame{
+    border-color:black!important;
+    background-color:white;
+}
+// .contact-btn{
+//     color: white !important;
+//     background-color: #e83802;
+//     padding:10px;
+// }
+.contact-btn{
+
+    .main-btnn{
+        background-color:rgb(232, 56, 2) ;
+        color: white;
+        border: 2px solid var(--web-theme);
+        padding: 7px 10px 8px 10px;
+        transition: 1s;
+        margin-bottom:5%;
+        height:100%;
+    }:hover{
+        background-color:rgb(83, 20, 1) ;
+        border: 2px solid var(--web-theme);
+        transition: 1s;
+        
+    }
+
+    
+}
+
+
+.facebook{
+  animation: fb 1000ms infinite linear;
+  animation-direction: alternate;
+  animation-delay: 0ms; 
+}
+
+.instagram{
+    animation: fb 1000ms infinite linear;
+    animation-direction: alternate;  
+    animation-delay: 300ms; 
+   
+}
+.twitter{
+    animation: fb 1000ms infinite linear;
+    animation-direction: alternate; 
+    animation-delay: 600ms; 
+
+
+}
+@keyframes fb {
+  0% {
+    transform: translateY(-20px)
+  }
+
+  100% {
+    transform: translateY(10px)
+  }
 }
