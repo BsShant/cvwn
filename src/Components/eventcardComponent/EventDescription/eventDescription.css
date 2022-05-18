@@ -1,0 +1,81 @@
+
+.eventpage-section{
+opacity: 1;
+position: relative;
+z-index: 1;
+}
+
+
+
+.eventpage-section::after{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+
+
+
+.title h2{
+    display: flex;
+    justify-content: center;
+text-align: center;
+    align-items: center;
+}
+.title{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+}
+.main-contents{
+    /* height: 100vh;
+    display: flex;
+    justify-content: center;   */
+  width:70%;
+  margin:auto;
+}
+.event-desc{
+    color:white;
+}
+.event-row{
+    color: white;
+    background-color: #e9886b;
+    /* font-size: 10px; */
+    margin-top:5%;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+.JoinusButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.joinButton{
+        background-color:rgb(232, 56, 2) ;
+        color: white;
+        border: 2px solid var(--web-theme);
+        padding: 7px 10px 8px 10px;
+        transition: 1s;
+        /* margin-bottom:5%; */
+        height:100%;
+    }
+.joinButton:hover{
+        background-color:rgb(83, 20, 1) ;
+        border: 2px solid var(--web-theme);
+        transition: 1s;
+        
+    }
+    .JoinusButton .modal-content{
+        background-color: red;
+    }
+    form input{
+        margin-bottom: 15px;
+    }
+
+    

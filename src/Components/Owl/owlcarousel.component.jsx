@@ -1,10 +1,11 @@
 import React from 'react'
 import OwlCarousel from 'react-owl-carousel';
 import './owlcarousel.styles.scss';
-import image1 from '../../assets/event4.jpg'
-import image2 from '../../assets/event1.jpg'
-import image3 from '../../assets/events/event1.jpg'
+import image1 from '../../assets/events/event1.jpg';
+import image2 from '../../assets/events/event2.jpg';
+import image3 from '../../assets/events/event3.jpg'
 import EventCard from '../eventcardComponent/eventCard';
+import { eventData } from '../../assets/dummyData/eventsData';
 
 
 export default function EventCarousel() {
@@ -32,9 +33,9 @@ export default function EventCarousel() {
             }
         }}
         >
-   <EventCard image={image1} title="Strengthening Women Voice" date="1 May 2022" sponser="Login"/>
-  <EventCard image={image2} title="Women in Leadership" date="1 April 2022" sponser="Tata"/>
-  <EventCard image={image3} title="Shared Journeys Virtual Exhibition -2021" date="1 April 2022" sponser="Tata"/>
+   <EventCard id={eventData[0].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login"/>
+  <EventCard id={eventData[1].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
+  <EventCard id={eventData[2].id} image={image3} title="Shared Journeys Virtual Exhibition -2021" date="1 April 2022" sponsor="Tata" />
    
 </OwlCarousel>
 </div>

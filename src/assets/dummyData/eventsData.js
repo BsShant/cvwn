@@ -6,6 +6,9 @@ export const eventData = [
         id:1,
         title:"Strengthening Women Voice",
         image: image1,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 May 2022",
         sponsor:"Login"
     },
@@ -13,6 +16,9 @@ export const eventData = [
         id:2,
         title:"Women in Leadership",
         image: image2,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 April 2022",
         sponsor:"Tata"
     },
@@ -20,6 +26,9 @@ export const eventData = [
         id:3,
         title:"१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण",
         image: image3,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 April 2022",
         sponsor:"Tata"
     },
@@ -27,6 +36,9 @@ export const eventData = [
         id:4,
         title:"Women in Leadership",
         image: image2,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 April 2022",
         sponsor:"Tata"
     },
@@ -34,6 +46,9 @@ export const eventData = [
         id:5,
         title:"१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण",
         image: image3,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 April 2022",
         sponsor:"Tata"
     },
@@ -41,6 +56,9 @@ export const eventData = [
         id:6,
         title:"Strengthening Women Voice",
         image: image1,
+        time:"10 AM",
+        location:"Ratobhale, Kathmandu",
+        description:"An event description is a text or copy that tells audiences all the essential details about your event. These details should come together so that it compels potential attendees to register. But more than driving up attendance, a good event description can pique the interest of non-members and even the press.",
         date:"1 May 2022",
         sponsor:"Login"
     }

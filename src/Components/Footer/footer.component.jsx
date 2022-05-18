@@ -14,7 +14,7 @@ export default function Footer() {
                         <div className="col-3" style={{paddingBottom:"15px"}}>
                          <p>Conflict Victims' Women National Network</p>
 
-                           <div className='container' style={{marginLeft:"0px",width:"80%",paddingLeft:"0px"}}>
+                           <div className='container' style={{marginLeft:"0px",width:"60%",paddingLeft:"0px"}}>
 
                             <div className='outer-frame'>
                                 {/* <div className="inner-frame"> */}
