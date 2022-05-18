@@ -10,8 +10,8 @@ export default function ReportComponent({report_type, year, image}) {
      
      
        
-       <div className='reportImage'>
-           <img src={image} alt='report image'/>
+       <div className='reportImage' style={{objectFit:"cover"}}>
+           <img src={image} alt='report image' style={{objectFit:"cover",height:"100%",width:"100%"}}/>
        </div>
        <div className='report-txt'><a href="#"> <h5> {report_type} {year}</h5></a></div>
        

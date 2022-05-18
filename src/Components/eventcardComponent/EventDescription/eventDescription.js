@@ -9,11 +9,11 @@ export default function EventDescription() {
     const [myEvent,setMyEvent] = useState(eventData.filter(event=>event.id==id)[0])
     console.log("my event", myEvent)
     return (
-        <div className="eventpage-section"style={{minHeight:"100vh",background:`url(${myEvent? myEvent.image : ""})`, backgroundSize:"cover",alignContent:"center"}}>
+        <div className="eventpage-section"style={{minHeight:"90vh",background:`url(${myEvent? myEvent.image : ""})`, backgroundSize:"cover",alignContent:"center",display:"flex"}}>
             <div className='main-contents'>
                 <div className='inner-main-contents'>
-            <div className='title'>
-                <h2>{myEvent.title}</h2>
+            <div className='Heading'>
+                <h1><b>{myEvent.title}</b></h1>
               
             </div>
             <div className='container'>
@@ -23,14 +23,15 @@ export default function EventDescription() {
 
             <div className='row event-row'>
                 <div className='col-4 col-lg-4 col-md-4 col-sm-4'>
-                    {myEvent.date}
+                <i class="fa fa-calendar" style={{marginRight:"10px"}} aria-hidden="true"></i>  {myEvent.date}
                 </div>
                 <div className='col-4 col-lg-4 col-md-4 col-sm-4'>
-                    {myEvent.time}
+                <i className='fas fa-clock' style={{marginRight:"10px"}}/>  {myEvent.time}
                     </div>
                     <div className='col-4 col-lg-4 col-md-4 col-sm-4'>
-                    {myEvent.location}
+                    <i className='far fa-location' style={{marginRight:"10px"}}/>  {myEvent.location}
                     </div>
+                    {/* <div className='col-4 col-lg-4 col-md-4 col-sm-4'></div> */}
             </div>
           </div>
 
@@ -44,15 +45,18 @@ export default function EventDescription() {
                                 centered
                             >
                                 <div className='eventjoin-panel' style={{width:"75%"}}>
+                                <div className='eventimage'>
+                                        <img src={myEvent.image} height={100} width={100}/>
+                                    </div>
                                    
                                 <div className='join-us-form'>
                         {/* <h3 style={{ textAlign: "left", fontWeight: "bold" }}> Us</h3>
                         <hr style={{height:"3px",width:"20%",background:"#e83802",opacity:"1"}}></hr> */}
-                        <h6 style={{ textAlign: "left" ,marginTop:"13px"}}>
+                        <h6 style={{ textAlign: "center" ,marginTop:"10%",marginBottom:"10%"}}>
 I would like to join your <q><b>{myEvent.title}</b></q> event 
 on <b>{myEvent.date}</b>.
- Please be kind to consider my request.<br/><br/>
-My required information can be seen below:
+ <br/><br/>
+ Please be kind to consider my request.
                         </h6>
 
                         <form className='joinusForm'>
@@ -81,7 +85,7 @@ My required information can be seen below:
 
 
                         </form>
-                        <button className='joinButton'  type='submit' style={{width:"100%",marginBottom:"10px"}}>Request for Invitation</button>
+                        <button className='joinButton'  type='submit' style={{width:"100%",marginBottom:"25%",marginTop:"10%"}}>Request for Invitation</button>
                        </div>
 
 

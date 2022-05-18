@@ -3,6 +3,7 @@ import './header.styles.scss'
 import NavBar from './Navbar/navBar.component'
 import Logo from'../../assets/Logo.png'
 import MenuToggle from './Toggle Header/menu2.components'
+import { Link } from 'react-router-dom'
 
 
 export default function MenuBar() {
@@ -14,7 +15,10 @@ export default function MenuBar() {
         <div className="row menu-row">
             <div className="col-lg-3 col-md-2 col-xl-3  logo-section" style={{display:"flex",justifyContent:"center"}}>
                 
+                
+                <Link  className="nav-link" id="navbarDropdownMenuLink" to='/'  aria-expanded="false" >
                 <img src={Logo} className='img-fluid'/>
+          </Link>
              
                 
             </div>

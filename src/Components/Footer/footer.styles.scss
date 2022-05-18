@@ -68,6 +68,8 @@
                    border-radius: 50%;
                    border: 2px solid lightgray;
                    padding: 12px;
+                   height:45px;
+                   width:45px;
                    margin-right: 4px;
                    cursor: pointer;
                    transition: 1s;
@@ -127,10 +129,16 @@
     }
 }
 
-@media(max-width:430px){
+@media(max-width:550px){
    .footer-section{
        p{
            font-size: 12px;
+       }
+       .sitemap{
+           font-size:11px;
+       }
+       .sitemap .nav-item a{
+           font-size:11px!important;
        }
    }
    .details{
@@ -153,6 +161,9 @@
 }
 .sitemap .nav-link:hover{
     color:black;
+}
+.sitemap .nav-link:active{
+    color: black !important;
 }
 .outer-frame{
     // border-color:black!important;
@@ -217,4 +228,9 @@
   100% {
     transform: translateY(10px)
   }
+}
+@media(max-width:768px){
+    .container-footer{
+        width: 100% !important;
+    }
 }

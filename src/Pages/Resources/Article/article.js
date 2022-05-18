@@ -1,7 +1,7 @@
 import React from 'react'
 import EventSection from './event.component'
 import './article.style.scss'
-import image from '../../../assets/event1.jpg'
+import image1 from '../../../assets/event1.jpg'
 import image2 from '../../../assets/event4.jpg'
 
 
@@ -14,7 +14,7 @@ export default function Articlepage() {
 
         <div className='row' style={{width:"89%",margin:"auto"}}>
           <div className='col-lg-4 col-md-6 col-sm-6'>
-            <EventSection eventimage={image}
+            <EventSection eventimage={image1}
                eventtitle={'Strengthening Access to Justice'}
                eventdetail={'This project seeks to address the injustice and grievances experienced by conflict-affected women due to the impact of conflict. These injustices and grievances...'}
             />
@@ -26,7 +26,7 @@ export default function Articlepage() {
             />
           </div>
           <div className='col-lg-4 col-md-6 col-sm-6'>
-          <EventSection eventimage={image}
+          <EventSection eventimage={image1}
                eventtitle={'Strengthening Access to Justice'}
                eventdetail={'This project seeks to address the injustice and grievances experienced by conflict-affected women due to the impact of conflict. These injustices and grievances...'}
             />
@@ -38,7 +38,7 @@ export default function Articlepage() {
             />
           </div>
           <div className='col-lg-4 col-md-6 col-sm-6'>
-            <EventSection eventimage={image}
+            <EventSection eventimage={image1}
                eventtitle={'Strengthening Access to Justice'}
                eventdetail={'This project seeks to address the injustice and grievances experienced by conflict-affected women due to the impact of conflict. These injustices and grievances...'}
             />

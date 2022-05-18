@@ -264,7 +264,7 @@
     }
    
 }
-@media(max-width:767px){
+@media(max-width:768px){
     .info {
         align-items: center;
         height: 100%;
@@ -327,5 +327,10 @@
 @media(max-width:816px) and (min-width:767px){
     .menu-bar{
         max-height: 112px !important;
+    }
+}
+@media(max-width:768px){
+    .menu-bar .menu-row .logo-section img{
+        width:130px;
     }
 }

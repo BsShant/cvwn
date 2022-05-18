@@ -49,6 +49,7 @@
         
         margin-right: 4px;
         margin-left: 4px;
+        display: none;
         
     }
 
@@ -126,4 +127,11 @@
            
         }
     }
+}
+.carousel-control-next{
+    display: none;
+}
+.carousel-control-prev{
+    display: none;
+
 }

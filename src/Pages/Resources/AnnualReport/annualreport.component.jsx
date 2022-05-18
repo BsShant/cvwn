@@ -1,11 +1,13 @@
 import React from 'react'
 import './annualreport.styles.scss'
-import image1 from '../../../assets/Resources/annual1.jpg'
-import image2 from '../../../assets/Resources/annual2.jpg'
-import image3 from '../../../assets/Resources/annual3.jpg'
-import image4 from '../../../assets/Resources/annual4.jpg'
-import image5 from '../../../assets/Resources/annual5.jpg'
-import image6 from '../../../assets/Resources/annual6.jpg'
+
+import image1 from '../../../assets/case-1.png'
+import image2 from '../../../assets/case-2.png'
+import image3 from '../../../assets/case-3.png'
+import image4 from '../../../assets/case-4.png'
+import image5 from '../../../assets/case-5.jpg'
+import image6 from '../../../assets/case-6.png'
+
 import ReportComponent from './report.component'
 
 export default function AnnualReportPage() {

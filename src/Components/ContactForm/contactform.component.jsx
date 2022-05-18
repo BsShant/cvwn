@@ -56,7 +56,7 @@ function ContactForm() {
 
 
                         </form>
-                        <div className='button' style={{ display: "flex", justifyContent: "left" }}>
+                        <div className='button send-btn' style={{ display: "flex", justifyContent: "left" }}>
                             <CustomButton children="Send Message" />
                         </div>
                     </div>

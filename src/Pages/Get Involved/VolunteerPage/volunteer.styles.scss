@@ -12,7 +12,7 @@ h2{
     color:#e83802;
     font-size: 44px;
     font-weight: 700;
-    text-shadow: 1px 1px 5px lightpink;
+    // text-shadow: 1px 1px 5px lightpink;
 }
 .Intel{
     margin-top:10%;
@@ -64,6 +64,12 @@ margin-top:5%;
   .items svg{
       margin-right:0px;
   }  
+  .items{
+    margin-bottom: 20px!important;
+  }
+  .volunteerContainer {
+    width: 100%;
+}
 }
 .items i{
   padding-right: 15px;
@@ -85,4 +91,11 @@ color:#d62976;
 }
 .items i.twitter:hover{
 color:#00acee;
+}
+@media(min-width:768px) and (max-width:992px){
+  .image-container img{
+    height:170px;
+    width:170px;
+  }
+
 }

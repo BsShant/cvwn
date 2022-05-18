@@ -116,3 +116,23 @@ iframe{
     //     background: #e83802;
     //     opacity: 1;
     // }
+    @media(max-width:460px){
+
+        .map-bg{
+            left: 336px;
+            width: 38%;
+            top: -30px;
+            height: 27%;
+        }
+    }
+    @media (max-width: 992px) and (min-width:768px){
+.map-bg {
+    left: 236px;
+    width: 40%;
+}
+    }
+    @media(max-width:768px){
+      .send-btn{
+          margin-bottom: 10%;
+      }
+    }

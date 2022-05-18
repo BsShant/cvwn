@@ -14,7 +14,7 @@ export default function Footer() {
                         <div className="col-3" style={{paddingBottom:"15px"}}>
                          <p>Conflict Victims' Women National Network</p>
 
-                           <div className='container' style={{marginLeft:"0px",width:"60%",paddingLeft:"0px"}}>
+                           <div className='container-footer' style={{marginLeft:"0px",width:"60%",paddingLeft:"0px"}}>
 
                             <div className='outer-frame'>
                                 {/* <div className="inner-frame"> */}
@@ -125,10 +125,12 @@ export default function Footer() {
                     <div className='newsletter'>
                         <p>CONNECT WITH US</p>
                         <div className='social-icon'>
-                        <a href='https://www.facebook.com/cvwnn'> <i className='fab fa-facebook-f facebookicon'/></a>
+                        <a href='https://www.facebook.com/cvwnn'><i className='fab fa-facebook-f facebookicon'/></a>
                         <a href='https://www.instagram.com/cvwnnepal/'> <i className='fab fa-instagram instagramicon'/></a>
                         <a href='https://twitter.com/Cvwnnepal'> <i className='fab fa-twitter twittericon'/></a>
                         </div>
+
+                        {/* <i className='fab fa-facebook-f facebookicon'/>  */}
                         {/* <span className='newsletter-txt'>
                         Stay Upto Date With VOW News, Programs And Appeals
                         </span> */}

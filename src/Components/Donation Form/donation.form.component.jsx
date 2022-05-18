@@ -20,7 +20,7 @@ export default function DonationForm() {
             <div className="donationSection">
             <div className="row">
                     <div className="col-lg-12" style={{ margin: "auto" }}>
-                        <span className='title tittle'>Donate via your preferred method</span>
+                        <span className='title tittle' style={{textAlign:"left",justifyContent:"left"}}>Donate via your preferred method</span>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                         <div className='finance-friends'>
@@ -40,7 +40,7 @@ export default function DonationForm() {
                                    
 <div className='row'style={{margin:"5%"}}>
     <div className='col-6 col-lg-6 col-sm-6 col-md-6 '>
-    <div className='image'>
+                                   <div className='image'>
                                         <img src={Esewa} height={50} width={50}/>
                                     </div>
     </div>
@@ -107,7 +107,7 @@ Name: CVWN</b></p><br/>
 
 <b>Bank Credentials</b><br/>
 <br/>
-<p style={{fontSize:"14px"}}><b>Account NO: 9803 6669 8900<br/>
+<p style={{fontSize:"14px"}}><b>Acc No: 9803 6669 8900<br/>
 Name: CVWN</b></p><br/>
 </div>
 </div>

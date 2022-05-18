@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function EventSection({eventimage, eventtitle, eventdetail}) {
   return (
-    <div className='eventSection '>
+      <div className='eventSection '>
         <div className="imgSection">
             <img src={eventimage} alt='event picture'/>
         </div>
