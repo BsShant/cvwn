@@ -1,0 +1,23 @@
+.google-auth-button {
+    background: transparent;
+    box-shadow: none !important;
+}
+
+.google-auth-button div {
+    margin-right: 10px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    /* background: grey; */
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
+}
+
+.google-auth-button span {
+    display: none!important;
+}

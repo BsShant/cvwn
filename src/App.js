@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 import HomePage from './Pages/homepage';
 import MenuBar from './Components/Header/header.components';
 import Footer from './Components/Footer/footer.component';
@@ -24,35 +24,43 @@ import VolunteerPage from './Pages/Get Involved/VolunteerPage/volunteer.componen
 import DonatePage from './Pages/Get Involved/Donate Page/donate.components';
 import Articlepage from './Pages/Resources/Article/article';
 import EventDescription from './Components/eventcardComponent/EventDescription/eventDescription';
+import ArticleDescription from './Pages/Resources/Article/articleDescription';
+import Login from './protectedPages/login/login.page'
+import { useSelector } from 'react-redux';
+import { PublicLayout } from './layout/publicLayout/PublicLayout';
 
 function App() {
-  useEffect(()=>{
+  const authUser = useSelector(state => state.authStore.authUser)
+  console.log(authUser)
+  useEffect(() => {
     AOS.init();
-  },[])
+  }, [])
   return (
     <div>
-    <MenuBar/>
-    <Routes>
-      <Route path="/" element={<HomePage/>} />
-      <Route path="/about" element={<Aboutpage/>} />
-      <Route path="/project/strengthening-access-to-justice" element={<StrengtheningProject/>} />
-      <Route path="project/women-leadership-skill-development" element={<LeadershipProject/>} />
-      <Route path="/events" element={<Eventpage/>} />
-      <Route path="/events/event-page" element={<Event1Component/>} />
-      <Route path="/events/event2" element={<Event2Component/>} />
-      <Route path="/resources/annual_report" element={<AnnualReportPage/>} />
-      <Route path="/events/events-description/:id" element={<EventDescription/>}/>
-      <Route path="/resources/case_study_report" element={<CaseStudyReportPage/>} />
-      <Route path="/resources/article" element={<Articlepage />} />
-      <Route path="/get-involved/announcement" element={<AnnouncementPage/>} />
-      <Route path="/get-involved/volunteer" element={<VolunteerPage/>} />
-      <Route path="/get-involved/donate" element={<DonatePage/>} />
-      <Route path="/contact" element={<Contactpage/>} />
+      <Routes>
+        <Route element={<PublicLayout><Outlet /></PublicLayout>}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/project/strengthening-access-to-justice" element={<StrengtheningProject />} />
+          <Route path="project/women-leadership-skill-development" element={<LeadershipProject />} />
+          <Route path="/events" element={<Eventpage />} />
+          <Route path="/events/event-page" element={<Event1Component />} />
+          <Route path="/events/event2" element={<Event2Component />} />
+          <Route path="/resources/annual_report" element={<AnnualReportPage />} />
+          <Route path="/events/events-description/:id" element={<EventDescription />} />
+          <Route path="/resources/article/article-description/:id" element={<ArticleDescription />} />
+          <Route path="/resources/case_study_report" element={<CaseStudyReportPage />} />
+          <Route path="/resources/article" element={<Articlepage />} />
+          <Route path="/get-involved/announcement" element={<AnnouncementPage />} />
+          <Route path="/get-involved/volunteer" element={<VolunteerPage />} />
+          <Route path="/get-involved/donate" element={<DonatePage />} />
+          <Route path="/contact" element={<Contactpage />} />
+        </Route>
+       
+        <Route path="/admin" element={<Login />} />
       </Routes>
-      
-  <Footer/>
-  <Copyright/>
-  </div>
+
+    </div>
   );
 }
 

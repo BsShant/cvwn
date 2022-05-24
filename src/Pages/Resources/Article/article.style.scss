@@ -69,6 +69,15 @@
        h5{
            font-weight: 600;
            cursor: pointer;
+           height:29px;
+           text-overflow: ellipsis;
+// height: 77px;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+white-space: normal;
+display: -webkit-box!important;
+overflow: hidden!important;
+line-height: 1.5;
        }
        h5:hover{
         color: var(--web-theme);

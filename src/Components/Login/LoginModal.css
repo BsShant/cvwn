@@ -1,0 +1,32 @@
+.forget-password{
+    text-decoration: none;
+    font-size: 14px;
+    color:orangered;
+}
+.new-acc{
+    text-decoration: none;
+    color: orangered;
+}
+.new-account{
+    /* margin-bottom: 25px; */
+    margin-top: 25px;
+}
+.buttons{
+    /* display: flex;
+    justify-content: flex-end; */
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.login-modal-container .modal-content{
+    width: 330px !important;
+    /* height:400px; */
+    padding: 12px 0px 40px;
+}
+.login-into{
+    margin-bottom: 25px;
+    display: flex;
+    color:orangered;
+
+    justify-content: flex-start;
+    font-size: 32px;
+}

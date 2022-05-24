@@ -30,3 +30,13 @@
     }
     
 }
+
+@media(max-width:700px){
+    .aboutPage .aboutDetail {
+        max-width: 85%;
+    }
+    .aboutPage .aboutImgsection img {
+        width: 85%;
+        height: 55vh;
+    }
+}

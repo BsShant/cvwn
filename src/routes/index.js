@@ -59,14 +59,6 @@ function IndexRoute(props) {
           }
         />
         <Route
-          path="/admin/event"
-          element={
-            <SuperRoute>
-              <OurTeam />
-            </SuperRoute>
-          }
-        />
-        <Route
           path="/admin/setting"
           element={
             <SuperRoute>
@@ -74,15 +66,7 @@ function IndexRoute(props) {
             </SuperRoute>
           }
         /> 
-         <Route
-          path="/admin/our-company"
-          element={
-            <SuperRoute>
-              <OurCOmpany />
-            </SuperRoute>
-          }
-        /> 
-         <Route path="/" element={<AnimatingPages audioEvent={props.audioEvent} audioPause={props.audioPause} playSpaceAudio={props.playSpaceAudio} />} />
+       
       </Routes>
     </>
   );

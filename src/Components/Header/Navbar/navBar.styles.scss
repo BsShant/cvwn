@@ -74,6 +74,7 @@
                        padding-left: 10px !important;
                        padding-right: 10px !important;
                       // margin: 0px 10px;
+                    //   margin-left: -10%;
                        
                    }
                }
@@ -339,4 +340,10 @@
             
         }
     }
+}
+
+
+.menu-bar .offcanvas-end .dropdown-menu{
+    position: relative!important;
+    margin: 0 13px!important;
 }

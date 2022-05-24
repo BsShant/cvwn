@@ -11,7 +11,7 @@ export default function EventCard(props) {
             <Link to={`/events/events-description/${id}`}>
                 <div className='row'>
 
-                    <div className='col-lg-5 col-md-5 col-sm-5'>
+                    <div className='col-lg-5 col-md-5 col-sm-5 col-6'>
                         <div className='Carousel-img'>
                             <img
                                 className="d-block w-100"
@@ -20,7 +20,7 @@ export default function EventCard(props) {
                             />
                         </div>
                     </div>
-                    <div className='col-lg-7 col-md-7 col-sm-7'>
+                    <div className='col-lg-7 col-md-7 col-sm-7 col-6'>
                         <div className='Carousel-detail'>
                             <div className='title'>
                                 <h5>{title}</h5>

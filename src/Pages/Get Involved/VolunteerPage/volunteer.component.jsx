@@ -43,7 +43,7 @@ export default function VolunteerPage() {
             <div className="col-lg-4 col-md-4 col-sm-6">
             <VolunteerComponent image={Face3} name="Tobey Maguire" role="Programmer"/>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6 d-sm-block d-lg-none d-md-none">
+            <div className="col-lg-4 col-md-4 col-sm-6 d-sm-block col-xs-0 d-lg-none d-md-none d-xs-none">
             <VolunteerComponent image={Face4} name="Wanda Maximof" role="Graphic Designer"/>
             </div>
             {/* <div className="col-lg-3 col-md-4 col-sm-6">
@@ -51,7 +51,7 @@ export default function VolunteerPage() {
             </div> */}
 </div>
 <div className="row volunteerContainer" style={{marginTop:"4%"}}>
-            <div className="col-lg-4 col-md-4 col-sm-6 d-sm-none d-lg-block d-md-block">
+            <div className="col-lg-4 col-md-4 col-sm-6 col-xs-0 d-sm-none d-xs-none d-lg-block d-md-block">
             <VolunteerComponent image={Face4} name="Wanda Maximof" role="Graphic Designer"/>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-6">

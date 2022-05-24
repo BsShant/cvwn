@@ -1,0 +1,26 @@
+.article-description{
+    text-align: left;
+    margin: auto;
+    width: 55%;
+}
+.article-image{
+    /* background: black; */
+    height: 50vh;
+    width: 100%;
+    margin-bottom:40px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+.article-detail{
+    margin-top:30px;
+}
+.article-descript{
+text-overflow: ellipsis;
+height: 77px;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+white-space: normal;
+display: -webkit-box!important;
+overflow: hidden!important;
+}

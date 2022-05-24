@@ -63,7 +63,7 @@
     top: 0;
     right: 0;
     width: 51%;
-    height: 85vh;
+    height: 100vh;
     border-left: 1px solid rgba(0,0,0,.2);
     transform: translateX(100%);
     background-color: #e83802;
@@ -84,7 +84,7 @@
 
 @media(max-width:768px){
     .menutoggle{
-        margin-left:34%;
+        margin-left:0%;
     }
 }
 @media(max-width:500px){

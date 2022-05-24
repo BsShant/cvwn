@@ -1,119 +1,50 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import "./styles.css";
+import { useDispatch } from "react-redux";
 import { authProcessStarts } from "../../store/authStore/auth.action";
-import { Form, Input, Button, Checkbox, Modal } from "antd";
-import { useLocation, useNavigate } from "react-router-dom";
+
+import "./login.css";
+// import { authProcessStarts } from "../../store/authStore/auth.action";
 const Login = () => {
-  const [loginError, setLoginError] = useState("");
-  const location = useLocation();
-  const navigate = useNavigate();
-  let from = location.state?.from?.pathname || "/admin";
+  const dispatch = useDispatch()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const authUser = useSelector((state) => state.authStore.authUser);
-
-  const dispatch = useDispatch();
-  const layout = {
-    labelCol: {
-      span: 24,
-    },
-    wrapperCol: {
-      span: 24,
-    },
-  };
-  const tailLayout = {
-    wrapperCol: {
-      offset: 8,
-      span: 16,
-    },
-  };
-
-  const onFinish = (values) => {
-    try {
-      dispatch(authProcessStarts(values));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-  useEffect(() => {
-    if (authUser) {
-      navigate(from);
-    }
-  }, [authUser,from]);
-
+  const onLogin = (e) => {
+    e.preventDefault()
+    dispatch(authProcessStarts({
+      email, password
+    }))
+  }
   return (
-    <div className="LoginWrapper">
-      <div className="row LoginBox">
-        <div className="col-md-12">
-          <h2>Login</h2>
-          <Form
-            {...layout}
-            name="basic"
-            initialValues={{
-              remember: true,
-            }}
-            onFinish={onFinish}
-            layout="vertical"
-            onFinishFailed={onFinishFailed}
-          >
-            <Form.Item
-              label="Username"
-              name="username"
-              className="formBox"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your username!",
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
+    <div className="container" style={{ height: "100vh", display: "flex" }}>
+      <div className="admin-login">
 
-            <Form.Item
-              label="Password"
-              name="password"
-              className="formBox"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your password!",
-                },
-              ]}
-            >
-              <Input.Password />
-            </Form.Item>
+        <form className='joinusForm'>
+          <diV className="login-into">Login</diV>
+          <div className='row inputSection'>
 
-            <Form.Item>
-              <Form.Item name="remember" valuePropName="checked" noStyle>
-                <Checkbox>Remember me</Checkbox>
-              </Form.Item>
-              <a
-                className="login-form-forgot"
-                onClick={() => {
-                  navigate("/forgot-password");
-                }}
-                href
-              >
-                Forgot password
-              </a>
-            </Form.Item>
+            <diV className="col-md-12 col-sm-12">
+              <input type='email' placeholder='Email' name='email' value={email} onChange={(e)=> setEmail(e.target.value)} style={{ width: "100%" }} />
+            </diV>
+            <diV className="col-md-12 col-sm-12">
+              <input type='password' placeholder="password" value={password} onChange={(e)=> setPassword(e.target.value)} name='password' style={{ width: "100%" }} />
+              <div style={{ margin: "10px 0px 10px 0px" }}>
+                <a href="#lk" className='forget-password'>Forget password?</a>
+              </div>
+            </diV>
 
-            <Form.Item>
-              <Button className="buttonReverse" htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
-          </Form>
-          {/* <a onClick={()=>{history.pushState('/forgotPassword')}}>Forgot Password?</a> */}
+          </div>
+
+        </form>
+        <div className=' row buttons'>
+        
+            <button className='joinButton' onClick={(e) => onLogin(e)} type='submit' style={{ width: "50%", marginBottom: "5%", marginTop: "0%" ,marginLeft:"0%"}}>LOGIN</button>
+        
         </div>
+
       </div>
     </div>
-  );
+  )
 };
 
 export default Login;

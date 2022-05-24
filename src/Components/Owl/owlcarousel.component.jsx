@@ -22,9 +22,9 @@ export default function EventCarousel() {
                 items: 1,
             },
             600: {
-                items: 2,
+                items: 1,
             },
-            700: {
+            768: {
                 items: 2,
             },
             1000: {

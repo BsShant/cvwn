@@ -23,9 +23,9 @@ export default function Eventpage() {
                 items: 1,
             },
             600: {
-                items: 2,
+                items: 1,
             },
-            700: {
+            768: {
                 items: 2,
             },
             1000: {
@@ -51,9 +51,9 @@ export default function Eventpage() {
                 items: 1,
             },
             600: {
-                items: 2,
+                items: 1,
             },
-            700: {
+            768: {
                 items: 2,
             },
             1000: {
