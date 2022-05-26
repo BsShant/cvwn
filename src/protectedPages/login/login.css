@@ -66,6 +66,6 @@
     border: 2px solid orangered;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 1px 1px 0px 1px grey;
+    /* box-shadow: 1px 1px 0px 1px grey; */
 
   }

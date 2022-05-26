@@ -20,7 +20,7 @@ const Login = () => {
       <div className="admin-login">
 
         <form className='joinusForm'>
-          <diV className="login-into">Login</diV>
+          <diV className="login-into">Admin Login</diV>
           <div className='row inputSection'>
 
             <diV className="col-md-12 col-sm-12">
@@ -38,7 +38,7 @@ const Login = () => {
         </form>
         <div className=' row buttons'>
         
-            <button className='joinButton' onClick={(e) => onLogin(e)} type='submit' style={{ width: "50%", marginBottom: "5%", marginTop: "0%" ,marginLeft:"0%"}}>LOGIN</button>
+            <button className='joinButton' onClick={(e) => onLogin(e)} type='submit' style={{ width: "35%", marginBottom: "5%", marginTop: "0%" ,marginLeft:"0%"}}>LOGIN</button>
         
         </div>
 

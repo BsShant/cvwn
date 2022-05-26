@@ -5,6 +5,7 @@ import HomePage from './Pages/homepage';
 import MenuBar from './Components/Header/header.components';
 import Footer from './Components/Footer/footer.component';
 import Copyright from './Components/Copyright/copyright.components';
+import 'antd/dist/antd.css'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Aboutpage from './Pages/About/aboutpage.component';

@@ -1,8 +1,10 @@
 import React from 'react'
 import ReportComponent from '../AnnualReport/report.component'
 import './case.study.report.styles.scss'
+import LoginModal from '../../../Components/Login/LoginModal'
 import '../AnnualReport/annualreport.styles.scss'
 import image1 from '../../../assets/report01.jpg'
+
 import image2 from '../../../assets/report02.webp'
 import image3 from '../../../assets/report03.png'
 import image4 from '../../../assets/report04.jpg'
@@ -12,6 +14,7 @@ import image6 from '../../../assets/report06.jpg'
 export default function CaseStudyReportPage() {
   return (
     <div className='annualReport'>
+           <LoginModal />
         <h2>Case Studies Reports</h2>
 
         <div className='row' style={{width:"89%",margin:"auto"}}>

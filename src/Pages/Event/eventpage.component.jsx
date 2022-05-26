@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import EventSection from './event.component'
 import './eventpage.styles.scss'
+
+// import { eventData } from '../../../assets/dummyData/eventsData'
 import OwlCarousel from 'react-owl-carousel';
 import image1 from '../../assets/events/event1.jpg';
 import image2 from '../../assets/events/event2.jpg';
@@ -10,65 +13,72 @@ import EventCard from '../../Components/eventcardComponent/eventCard';
 import { eventData } from '../../assets/dummyData/eventsData';
 
 export default function Eventpage() {
-  return (
-    <div className='eventCarousel container-fluid'>
-        <h2>Our Events</h2>
-        <div className='container'>
-        <OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
-         responsive= {{
-            0: {
-                items: 1,
-            },
-            400: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-    
-            }
-        }}
-        >
-  <EventCard id={eventData[0].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login"/>
-  <EventCard id={eventData[1].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
-  <EventCard id={eventData[2].id} image={image3} title="Shared Journeys Virtual Exhibition -2021" date="1 April 2022" sponsor="Tata" />
- 
-   
-</OwlCarousel>
-</div>
-<div className='container'>
-<OwlCarousel className='owl-theme' loop   responsiveClass={true} nav={false}
-         responsive= {{
-            0: {
-                items: 1,
-            },
-            400: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-    
-            }
-        }}
-        >
-  <EventCard id={eventData[3].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
-  <EventCard id={eventData[4].id} image={image3} title="१० वर्षपछि लाश मिल्यो तर अझै न्याय मिलेन सार्वजनिकीकरण" date="1 April 2022" sponsor="Tata" />
-  <EventCard id={eventData[5].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login" />
- 
-   
-</OwlCarousel>
-</div>
-    </div>
-  )
+    const id = useParams().id
+    const [myEvent, setMyEvent] = useState(eventData)
+    return (
+        <div className='eventCarousel container-fluid'>
+            <h2>Upcoming Events</h2>
+            <div className='container'>
+                <OwlCarousel className='owl-theme' loop responsiveClass={true} nav={false}
+                    responsive={{
+                        0: {
+                            items: 1,
+                        },
+                        400: {
+                            items: 1,
+                        },
+                        600: {
+                            items: 1,
+                        },
+                        768: {
+                            items: 2,
+                        },
+                        1000: {
+                            items: 3,
+
+                        }
+                    }}
+                >
+                    {myEvent.length > 0 ? myEvent.filter(event => event.status === 'upcoming').map((event, index) => {
+                        return (
+                            <EventCard key={index} id={event.id} image={event.image} title={event.title} date={event.date} sponsor={event.sponsor} />
+                        )
+                    }) : null
+                    }
+
+                </OwlCarousel>
+            </div>
+            <h2 style={{ marginTop: "30px" }}>Previous Events</h2>
+            <div className='container'>
+                <OwlCarousel className='owl-theme' loop responsiveClass={true} nav={false}
+                    responsive={{
+                        0: {
+                            items: 1,
+                        },
+                        400: {
+                            items: 1,
+                        },
+                        600: {
+                            items: 1,
+                        },
+                        768: {
+                            items: 2,
+                        },
+                        1000: {
+                            items: 3,
+
+                        }
+                    }}
+                >
+                    {myEvent.length > 0 ? myEvent.filter(event => event.status === 'completed').map((event, index) => {
+                        return (
+                            <EventCard key={index} id={event.id} image={event.image} title={event.title} date={event.date} sponsor={event.sponsor} />
+                        )
+                    }) : null
+                    }
+
+                </OwlCarousel>
+            </div>
+        </div>
+    )
 }

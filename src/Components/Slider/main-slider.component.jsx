@@ -12,7 +12,7 @@ import './main-slider.styles.scss'
 
 const MainSlider = () => {
   return (<div className='myCarousel' >
-    <Carousel interval={null} loop={true} fade>
+    <Carousel interval={3000} loop={true} autoloop={true} fade>
       <Carousel.Item className='sliderOverlay' >
         {/* <img
       className="d-block  w-100  slide "

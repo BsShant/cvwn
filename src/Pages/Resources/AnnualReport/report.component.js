@@ -1,5 +1,7 @@
 import React from 'react'
 import './annualreport.styles.scss'
+import { Image } from 'antd';
+import 'antd/dist/antd.css'
 
 export default function ReportComponent({report_type, year, image}) {
   return (
@@ -11,9 +13,9 @@ export default function ReportComponent({report_type, year, image}) {
      
        
        <div className='reportImage' style={{objectFit:"cover"}}>
-           <img src={image} alt='report image' style={{objectFit:"cover",height:"100%",width:"100%"}}/>
+           <Image src={image} alt='report image' style={{objectFit:"cover",height:"100%",width:"100%"}}/>
        </div>
-       <div className='report-txt'><a href="#"> <h5> {report_type} {year}</h5></a></div>
+       <div className='report-txt'><a href="#"> <h5 style={{color:"white"}}> {report_type} {year}</h5></a></div>
        
    </div>
   )

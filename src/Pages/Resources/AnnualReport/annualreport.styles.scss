@@ -71,7 +71,7 @@
        }
           
        }:hover{
-           transform: scale(1);
+        //    transform: scale(1);
           
        }
 }
@@ -101,4 +101,18 @@
 .reportSection:hover::before{
     top: -0%;
     
+}
+.ant-image-mask{
+    z-index:9999;
+    // cursor:none;
+}
+.ant-image-preview-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.ant-image-preview-wrap {
+    z-index: 10000;
 }

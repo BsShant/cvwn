@@ -36,7 +36,7 @@
         width: 100%;
     }
     .active.carousel-item img{
-        transform: scale(1.05);
+        transform: scale(1.2);
         transition: all 2.5s linear;
         transition-delay: 500ms;
     }
@@ -128,10 +128,10 @@
         }
     }
 }
-.carousel-control-next{
-    display: none;
-}
-.carousel-control-prev{
-    display: none;
+// .carousel-control-next{
+//     display: none;
+// }
+// .carousel-control-prev{
+//     display: none;
 
-}
+// }

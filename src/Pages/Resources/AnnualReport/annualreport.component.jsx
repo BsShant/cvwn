@@ -3,6 +3,8 @@ import './annualreport.styles.scss'
 
 import image1 from '../../../assets/case-1.png'
 import image2 from '../../../assets/case-2.png'
+import { Image } from 'antd';
+import 'antd/dist/antd.css'
 import image3 from '../../../assets/case-3.png'
 import image4 from '../../../assets/case-4.png'
 import image5 from '../../../assets/case-5.jpg'
