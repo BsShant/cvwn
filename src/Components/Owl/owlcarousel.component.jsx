@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import OwlCarousel from 'react-owl-carousel';
 import './owlcarousel.styles.scss';
 import image1 from '../../assets/events/event1.jpg';
 import image2 from '../../assets/events/event2.jpg';
 import image3 from '../../assets/events/event3.jpg'
+import { useParams } from 'react-router-dom'
 import EventCard from '../eventcardComponent/eventCard';
 import { eventData } from '../../assets/dummyData/eventsData';
+// import { eventData } from '../../assets/dummyData/eventsData';
 
 
 export default function EventCarousel() {
+    const id = useParams().id
+    const [myEvent, setMyEvent] = useState(eventData)
   return (
     <div className='eventCarousel container-fluid'>
         <h2>Events</h2>
@@ -33,9 +37,12 @@ export default function EventCarousel() {
             }
         }}
         >
-   <EventCard id={eventData[0].id} image={image1} title="Strengthening Women Voice" date="1 May 2022" sponsor="Login"/>
-  <EventCard id={eventData[1].id} image={image2} title="Women in Leadership" date="1 April 2022" sponsor="Tata" />
-  <EventCard id={eventData[2].id} image={image3} title="Shared Journeys Virtual Exhibition -2021" date="1 April 2022" sponsor="Tata" />
+   {myEvent.length > 0 ? myEvent.filter(event => event.status === 'upcoming').map((event, index) => {
+                        return (
+                            <EventCard key={index} id={event.id} image={event.image} title={event.title} date={event.date} sponsor={event.sponsor} />
+                        )
+                    }) : null
+                    }
    
 </OwlCarousel>
 </div>

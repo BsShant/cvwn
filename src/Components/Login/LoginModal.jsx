@@ -36,25 +36,26 @@ const LoginModal = () => {
                         </h6>
 
                         <form className='joinusForm'>
-                        <diV className="login-into">Login</diV>
+                        <diV className="login-into">Please send us your Email</diV>
                             <div className='row inputSection'>
-
+                            <diV className="col-md-12 col-sm-12">
+                                    <input type='text' placeholder="Name" name='Name' style={{ width: "100%" }} />
+                                    </diV>
                                 <diV className="col-md-12 col-sm-12">
                                     <input type='email' placeholder='Email' name='email' style={{ width: "100%" }} />
                                 </diV>
-                                <diV className="col-md-12 col-sm-12">
-                                    <input type='password' placeholder="password" name='password' style={{ width: "100%" }} />
-                                    <div style={{    margin: "10px 0px 10px 0px"}}>
+                         
+                                    {/* <div style={{    margin: "10px 0px 10px 0px"}}>
                                     <a href="#lk" className='forget-password'>Forget password?</a>
-                                    </div>
-                                </diV>
+                                    </div> */}
+                               
 
                             </div>
 
                         </form>
                         <div className=' row buttons'>
                             <div className='col-6'>
-                            <button className='joinButton' type='submit' style={{ width: "71%", marginBottom: "5%", marginTop: "0%" }}>LOGIN</button>
+                            <button className='joinButton' type='submit' style={{ width: "71%", marginBottom: "5%", marginTop: "0%" }}>Send</button>
                             </div>
                             <div className='col-6' style={{display:"flex",justifyContent:"flex-end"}}>
                             <GoogleAuth authUser={authUser} setAuthUser={setAuthUser} />
@@ -63,8 +64,8 @@ const LoginModal = () => {
                         </div>
                     <hr  style={{height:"2px",opacity:"1"}}/>
                     <div className='new-account'>
-                        <div style={{fontSize:"14px",color:"grey"}}>Don't have an account yet?</div>
-                        <a href="#jj" className='new-acc'>Create New Account</a>
+                        <div style={{fontSize:"14px",color:"grey"}}>You need to link your email in order to learn more about this article.</div>
+                 
 
                     </div>
 

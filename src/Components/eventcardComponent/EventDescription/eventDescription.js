@@ -11,31 +11,39 @@ export default function EventDescription() {
     const [myEvent, setMyEvent] = useState(eventData.filter(event => event.id == id)[0])
     console.log("my event", myEvent)
     return (
-        <div className="eventpage-section" style={{ minHeight: "90vh", background: `url(${myEvent ? myEvent.image : ""})`, backgroundSize: "cover", alignContent: "center", display: "flex" }}>
+        <div className='eventPages'>
+
+ {/* background: `url(${myEvent ? myEvent.image : ""})` */}
+
+        <div className="eventpage-section" style={{ minHeight: "80vh", backgroundSize: "cover", alignContent: "center", display: "flex" }}>
             <div className='main-contents'>
                 <div className='inner-main-contents'>
-                    <div className='Heading'>
+                    {/* <div className='Heading'>
                         <h1><b>{myEvent.title}</b></h1>
-                    </div>
-                    <div className='container'>
-                        <div className='event-desc'>
-                            {myEvent.description}
-                        </div>
+                    </div> */}
 
-                        <div className='row event-row'>
-                            <div className='col-12 col-lg-4 col-md-12 col-sm-12'>
-                                <i class="fa fa-calendar" style={{ marginRight: "10px" }} aria-hidden="true"></i>  {myEvent.date}
-                            </div>
-                            <div className='col-12 col-lg-4 col-md-12 col-sm-12'>
-                                <i className='fas fa-clock' style={{ marginRight: "10px" }} />  {myEvent.time}
-                            </div>
-                            <div className='col-12 col-lg-4 col-md-12 col-sm-12'>
-                                <i className='far fa-location' style={{ marginRight: "10px" }} />  {myEvent.location}
-                            </div>
-                            {/* <div className='col-4 col-lg-4 col-md-4 col-sm-4'></div> */}
+
+
+                    <div className='row ongoing-event-row'>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
+                            <Image src={myEvent.image} style={{ objectFit: "cover", height: "360px", width: "100%" }} />
                         </div>
-                    </div>
-                    {myEvent.status === 'upcoming' ?
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-12' style={{paddingLeft:"40px",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+
+                            <div className='head' style={{ display: "flex", justifyContent: "flex-start", textAlign: "left" }}><h5 style={{ color: "orangered" }}>{myEvent.title}</h5></div>
+                            <div className='description' style={{ display: "flex", justifyContent: "flex-start", color: "black", textAlign: "left" }}>{myEvent.description}</div>
+                            <div className='row' style={{ marginTop: "5%" }}>
+                                <div className='col-4'>
+                                <i class="fa fa-calendar" style={{ marginRight: "10px" }} aria-hidden="true"></i> {myEvent.date}
+                                </div>
+                                <div className='col-4'>
+                                <i className='fas fa-clock' style={{ marginRight: "10px" }} />   {myEvent.time}
+                                </div>
+                                <div className='col-4'>
+                                <i className='far fa-location' style={{ marginRight: "10px" }} />  {myEvent.location}
+                                </div>
+                            </div>
+                            {myEvent.status === 'upcoming' ?
                         <div className='JoinusButton'>
                             <button onClick={() => setShowJoin(true)} className='joinButton' type='submit'>Join Us</button>
                             <Modal
@@ -47,7 +55,7 @@ export default function EventDescription() {
                             >
                                 <div className='eventjoin-panel' style={{ width: "75%" }}>
                                     <div className='eventimage'>
-                                        <Image src={myEvent.image}  width={100} />
+                                        <Image src={myEvent.image} width={100} />
                                     </div>
 
                                     <div className='join-us-form'>
@@ -95,46 +103,71 @@ export default function EventDescription() {
 
 
 
-                        </div> :
-                        <div className='gallery'>
-                            <div className='gallery-heading'>
-                                <h3>Our Gallery </h3>
-                            </div>
-                            <div className='row gallery-row '>
-
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover", borderRadius:"15px" }} />
-                                </div>
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover", borderRadius:"15px" }} />
-                                </div>
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover", borderRadius:"15px" }} />
-
-                                </div>
-                            </div>
-                            <div className='row gallery-row ' style={{ marginBottom: "30px" }}>
-
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover" ,borderRadius:"15px"}} />
-                                </div>
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover", borderRadius:"15px" }} />
-                                </div>
-                                <div className='col-lg-4 col-md-3 col-sm-6 col-12'>
-                                    <Image src={myEvent.image} width={200} height={200} style={{ objectFit: "cover", borderRadius:"15px" }} />
-
-                                </div>
-                            </div>
-
-
-                        </div>
+                        </div> :null
+                       
                     }
+                            </div>
+                            </div>
+
+
+
+                  
 
 
 
                 </div>
             </div>
+        </div>
+
+
+
+
+        {myEvent.status === 'completed' ?
+
+        <div className='gallery'>
+                            <div className='gallery-heading'>
+                                <h3>Our Gallery </h3>
+                            </div>
+                            <div className='row gallery-row '>
+
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover" }} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover" }} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover" }} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover" }} />
+                                </div>
+                                {/* <div className='col-lg-3 col-md-4 col-sm-6 col-12 aboveCol d-md-block d-lg-none d-sm-block d-none'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover", borderRadius: "15px" }} />
+                                </div> */}
+                            </div>
+
+                            <div className='row gallery-row ' style={{ marginBottom: "30px" }}>
+
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol '>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover"}} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover"}} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover" }} />
+                                </div>
+                                <div className='col-lg-3 col-md-6 col-sm-6 col-12 aboveCol'>
+                                    <Image src={myEvent.image} style={{ objectFit: "cover"}} />
+                                </div>
+                            </div>
+
+
+                        </div>:null
+}
+
+
         </div>
     )
 }

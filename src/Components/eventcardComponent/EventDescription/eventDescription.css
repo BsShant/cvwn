@@ -7,7 +7,7 @@ z-index: 1;
 
 
 
-.eventpage-section::after{
+/* .eventpage-section::after{
     content: " ";
     position: absolute;
     z-index: -1;
@@ -16,7 +16,7 @@ z-index: 1;
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.6);
-}
+} */
 
 
 
@@ -73,14 +73,14 @@ text-align: center;
     justify-content: center;
     text-align: center; 
     font-size: 14px;
-    width: 68%;
+    width: 100%;
     display: flex;
     margin-bottom:20px;
     justify-content: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 5px;
     color: white;
-    margin-top:30px;
+    /* margin-top:30px; */
 }
 .gallery-heading h3{
     display: flex;
@@ -94,7 +94,8 @@ text-align: center;
 .JoinusButton{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    /* margin-top: 5%; */
+    margin-top: 20%;
 }
 .joinButton{
         background-color:rgb(232, 56, 2) ;
@@ -163,4 +164,39 @@ h1{
     h1{
         font-size: 45px;
     }
+}
+.gallery{
+    /* background:rgba(0,0,0,0.5); */
+    padding-bottom:30px;
+    width:80%;
+    margin:auto;
+}
+.ant-image-img{
+    height:300px;
+    width:293px;
+}
+@media(max-width:1300px){
+    .ant-image-img{
+        height:250px;
+        width:250px;
+    }
+    .gallery-row{
+/* width:80%; */
+    }
+}
+
+
+.aboveCol{
+    padding: 0px;
+}
+
+@media(min-width:768px) and (max-width:992px){
+    .gallery-row{
+        width: 67%;
+        }
+
+.ant-image-img{
+        height:230px;
+        width:230px;
+}
 }
