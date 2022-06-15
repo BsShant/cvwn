@@ -23,3 +23,33 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Nexa Bold";
+  src: local("Nexa Bold"),
+    url("./assets/fonts/Nexa\ Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nexa Light";
+  src: local("Nexa Light"),
+    url("./assets/fonts/Nexa\ Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nexa Regular";
+  src: local("Nexa Regular"),
+    url("./assets/fonts/Nexa\ Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: nova-light;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Light.otf");
+}
+
+@font-face {
+  font-family: nova-bold;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Bold.otf");
+}
+
+@font-face {
+  font-family: nova-thin;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Thin.otf");
+}

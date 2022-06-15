@@ -1,0 +1,56 @@
+.image-list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-images {
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.image-list {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    overflow: hidden;
+    opacity: 1;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.image-list svg {}
+
+.image-list img:hover {
+    opacity: 0.6;
+}
+
+.image-list img {
+    height: 100px;
+    width: 100px;
+}
+
+.image-list .svg-inline--fa.fa-check{
+    color: blue;
+    position: absolute;
+    top: 45%;
+    font-size: 28px;
+    right: 45%;
+}
+
+.image-list .svg-inline--fa.fa-trash.image-trash{
+    color: red;
+    font-size: 18px;
+    top: 1%;
+    right: 2%;
+    position: absolute;
+    display: none;
+    z-index: 2;
+}
+.image-list:hover .svg-inline--fa.fa-trash.image-trash{
+    display: inline-block;
+}
+
+.bottom-gap{
+    height: 60px;
+}

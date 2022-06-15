@@ -1,0 +1,42 @@
+.service-stats-container {
+    margin-bottom: 30px !important;
+  }
+  .service-stats-heading {
+    font-family: nova-bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }
+  .visitor-stats-container {
+    margin-bottom: 30px !important;
+  }
+  .visitor-stats-heading {
+    margin-bottom: 20px;
+    font-family: nova-bold;
+    font-size: 18px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .visitor-doughnut-stats-container {
+  }
+  .visitor-doughnut-stats-heading {
+    margin-bottom: 20px;
+    font-family: nova-bold;
+    font-size: 18px;
+    color: darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .charts-box{
+    background-color: #f2f2f2;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }

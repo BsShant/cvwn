@@ -1,0 +1,5 @@
+.admin-modal-text-box{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}

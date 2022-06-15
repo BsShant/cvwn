@@ -1,21 +1,13 @@
-import React from 'react'
+import React from "react";
 
-export default function Announcement() {
+export default function Announcement(props) {
+  const { title, detail, date } = props;
   return (
-    <div className='announcementCard'>
-<div className='title'>MalaysiaStock.Biz: Latest Announcement
-</div>
-<hr/>
-    <div className='Description'>
-    MalaysiaStock.Biz provides latest klse announcement
-     such as latest quarter report,
-     latest dividend news,
-      latest bonus issue news,
-       latest rights issue news.
+    <div className="announcementCard">
+      <div className="title">{title}</div>
+      <hr />
+      <div className="Description">{detail}</div>
+      <div className="base-title">{date}</div>
     </div>
-    <div className='base-title'>
-        01.05.2022  CVWN  Samakhushi
-    </div>
-    </div>
-  )
+  );
 }

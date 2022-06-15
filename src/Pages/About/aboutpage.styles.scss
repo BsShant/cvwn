@@ -1,42 +1,41 @@
-.aboutPage{
-   
-    .aboutImgsection{
-        width: 100%;
-       
 
-        img{
-            width: 60%;
-            height: 65vh;
-            object-fit: cover;
-        }
+  .aboutDetail {
+    margin: 50px auto;
+    text-align: start;
+    h6 {
+      color: var(--web-theme);
     }
+    p {
+      font-size: 15px;
+    }
+    h2 {
+      font-size: 34px;
 
-    .aboutDetail{
-        max-width: 60%;
-        margin: 50px auto;
-       text-align: start;
-       h6{
-           color: var(--web-theme);
-       }
-        p{
-            font-size: 15px;
-        }
-        h2{
-            font-size: 34px;
-            
-            font-weight: 700;
-           margin-bottom: 20px;
-        }
+      font-weight: 700;
+      margin-bottom: 20px;
     }
-    
+  }
+
+
+
+.aboutPage-inner-row {
+  width: 75%;
+  margin: auto;
+  img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 5/4;
+  }
 }
 
-@media(max-width:700px){
-    .aboutPage .aboutDetail {
-        max-width: 85%;
+@media (max-width: 768px) {
+    .aboutPage-inner-row {
+      width: 100%!important;
+      margin: auto;
     }
-    .aboutPage .aboutImgsection img {
-        width: 85%;
-        height: 55vh;
-    }
-}
+  }
+  

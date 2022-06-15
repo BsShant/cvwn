@@ -1,0 +1,31 @@
+.admin-container {
+  width: calc(100% - 170px);
+  margin-left: auto;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 992px) {
+  .full-admin-body {
+    width: 100%;
+    transition: all 500ms ease-in-out;
+  }
+  .admin-backdrop{
+    background-color: rgba(0,0,0,0.9);
+  }
+}
+.admin-padding {
+  padding: 10px 40px;
+}
+
+.logo-above-bottom {
+  position: relative;
+  overflow: hidden;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo-above-bottom img {
+  position: absolute;
+  top: -26px;
+  width: 136px;
+}

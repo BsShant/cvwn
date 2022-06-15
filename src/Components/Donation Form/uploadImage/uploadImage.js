@@ -2,8 +2,7 @@ import React from 'react';
 import ImageUploading from 'react-images-uploading';
 import './uploadImage.css'
 
-export function UploadImage() {
-    const [images, setImages] = React.useState([]);
+export function UploadImage({images, setImages}) {
     const maxNumber = 1;
 
     const onChange = (imageList, addUpdateIndex) => {

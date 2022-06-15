@@ -1,0 +1,34 @@
+.rdw-editor-toolbar{
+    visibility: visible;
+/* display: flex; */
+/* justify-content: space-around; */
+}
+
+/* .rdw-editor-toolbar > div{
+    cursor: pointer;
+    width: 20%;
+} */
+.sole .demo-editor{
+    /* min-height: 500px; */
+    margin-bottom: 100px;
+    /* background-color: grey; */
+    border: 1px solid black;
+}
+.editor{
+    margin-bottom: 50px;
+}
+/* .rdw-editor-main{
+    min-height: 300px;
+    background-color: grey;
+} */
+
+.hideToolbar{
+    display: none;
+}
+.greyEditor{
+    background-color: rgb(158, 154, 154, 0.5);
+    min-height: 300px;
+}
+.rdw-link-modal{
+    height: 250px!important;
+}

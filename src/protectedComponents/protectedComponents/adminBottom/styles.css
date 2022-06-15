@@ -1,0 +1,22 @@
+.admin-bottom-container {
+  background-color: #1496d1;
+  margin-top: 2px;
+  padding: 20px 0;
+}
+.quote-container {
+  color: white;
+  font-family: roboto;
+  width: 60%;
+  margin: auto;
+}
+.quote {
+  font-size: 21px;
+  font-style: italic;
+  text-align: center;
+}
+.author {
+  font-style: initial;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 10px;
+}

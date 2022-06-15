@@ -10,7 +10,14 @@ import {
   GET_USER,
   UPDATE_TOKEN,
   UPDATE_USER,
-  
+  UPDATE_SUBSCRIBER_TOKEN,
+  UPDATE_SUBSCRIBER,
+  SUBSCRIBER_LOGOUT_FAILURE,
+  SUBSCRIBER_LOGOUT_SUCCESS,
+  START_SUBSCRIBER_LOGOUT,
+  SUBSCRIBER_AUTH_FAILURE,
+  SUBSCRIBER_AUTH_SUCCESS,
+  START_SUBSCRIBER_AUTHENTICATION,
 } from "./authActionTypes";
 
 export const updateUser = (user) => {
@@ -20,16 +27,12 @@ export const updateUser = (user) => {
   };
 };
 
-
-
 export const authProcessStarts = (emailandpassword) => {
   return {
     type: START_USER_AUTHENTICATION,
     payload: emailandpassword,
   };
 };
-
-
 
 export const userAuthSuccess = () => {
   return {
@@ -43,7 +46,6 @@ export const userAuthFailure = (error) => {
   };
 };
 
-
 export const logoutProcessStarts = () => {
   return {
     type: START_USER_LOGOUT,
@@ -53,7 +55,7 @@ export const logoutProcessStarts = () => {
 export const userLogoutSuccess = (user) => {
   return {
     type: USER_LOGOUT_SUCCESS,
-    payload: user
+    payload: user,
   };
 };
 export const userLogoutFailure = (error) => {
@@ -63,17 +65,16 @@ export const userLogoutFailure = (error) => {
   };
 };
 
-
 export const getUser = () => {
   return {
-    type: GET_USER
+    type: GET_USER,
   };
 };
 
 export const getUserSuccess = (user) => {
   return {
     type: GET_USER_SUCCESS,
-    payload: user
+    payload: user,
   };
 };
 export const getUserFailure = (error) => {
@@ -83,10 +84,61 @@ export const getUserFailure = (error) => {
   };
 };
 
-export const updateToken = (token)=>{
-  return{
+export const updateToken = (token) => {
+  return {
     type: UPDATE_TOKEN,
-    payload: token
-  }
-}
+    payload: token,
+  };
+};
 
+export const updateSubscriberToken = (token) => {
+  return {
+    type: UPDATE_SUBSCRIBER_TOKEN,
+    payload: token,
+  };
+};
+
+export const updateSubscriber = (user) => {
+  return {
+    type: UPDATE_SUBSCRIBER,
+    payload: user,
+  };
+};
+
+export const subscriberAuthProcessStarts = (emailandpassword) => {
+  return {
+    type: START_SUBSCRIBER_AUTHENTICATION,
+    payload: emailandpassword,
+  };
+};
+
+export const subscriberAuthSuccess = () => {
+  return {
+    type: SUBSCRIBER_AUTH_SUCCESS,
+  };
+};
+export const subscriberAuthFailure = (error) => {
+  return {
+    type: SUBSCRIBER_AUTH_FAILURE,
+    payload: error,
+  };
+};
+
+export const subscriberLogoutStarts = () => {
+  return {
+    type: START_SUBSCRIBER_LOGOUT,
+  };
+};
+
+export const subscriberLogoutSuccess = (user) => {
+  return {
+    type: SUBSCRIBER_LOGOUT_SUCCESS,
+    payload: user,
+  };
+};
+export const subscriberLogoutFailure = (error) => {
+  return {
+    type: SUBSCRIBER_LOGOUT_FAILURE,
+    payload: error,
+  };
+};

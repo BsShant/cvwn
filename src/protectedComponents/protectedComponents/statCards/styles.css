@@ -1,0 +1,43 @@
+.stats-card {
+  height: 103px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #00000026;
+  padding: 0 30px;
+}
+.stats-card:not(:last-child){
+}
+
+
+.stats-card-header {
+  font-family: nova-bold;
+  text-align: center;
+  color: darkgray;
+  font-size: 53px;
+}
+
+.stats-card-icon {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.stats-card-text{
+    width: 30%;
+}
+
+.stats-card-icon svg {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #808080;
+}
+
+.stats-card-body {
+  font-family: nova-light;
+  text-align: center;
+}

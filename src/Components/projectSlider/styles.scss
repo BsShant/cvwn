@@ -1,0 +1,110 @@
+.project-slider{
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 700px!important;
+    border: 2px dotted #e83802;
+    padding: 10px;
+    .carousel-item{
+        height: 400px;
+    }
+   
+
+    .carousel-item img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .active.carousel-item img{
+        transform: scale(1.2);
+        transition: all 2.5s linear;
+        transition-delay: 500ms;
+    }
+   
+    .carousel-indicators [data-bs-target] {
+       
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        
+        margin-right: 4px;
+        margin-left: 4px;
+        display: none;
+        
+    }
+
+    img{
+       // opacity: 1;
+        
+        transition: 2s;
+    }
+    .animate__animated, .animate__zoomIn{
+        transition-delay: 2s;
+    }
+    .content{
+        position: absolute;
+        
+        top: 50%;
+        transform: translateY(50%);
+        width: 100%;
+        color: #ffffff;
+        z-index: 3;
+
+        .content-box{
+           
+
+            h2{
+                font-size: 45px;
+                font-weight: 700;
+                 color: #ffffff;
+                line-height: 1.2;
+                 text-align: right;
+                  margin-bottom: 10px;
+                  text-transform: uppercase;
+                  opacity: 1;
+                  text-shadow: 1px 1px 3px black;
+                  margin-right:15px;
+               
+            }
+           
+        }
+    }
+}
+@media(max-width:764px){
+    .carousel-item{
+        height: calc(100vh - 0px);
+    }
+
+}
+@media(max-width:500px){
+    .myCarousel{
+        max-height: auto !important;
+        .carousel-indicators [data-bs-target] {
+       
+            width: 8px;
+            height: 8px;
+            
+        }
+       
+        .content-box{
+           
+
+            h2{
+                font-size: 18px;
+                font-weight: 600;
+                 color: #ffffff;
+                //line-height: 1.2;
+                 text-align: right;
+                 right: 2%;
+                 
+                  position: absolute;
+                  text-transform: uppercase;
+                  opacity: 1;
+                  text-shadow: 1px 1px 3px black;
+                  
+               
+            }
+           
+        }
+    }
+    
+}

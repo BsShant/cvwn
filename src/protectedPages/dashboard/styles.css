@@ -1,0 +1,66 @@
+.gapi-analytics-auth-styles-signinbutton-image {
+  display: none !important;
+}
+
+.gapi-analytics-auth-styles-signinbutton-buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: nova-light;
+  padding: 10px;
+}
+.gapi-analytics-auth-styles-signinbutton {
+  display: inline-block;
+  border: 1px solid #1890ff !important;
+  background: transparent !important;
+  color: black !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px !important;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.gapi-authorize-container {
+  display: flex;
+  justify-content: center;
+}
+.gapi-analytics-data-chart{
+  width: 100%!important;
+  height: 100%!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gapi-analytics-data-chart rect {
+  fill: #f2f2f2 !important;
+  /* width: "100%"; */
+}
+#gapi-view-selector-container {
+  display: none !important;
+}
+.analytics-auth-widgets {
+  /* display: none !important; */
+}
+/* #gapi-sessions-geo-chart-28-days svg {
+  width: 100% !important;
+} 
+#gapi-sessions-geo-chart-28-days rect {
+  width: 100% !important;
+} 
+#gapi-sessions-geo-chart-28-days g {
+  width: 100% !important;
+}  */
+#gapi-sessions-geo-chart-28-days {
+  display: flex;
+  justify-content: center;
+  height: 100%!important;
+
+}
+
+.analytics-sign-out-button{
+  display: none!important;
+}

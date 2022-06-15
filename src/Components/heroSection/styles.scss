@@ -1,0 +1,67 @@
+.landing-page-hero {
+  position: relative;
+  .landing-page-inner-container {
+    .hero-section-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      //   background: url('../../assets/texture.png');
+      .heroheading {
+        font-size: 45px;
+        color: #e83802;
+        font-weight: 1000;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .herosubHeading {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
+        //   text-transform: capitalize;
+      }
+      .main-btnn {
+        background-color: #e83802;
+        color: white;
+        border: 2px solid var(--web-theme);
+        padding: 7px 10px 8px 10px;
+        transition: 1s;
+        display: inline-flex;
+        width: 87px;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover {
+          background-color: #531401;
+          border: 2px solid var(--web-theme);
+          transition: 1s;
+        }
+      }
+    }
+    .hero-section-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100vh - 110px);
+    }
+  }
+}
+
+// .heroheading:hover {
+//   animation: moveHero;
+//   animation-duration: 1s;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   animation-timing-function: ease-in-out;
+// }
+// @keyframes moveHero {
+//   0% {
+//     transform: translateX(-20px);
+//   }
+//   100% {
+//     transform: translate(20px);
+//   }
+
+// }

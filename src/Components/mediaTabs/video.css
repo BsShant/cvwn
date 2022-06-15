@@ -1,0 +1,13 @@
+.video-tab-container {
+}
+.video-gallery {
+    display: flex;
+    justify-content: center;
+}
+.gallery-video-container {
+    margin-bottom: 20px;
+}
+.video-react .video-react-big-play-button{
+    top: 40%!important;
+    left: 35%!important;
+}

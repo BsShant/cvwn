@@ -1,0 +1,9 @@
+.photo-tab-container {
+}
+.photo-gallery {
+}
+.gallery-image-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}

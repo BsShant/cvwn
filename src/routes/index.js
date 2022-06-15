@@ -18,21 +18,37 @@ import OurCOmpany from "../protectedPages/ourCompany/ourCompany";
 import { useDispatch } from "react-redux";
 import { fetchingOurCompanyContentWithSpinnerStarts } from "../store/ourCompanyStore/ourCompanyAction";
 import { fetchingOurTeamContentWithSpinnerStarts } from "../store/ourTeamStore/ourTeamAction";
+import Admin from "../protectedPages/admin/Admin";
 function IndexRoute(props) {
-  const dispatch = useDispatch()
-  useEffect(()=>{
-
+  const dispatch = useDispatch();
+  useEffect(() => {
     sessionStorage.setItem("opened", "yes");
-    dispatch(fetchingOurCompanyContentWithSpinnerStarts())
+    dispatch(fetchingOurCompanyContentWithSpinnerStarts());
     dispatch(fetchingOurTeamContentWithSpinnerStarts());
-
-
-  },[])
+  }, []);
   return (
     <>
       <Routes>
-         <Route path="/" element={<HomePage playSpaceAudio={props.playSpaceAudio} audioEvent={props.audioEvent} audioPause={props.audioPause}/>} />
-        <Route path="/our-team" element={<OurTeamPage playSpaceAudio={props.playSpaceAudio} audioEvent={props.audioEvent} audioPause={props.audioPause} />} />
+        <Route
+          path="/"
+          element={
+            <HomePage
+              playSpaceAudio={props.playSpaceAudio}
+              audioEvent={props.audioEvent}
+              audioPause={props.audioPause}
+            />
+          }
+        />
+        <Route
+          path="/our-team"
+          element={
+            <OurTeamPage
+              playSpaceAudio={props.playSpaceAudio}
+              audioEvent={props.audioEvent}
+              audioPause={props.audioPause}
+            />
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         <Route
@@ -41,32 +57,7 @@ function IndexRoute(props) {
           path="/forgot-password"
           element={<ForgotPassword />}
         />
-        <Route
-          exact
-          path="/admin"
-          element={
-            <SuperRoute>
-              <Dashboard />
-            </SuperRoute>
-          }
-        />
-        <Route
-          path="/admin/dashboard"
-          element={
-            <SuperRoute>
-              <Dashboard />
-            </SuperRoute>
-          }
-        />
-        <Route
-          path="/admin/setting"
-          element={
-            <SuperRoute>
-              <Setting />
-            </SuperRoute>
-          }
-        /> 
-       
+        <Route exact path="/admin" element={<Admin />} />
       </Routes>
     </>
   );

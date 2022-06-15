@@ -61,11 +61,12 @@
   .admin-login{
     /* display: flex; */
     /* justify-content: center; */
-    width:25%;
-    margin: auto;
     border: 2px solid orangered;
-    padding: 20px;
+    padding: 60px 10px;
     border-radius: 10px;
     /* box-shadow: 1px 1px 0px 1px grey; */
 
+  }
+  .admin-login .joinButton{
+    width: auto!important;
   }

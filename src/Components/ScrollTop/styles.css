@@ -1,0 +1,19 @@
+.preloader-container {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  transition: all 500ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+.preloader-remover {
+  transform: translateY(-110vh);
+}
+
+.preloader-none{
+    display: none;
+}

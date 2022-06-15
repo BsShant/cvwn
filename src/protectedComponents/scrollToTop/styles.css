@@ -1,0 +1,177 @@
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  background-color: transparent;
+  z-index: 10000;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  transition: all 300ms ease-out;
+}
+.alternate-button:hover .cursor {
+  background-color: pink !important;
+  transform: scale(1.1);
+}
+a:hover .cursor {
+  background-color: pink !important;
+  transform: scale(1.1) !important;
+}
+
+.ant-modal-header {
+  display: none;
+}
+
+.login-container {
+}
+.modal-logo {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-logo img {
+  width: 250px;
+  position: absolute;
+  top: -125px;
+}
+.login-info {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-bottom: auto;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.login-image {
+  width: 80%;
+}
+.login-image img {
+  width: 150px;
+}
+.login-text {
+  font-family: roboto;
+}
+.mobile-number-container {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  font-family: roboto;
+}
+.mobile-input-container {
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.mobile-input {
+  height: 33px;
+  border-radius: 10px;
+  height: 33px;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+}
+.mobile-input input {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.mobile-input input:active {
+  border: none;
+}
+#phone:focus-visible {
+  border: none !important;
+  outline: none;
+}
+.otp-button {
+  margin-bottom: 10px;
+}
+.otp-button button {
+  background-color: #1496d1;
+  color: white;
+  border: 1px solid #1496d1;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  font-family: roboto;
+}
+.password-button {
+  margin-bottom: 20px;
+}
+.password-button button {
+  border: 2px solid grey;
+  background-color: white;
+  color: black;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  font-family: roboto;
+}
+.first-tim {
+  display: flex;
+  justify-content: center;
+  font-family: roboto;
+}
+.register {
+  color: #1496d1;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: roboto;
+}
+
+.login-wrap .ant-modal-body {
+  border-radius: 10px;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+.login-wrap .ant-modal-content {
+  overflow: auto;
+  border-radius: 14px;
+  width: 70%;
+  margin: auto;
+  padding: 30px 0;
+}
+@media (min-width: 448px) and (max-width: 532px) {
+  .login-wrap .ant-modal-content{
+    width: 80%;
+  }
+}
+@media (max-width: 448px) {
+  .login-wrap .ant-modal-content{
+    width: 100%;
+  }
+  .login-wrap .ant-modal-body {
+    padding: 11px;
+  }
+}
+
+.ant-modal-mask {
+  background: rgba(9, 145, 190, 0.4);
+}
+
+.preloader-container {
+  position: relative;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+}
+.main-child-container {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,23 @@
+.media-tab {
+}
+.media-tab .ant-tabs-nav-wrap {
+  justify-content: center !important;
+}
+.media-tab .ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.media-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: orangered;
+  text-shadow: 0 0 0.25px currentColor;
+}
+.media-tab .ant-tabs-tab-btn:hover {
+  color: orangered !important;
+}
+
+.media-tab .ant-tabs-ink-bar {
+  background: orangered !important;
+}
+.media-tab .ant-tabs-tab:hover {
+  color: orangered;
+}

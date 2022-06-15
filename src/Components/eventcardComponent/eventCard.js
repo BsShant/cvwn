@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import image2 from '../../assets/events/event2.jpg';
 import './eventCard.css'
 
 export default function EventCard(props) {
@@ -26,7 +25,7 @@ export default function EventCard(props) {
                                 <h5 style={{color:"orangered"}}>{title}</h5>
                             </div>
                             <div className='footer'>
-                                <span><i className='fas fa-globe px-2' />{sponsor}</span>
+                                {/* <span><i className='fas fa-globe px-2' />{sponsor}</span> */}
                                 <span><i className='fas fa-calendar-week px-2' />{date}</span>
                             </div>
 
