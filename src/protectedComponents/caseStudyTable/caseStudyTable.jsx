@@ -29,11 +29,9 @@ const CaseStudyTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingCaseStarts());
-        console.log("Deleteing Case Study Success");
         message.success("Case Study Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Case Study Failed: ", error);
         message.error("Case Study Deletion Failed!");
       });
   };

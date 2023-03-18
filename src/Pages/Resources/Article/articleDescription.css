@@ -8,25 +8,33 @@
   margin: auto;
 }
 .article-description-inner img {
-  width: 100%!important;
-  max-height: 300px!important;
-  object-fit: cover;
+  width: 100%;
+  height: auto !important;
   margin: auto;
   display: flex;
   justify-content: center;
-  aspect-ratio: 5/3!important;
   margin-bottom: 30px;
+  max-width: 100% !important;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.article-desc-detail img {
+  width: 80% !important;
+  margin: auto !important;
+  max-height: 350px;
+  object-fit: contain;
 }
 
 .article-desc-heading {
-    color: orangered;
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+  color: #f45a2f;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }
 .article-desc-detail {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {

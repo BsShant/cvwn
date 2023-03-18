@@ -40,11 +40,11 @@ const ProductHero = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(`Product Hero Section Updated!`);
+        ""
         message.success(`Product Hero Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Product Hero Section Failed!! : `, error);
+        ""
         message.success(`Updating Product Hero Section Failed!!`);
       });
   };

@@ -19,6 +19,10 @@ import {
   VOLUNTEER_HERO_SPINNER_STARTS,
   FETCHING_VOLUNTEER_HERO_FAILURE,
   FETCHING_VOLUNTEER_HERO_SUCCESS,
+  VOLUNTEER_TYPE_SPINNER_STOPS,
+  VOLUNTEER_TYPE_SPINNER_STARTS,
+  FETCHING_VOLUNTEER_TYPE_FAILURE,
+  FETCHING_VOLUNTEER_TYPE_SUCCESS,
 } from "./getInvolvedStore.actionTypes";
 
 const INITIAL_STATE = {
@@ -28,6 +32,9 @@ const INITIAL_STATE = {
   volunteer: [],
   volunteerSpinner: false,
   volunteerError: null,
+  volunteerType: [],
+  volunteerTypeSpinner: false,
+  volunteerTypeError: null,
   volunteerHero: [],
   volunteerHeroSpinner: false,
   volunteerHeroError: null,
@@ -37,6 +44,7 @@ const INITIAL_STATE = {
   donationHero: [],
   donationHeroSpinner: false,
   donationHeroError: null,
+  donationInfo: [],
 };
 
 export const getInvolvedReducer = (state = INITIAL_STATE, action) => {
@@ -83,33 +91,53 @@ export const getInvolvedReducer = (state = INITIAL_STATE, action) => {
         volunteerSpinner: false,
       };
 
+    case FETCHING_VOLUNTEER_HERO_SUCCESS:
+      return {
+        ...state,
+        volunteerHero: action.payload,
+      };
+    case FETCHING_VOLUNTEER_HERO_FAILURE:
+      return {
+        ...state,
+        volunteerHeroError: action.payload,
+      };
+    case VOLUNTEER_HERO_SPINNER_STARTS:
+      return {
+        ...state,
+        volunteerHeroSpinner: true,
+      };
+    case VOLUNTEER_HERO_SPINNER_STOPS:
+      return {
+        ...state,
+        volunteerHeroSpinner: false,
+      };
 
-      case FETCHING_VOLUNTEER_HERO_SUCCESS:
-        return {
-          ...state,
-          volunteerHero: action.payload,
-        };
-      case FETCHING_VOLUNTEER_HERO_FAILURE:
-        return {
-          ...state,
-          volunteerHeroError: action.payload,
-        };
-      case VOLUNTEER_HERO_SPINNER_STARTS:
-        return {
-          ...state,
-          volunteerHeroSpinner: true,
-        };
-      case VOLUNTEER_HERO_SPINNER_STOPS:
-        return {
-          ...state,
-          volunteerHeroSpinner: false,
-        };
-
+    case FETCHING_VOLUNTEER_TYPE_SUCCESS:
+      return {
+        ...state,
+        volunteerType: action.payload,
+      };
+    case FETCHING_VOLUNTEER_TYPE_FAILURE:
+      return {
+        ...state,
+        volunteerTypeError: action.payload,
+      };
+    case VOLUNTEER_TYPE_SPINNER_STARTS:
+      return {
+        ...state,
+        volunteerTypeSpinner: true,
+      };
+    case VOLUNTEER_TYPE_SPINNER_STOPS:
+      return {
+        ...state,
+        volunteerTypeSpinner: false,
+      };
 
     case FETCHING_DONATION_SUCCESS:
       return {
         ...state,
-        donation: action.payload,
+        donation: action.payload.donate.data,
+        donationInfo: action.payload.donateInfo.data,
       };
     case FETCHING_DONATION_FAILURE:
       return {

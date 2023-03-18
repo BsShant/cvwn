@@ -1,6 +1,7 @@
 import { message } from "antd";
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { server } from "../../utils/fetch";
 import CustomButton from "../Custom button/custom-button.component";
@@ -11,6 +12,11 @@ import NicAsia from "./nic-asia.png";
 import { UploadImage } from "./uploadImage/uploadImage";
 
 export default function DonationForm() {
+  const footerLinks = useSelector((state) => state.footerStore.footerLinks);
+  const donationInfo = useSelector(
+    (state) => state.getInvolvedStore.donationInfo
+  );
+
   const [showEsewa, setShowEsewa] = useState(false);
   const [showKhalti, setShowKhalti] = useState(false);
   const [showBank, setShowBank] = useState(false);
@@ -20,6 +26,7 @@ export default function DonationForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [images, setImages] = React.useState([]);
+  const [myInfo, setMyInfo] = useState(null);
   const sendDonation = async () => {
     if (
       !country ||
@@ -49,7 +56,6 @@ export default function DonationForm() {
       }
       const data = await res.json();
     } catch (error) {
-      console.log("Error sending donation: ", error);
       message.error("The submission failed! Please try again later.");
     }
   };
@@ -57,7 +63,7 @@ export default function DonationForm() {
     <div className="donationform">
       <div className="donationSection">
         <div className="row">
-          <div className="col-lg-12" style={{ margin: "auto" }}>
+          <div className="col-lg-12 mb-4" style={{ margin: "auto" }}>
             <span
               className="title tittle"
               style={{ textAlign: "left", justifyContent: "left" }}
@@ -65,154 +71,85 @@ export default function DonationForm() {
               Donate via your preferred method
             </span>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-            <div className="finance-friends">
-              <img
-                onClick={() => setShowEsewa(true)}
-                src={Esewa}
-                height={70}
-                width={70}
-              />
-              <img
-                onClick={() => setShowKhalti(true)}
-                src={Khalti}
-                height={100}
-                width={100}
-                style={{ marginLeft: "40px" }}
-              />
-              <img
-                onClick={() => setShowBank(true)}
-                src={NicAsia}
-                height={140}
-                width={140}
-              />
-              {/* <div>Tap on the icon to view descriptions</div> */}
-
-              <Modal
-                show={showEsewa}
-                onHide={() => setShowEsewa(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-              >
-                <div className="finance-panel" style={{ width: "100%" }}>
-                  <div className="row" style={{ margin: "5%" }}>
-                    <div className="col-6 col-lg-6 col-sm-6 col-md-6 ">
-                      <div className="image">
-                        <img src={Esewa} height={50} width={50} />
-                      </div>
-                    </div>
-                    <div
-                      className="col-6 col-lg-6 col-sm-6 col-md-6"
-                      style={{
-                        borderLeft: "3px solid green",
-                        paddingLeft: "8%",
+          {donationInfo.length > 0
+            ? donationInfo.map((dInfo) => {
+                return (
+                  <div className="col-lg-3 col-md-4 col-sm-4 col-6 mb-3">
+                    {/* <div className="finance-friends"> */}
+                    <img
+                      onClick={() => {
+                        setMyInfo(dInfo);
+                        setShowEsewa(true);
                       }}
-                    >
-                      <div style={{ marginTop: "22%" }}>
-                        <b>Esewa Credentials</b>
-                        <br />
-                        <br />
-                        <p style={{ fontSize: "14px" }}>
-                          <b>
-                            Esewa Id : 9803666989
-                            <br />
-                            Name: CVWN
-                          </b>
-                        </p>
-                        <br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Modal>
-              <Modal
-                show={showKhalti}
-                onHide={() => setShowKhalti(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-              >
-                <div className="finance-panel" style={{ width: "100%" }}>
-                  <div className="row" style={{ margin: "5%" }}>
-                    <div className="col-6 col-lg-6 col-sm-6 col-md-6 ">
-                      <div className="image">
-                        <img src={Khalti} height={50} width={50} />
-                      </div>
-                    </div>
-
-                    <div
-                      className="col-6 col-lg-6 col-sm-6 col-md-6"
+                      src={`${server}/${dInfo.image}`}
                       style={{
-                        borderLeft: "3px solid purple",
-                        paddingLeft: "8%",
+                        width: "100%",
+                        height: "auto",
+                        marginTop: "0",
+                        cursor:"pointer"
                       }}
+                    />
+
+                    <Modal
+                      show={showEsewa}
+                      onHide={() => setShowEsewa(false)}
+                      dialogClassName="modal-90w"
+                      aria-labelledby="contained-modal-title-vcenter"
+                      centered
                     >
-                      <div style={{ marginTop: "22%" }}>
-                        <b>Khalti Credentials</b>
-                        <br />
-                        <br />
-                        <p style={{ fontSize: "14px" }}>
-                          <b>
-                            Khalti Id : 9803666989
-                            <br />
-                            Name: CVWN
-                          </b>
-                        </p>
-                        <br />
+                      <div className="finance-panel" style={{ width: "100%" }}>
+                        <div className="row" style={{ margin: "5%" }}>
+                          <div
+                            className="col-6 col-lg-6 col-sm-6 col-md-6 "
+                            style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              display: "flex",
+                            }}
+                          >
+                            <div className="image">
+                              <img
+                                src={`${server}/${myInfo?.image}`}
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                  marginTop: "0",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div
+                            className="col-6 col-lg-6 col-sm-6 col-md-6"
+                            style={{
+                              borderLeft: "3px solid green",
+                              paddingLeft: "8%",
+                            }}
+                          >
+                            <div style={{ marginTop: "22%" }}>
+                              <b>{myInfo?.heading}</b>
+                              <br />
+                              <br />
+                              <p style={{ fontSize: "14px" }}>
+                                <b>
+                                  Id : {myInfo?.pid}
+                                  <br />
+                                  Name: {myInfo?.name}
+                                </b>
+                              </p>
+                              <br />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Modal>
+                    {/* </div> */}
                   </div>
-                </div>
-              </Modal>
-              <Modal
-                show={showBank}
-                onHide={() => setShowBank(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-              >
-                <div className="finance-panel" style={{ width: "100%" }}>
-                  <div className="row" style={{ margin: "5%" }}>
-                    <div className="col-6 col-lg-6 col-sm-6 col-md-6 ">
-                      <div
-                        className="image1"
-                        style={{
-                          marginTop: "24%",
-                          marginLeft: "15%",
-                          height: "125px",
-                          width: "125px",
-                        }}
-                      >
-                        <img src={NicAsia} height={125} width={125} />
-                      </div>
-                    </div>
-                    <div
-                      className="col-6 col-lg-6 col-sm-6 col-md-6"
-                      style={{ borderLeft: "3px solid red", paddingLeft: "8%" }}
-                    >
-                      <div style={{ marginTop: "22%" }}>
-                        <b>Bank Credentials</b>
-                        <br />
-                        <br />
-                        <p style={{ fontSize: "14px" }}>
-                          <b>
-                            Acc No: 9803 6669 8900
-                            <br />
-                            Name: CVWN
-                          </b>
-                        </p>
-                        <br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Modal>
-            </div>
-          </div>
+                );
+              })
+            : null}
           <div
-            className="col-lg-6 col-md-6 col-sm-12 col-12"
-            style={{ display: "flex" }}
+            className="col-lg-4 col-md-4 col-sm-4 col-6"
+            style={{ display: "flex", marginLeft:"auto" }}
           >
             <div className="tap-to-view">
               <i class="fas fa-arrow-left leftarrow d-none d-sm-none d-lg-block d-md-block"></i>
@@ -300,24 +237,28 @@ export default function DonationForm() {
           </div>
         </div>
       </div>
-      <h6 style={{ color: "#e83802" }}>
+      <h6 style={{ color: "#f45a2f" }}>
         Please drop the screenshot of payment
       </h6>
-      <UploadImage setImages={setImages} images={images} />
-      <div className="infoContainer">
+      <UploadImage
+        setImages={setImages}
+        images={images}
+        sendDonation={sendDonation}
+      />
+      {/* <div className="infoContainer">
         <p>
           Please share your personal{" "}
           <span>Email ID, Mobile Number and Address </span>. so that we can send
           you the reciept certificate & share updates on our programmes with
           you.<br></br>
-          <span> To know more please sms SF to 56161</span>
-          <br></br>
-          <span> (Registration No. - 6382)</span>
         </p>
-      </div>
-      <div>
-        <CustomButton children={"Submit"} onSubmit={sendDonation} />
-      </div>
+      </div> */}
+      <CustomButton
+        style={{ backgroundColor: "white", color: "black" }}
+        children={"Submit"}
+        onSubmit={sendDonation}
+      />
+      <div></div>
     </div>
   );
 }

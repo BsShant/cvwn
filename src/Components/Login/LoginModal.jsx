@@ -13,7 +13,6 @@ const LoginModal = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const subscriber = useSelector((state) => state.authStore.subscriber);
-  console.log("subscriber", subscriber)
   useEffect(() => {
     if (subscriber) {
       setShowLogin(false);

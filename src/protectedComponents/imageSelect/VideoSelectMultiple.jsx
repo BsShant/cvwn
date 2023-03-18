@@ -19,7 +19,6 @@ const VideoSelectMultiple = (props) => {
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
-        console.log(info.file, info.fileList);
       }
       if (status === "done") {
         setVideoFetching(true);
@@ -29,7 +28,6 @@ const VideoSelectMultiple = (props) => {
       }
     },
     onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
     },
   };
 
@@ -48,7 +46,6 @@ const VideoSelectMultiple = (props) => {
         message.success(`${img.image} file deleted successfully.`);
       })
       .catch((error) => {
-        console.log("Deleting Image failed: ", error);
         message.error(`${img.image} file deletion failed.`);
       });
   };
@@ -64,7 +61,6 @@ const VideoSelectMultiple = (props) => {
 
     return () => {};
   }, [videoFetching]);
-  console.log(myVideo);
   return (
     <div className="image-select-container">
       <Dragger {...uploadProps} accept="video/*">
@@ -81,11 +77,11 @@ const VideoSelectMultiple = (props) => {
           ? videos
               .sort((a, b) => new Date(b.date) - new Date(a.date))
               .map((video) => {
-                console.log(`${server}/${video.video}`, "Ser");
+                ""
                 return (
                   <div className="image-list">
                     <video onClick={() => {
-                          console.log("hi")
+                          ""
                           if (myVideo.includes(video.video)) {
                             for (let i = 0; i < myVideo.length; i++) {
                               if (myVideo[i] === video.video) {

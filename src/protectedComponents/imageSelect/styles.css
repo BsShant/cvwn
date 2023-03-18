@@ -31,6 +31,15 @@
   height: 100px;
   width: 100px;
 }
+.image-list div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100px;
+}
 
 .image-list .svg-inline--fa.fa-check {
   color: blue;
@@ -55,4 +64,42 @@
 
 .bottom-gap {
   height: 60px;
+}
+.my-File-list {
+  width: 200px;
+  color: white;
+  height: 100px;
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.my-File-list span {
+  display: -webkit-box !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.File-list-container {
+  display: flex;
+}
+
+.my-File-list:hover .File-trash {
+  display: inline-block;
+}
+.File-trash{
+  color: red;
+  font-size: 18px;
+  top: 5px!important;
+  right: 5px!important;
+  position: absolute;
+  display: none;
+  z-index: 2;
 }

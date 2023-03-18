@@ -65,7 +65,7 @@ const StatsCardsContainer = () => {
             background={colors[3].background}
             icon={<i class="far fa-users"></i>}
             title={volunteer.length}
-            body="Volunteers"
+            body="Team Members"
           />
         </div>
       </div>

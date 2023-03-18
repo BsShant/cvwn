@@ -5,6 +5,8 @@ import "./styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import Preloader from "../Preloader/Preloader";
+import Logo from "../../assets/Logo.png";
+
 const ScrollToTop = (props) => {
   const loginModal = useSelector((state) => state.layoutStore.loginModal);
   const dispatch = useDispatch();
@@ -29,7 +31,10 @@ const ScrollToTop = (props) => {
           preloaderOff ? "preloader-remover" : ""
         }`}
       >
-        <Preloader />
+        <div className="image-loader">
+          <img src={Logo} alt="" />
+        </div>
+        {/* <Preloader /> */}
       </div>
     </>
   );

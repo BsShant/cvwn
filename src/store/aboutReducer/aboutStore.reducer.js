@@ -10,6 +10,8 @@ const INITIAL_STATE = {
   about: null,
   aboutSpinner: false,
   aboutError: null,
+  galleryImage:[],
+  galleryVideo:[]
 };
 
 export const aboutReducer = (state = INITIAL_STATE, action) => {
@@ -18,7 +20,10 @@ export const aboutReducer = (state = INITIAL_STATE, action) => {
     case FETCHING_ABOUT_SUCCESS:
       return {
         ...state,
-        about: action.payload,
+        about: action.payload.about.data,
+        galleryImage: action.payload.galleryImage.data,
+        galleryVideo: action.payload.galleryVideo.data,
+ 
       };
     case FETCHING_ABOUT_FAILURE:
       return {

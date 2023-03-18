@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.styles.scss";
 import NavBar from "./Navbar/navBar.component";
 import Logo from "../../assets/Logo.png";
-import MenuToggle from "./Toggle Header/menu2.components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 export default function MenuBar() {
   const footerAbout = useSelector((state) => state.footerStore.footerAbout);
   const footerContact = useSelector((state) => state.footerStore.footerContact);
   const footerLinks = useSelector((state) => state.footerStore.footerLinks);
+  const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
   return (
     <div className="container menu-bar">
       <div className="row menu-row">
@@ -71,7 +72,14 @@ export default function MenuBar() {
           </div>
           <div className="row below-section">
             <NavBar />
-            <MenuToggle />
+            {/* <MenuToggle /> */}
+            <div className="menu-toggle">
+              <i
+                class="fas fa-bars"
+                onClick={() => setDisplayMobileMenu(true)}
+              ></i>
+            </div>
+            <MobileMenu displayMobileMenu={displayMobileMenu} setDisplayMobileMenu={setDisplayMobileMenu} />
           </div>
         </div>
       </div>

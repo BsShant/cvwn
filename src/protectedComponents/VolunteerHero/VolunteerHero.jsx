@@ -40,19 +40,17 @@ const VolunteerHero = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingVolunteerHeroStarts());
-        console.log(`Volunteer Hero Section Updated!`);
-        message.success(`Volunteer Hero Section Updated!`);
+        message.success(`Team Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Volunteer Hero Section Failed!! : `, error);
-        message.success(`Updating Volunteer Hero Section Failed!!`);
+        message.success(`Updating Team Section Failed!!`);
       });
   };
   return (
     <div className="admin-box-container">
       <div className="row">
         <div className="col-md-12">
-          <div className="admin-sub-heading">Volunteer Hero Section</div>
+          <div className="admin-sub-heading">Team Hero Section</div>
           <div className="data-container">
             <div className="data-heading">Title</div>
             <AdminTextArea

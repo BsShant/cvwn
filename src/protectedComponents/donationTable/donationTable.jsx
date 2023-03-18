@@ -13,7 +13,6 @@ const DonationTable = () => {
   let url = `${server}/donation`;
   const dispatch = useDispatch();
   const donation = useSelector((state) => state.getInvolvedStore.donation);
-  console.log("donatrio", donation);
   const [donationEditModalVisible, setDonationEditModalVisible] =
     useState(false);
   const [selectedDonation, setSelectedDonation] = useState({});
@@ -32,11 +31,9 @@ const DonationTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingDonationStarts());
-        console.log("Deleteing Volunteer Success");
         message.success("Volunteer Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Volunteer Failed: ", error);
         message.error("Volunteer Deletion Failed!");
       });
   };
@@ -71,11 +68,11 @@ const DonationTable = () => {
     },
 
     {
-      title: "Edit",
-      key: "edit",
+      title: "View",
+      key: "view",
       render: (text, record) => (
         <button className="table-button" onClick={() => tableItemEdit(record)}>
-          Edit
+          View
         </button>
       ),
       responsive: ["lg"],

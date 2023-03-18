@@ -9,12 +9,12 @@ const SettingPassword = () => {
   const dispatch = useDispatch();
   const [settingPasswordValues, setSettingPasswordValues] = useState({
     oldPassword: "",
-    newPassword:""
+    newPassword: "",
+    myId: "1",
   });
   const [settingPasswordTextEdit, setSettingPasswordTextEdit] = useState({
     newPasswordEdit: false,
     oldPasswordEdit: false,
-
   });
   // useEffect(() => {
   //   if (landingHero) {
@@ -27,24 +27,23 @@ const SettingPassword = () => {
   const settingNewPasswordRef = useRef(null);
   const settingOldPasswordRef = useRef(null);
 
-  const updateDatabase = () => {
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(settingPasswordValues),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        // dispatch(fetchingLandingHeroStarts());
-        console.log(`Email Updated!`);
-        message.success(`Email Updated!`);
-      })
-      .catch((error) => {
-        console.log(`Updating Email Failed!! : `, error);
-        message.error(`Updating Email Failed!!`);
+  const updateDatabase = async () => {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(settingPasswordValues),
       });
+      if (res.status == 401) {
+        return message.success(`password did not match. please try again!`);
+      }
+      const data = await res.json();
+      message.success(`password Updated!`);
+    } catch (error) {
+      message.error(`Updating password Failed!!`);
+    }
   };
   return (
     <div className="admin-box-container">

@@ -37,16 +37,12 @@ const SubscriberData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingContactStarts());
-        console.log(`Subscriber ${props.updateData ? "Updated" : "Added"}`);
         message.success(
           `Subscriber ${props.updateData ? "Updated" : "Added"}!`
         );
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Subscriber Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} Subscriber Failed!`
         );
@@ -77,9 +73,9 @@ const SubscriberData = (props) => {
         </div>
       </div>
 
-      <button className="update-button" onClick={() => addData()}>
+      {/* <button className="update-button" onClick={() => addData()}>
         {props.updateData ? "Update" : "Add"}
-      </button>
+      </button> */}
     </div>
   );
 };

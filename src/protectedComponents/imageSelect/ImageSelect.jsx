@@ -19,7 +19,6 @@ const ImageSelect = (props) => {
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
-        console.log(info.file, info.fileList);
       }
       if (status === "done") {
         setImageFetching(true);
@@ -29,7 +28,6 @@ const ImageSelect = (props) => {
       }
     },
     onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
     },
   };
 
@@ -48,7 +46,7 @@ const ImageSelect = (props) => {
         message.success(`${img.image} file deleted successfully.`);
       })
       .catch((error) => {
-        console.log("Deleting Image failed: ", error);
+        ""
         message.error(`${img.image} file deletion failed.`);
       });
   };
@@ -74,7 +72,9 @@ const ImageSelect = (props) => {
           Click or drag file to this area to upload
         </p>
       </Dragger>
-      <div className="my-images">My Images</div>
+      <div className="my-images">
+        {name == "file" ? "My Files" : "My Images"}
+      </div>
       <div className="image-list-container">
         {images.length > 0
           ? images
@@ -82,21 +82,44 @@ const ImageSelect = (props) => {
               .map((img) => {
                 return (
                   <div className="image-list">
-                    <img
-                      onClick={() => {
-                          console.log(img)
-                        if (myImage && myImage === img.image) {
-                          setMyImage((prev) => ({ ...prev, [name]: "" }));
-                        } else {
-                          setMyImage((prev) => ({
-                            ...prev,
-                            [name]: img.image,
-                          }));
-                        }
-                      }}
-                      src={`${server}/${img.image}`}
-                      alt="Display Image"
-                    />
+                    {img.image.toLowerCase().includes(".jpg") ||
+                    img.image.toLowerCase().includes(".jpeg") ||
+                    img.image.toLowerCase().includes(".png") ||
+                    img.image.toLowerCase().includes(".webp") ||
+                    img.image.toLowerCase().includes(".gif") ||
+                    img.image.toLowerCase().includes(".psd") ||
+                    img.image.toLowerCase().includes(".tiff") ? (
+                      <img
+                        onClick={() => {
+                          ""
+                          if (myImage && myImage === img.image) {
+                            setMyImage((prev) => ({ ...prev, [name]: "" }));
+                          } else {
+                            setMyImage((prev) => ({
+                              ...prev,
+                              [name]: img.image,
+                            }));
+                          }
+                        }}
+                        src={`${server}/${img.image}`}
+                        alt="Display Image"
+                      />
+                    ) : (
+                      <div
+                        onClick={() => {
+                          if (myImage && myImage === img.image) {
+                            setMyImage((prev) => ({ ...prev, [name]: "" }));
+                          } else {
+                            setMyImage((prev) => ({
+                              ...prev,
+                              [name]: img.image,
+                            }));
+                          }
+                        }}
+                      >
+                        {img.image}
+                      </div>
+                    )}
                     {myImage && img.image == myImage && (
                       <FontAwesomeIcon className="image-check" icon={faCheck} />
                     )}

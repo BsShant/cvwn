@@ -22,6 +22,7 @@ import ResourcePage from "../../protectedPages/resourcePage/resourcePage";
 import FooterPage from "../../protectedPages/footerPage/FooterPage";
 import ContactPage from "../../protectedPages/contactPage/ContactPage";
 import ProtectedNavSmall from "../nav/ProtectedNavSmall";
+import GalleryPage from "../../protectedPages/GalleryPage/GalleryPage";
 const AdminBody = () => {
   const { activeNavLinkId, setActiveNavLinkId, setAdminSlider, adminSlider } =
     useContext(NavContext);
@@ -34,6 +35,7 @@ const AdminBody = () => {
         <SmallDashboard />
         <LandingPage />
         <AboutPage />
+        <GalleryPage />
         <ProjectPage />
         <EventPage />
         <ResourcePage />

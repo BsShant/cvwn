@@ -1,5 +1,5 @@
 .admin-container {
-  width: calc(100% - 170px);
+  width: calc(100% - 15%);
   margin-left: auto;
   transition: all 500ms ease-in-out;
 }

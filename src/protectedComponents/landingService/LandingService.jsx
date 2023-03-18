@@ -45,11 +45,11 @@ const LandingService = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingLandingServiceStarts());
-        console.log(`Landing Service Section Updated!`);
+        ""
         message.success(`Landing Service Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Landing Service Section Failed!! : `, error);
+        ""
         message.success(`Updating Landing Service Section Failed!!`);
       });
   };

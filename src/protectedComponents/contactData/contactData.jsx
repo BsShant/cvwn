@@ -52,14 +52,10 @@ const ContactData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingContactStarts());
-        console.log(`Contact ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Contact ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Contact Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} Contact Failed!`
         );
@@ -71,6 +67,7 @@ const ContactData = (props) => {
       <div className="row">
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="name"
@@ -80,6 +77,7 @@ const ContactData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="address"
@@ -89,6 +87,7 @@ const ContactData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="phone"
@@ -98,6 +97,7 @@ const ContactData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="email"
@@ -108,6 +108,7 @@ const ContactData = (props) => {
 
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="message"
@@ -117,6 +118,7 @@ const ContactData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={contactValues}
             onTextAreaValueChange={setContactValues}
             textName="subject"
@@ -126,9 +128,9 @@ const ContactData = (props) => {
         </div>
       </div>
 
-      <button className="update-button" onClick={() => addData()}>
+      {/* <button className="update-button" onClick={() => addData()}>
         {props.updateData ? "Update" : "Add"}
-      </button>
+      </button> */}
     </div>
   );
 };

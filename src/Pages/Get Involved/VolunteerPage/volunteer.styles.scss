@@ -4,12 +4,12 @@
   padding-right: 30px;
   width: 100%;
   margin-top: 0;
-  background-color: rgb(249, 247, 247);
+  background-color: white;
   padding-bottom: 3%;
   padding-top: 2%;
 }
 h2 {
-  color: #e83802;
+  color: #f45a2f;
   font-weight: 700;
   font-size: 32px;
 }
@@ -100,5 +100,24 @@ h2 {
   .image-container img {
     height: 170px;
     width: 170px;
+  }
+}
+.image-container img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.volunteer-section{
+  margin-bottom: 50px;
+  h3{
+    color: #f45a2f;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  .volunteer-teams{
+    display: flex;
   }
 }

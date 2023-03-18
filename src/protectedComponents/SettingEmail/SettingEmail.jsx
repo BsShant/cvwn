@@ -5,7 +5,7 @@ import AdminTextArea from "../adminTextArea/AdminTextArea";
 import { useSelector, useDispatch } from "react-redux";
 import "./styles.css";
 const SettingEmail = () => {
-  let url = `${server}/auth/chgangeEmail`;
+  let url = `${server}/auth/changeEmail`;
   const dispatch = useDispatch();
   const [settingEmailValues, setSettingEmailValues] = useState({
     email: "",
@@ -36,11 +36,11 @@ const SettingEmail = () => {
       .then((res) => res.json())
       .then((data) => {
         // dispatch(fetchingLandingHeroStarts());
-        console.log(`Email Updated!`);
+        ""
         message.success(`Email Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Email Failed!! : `, error);
+        ""
         message.error(`Updating Email Failed!!`);
       });
   };

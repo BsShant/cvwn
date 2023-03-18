@@ -1,6 +1,7 @@
 .donationform{
     text-align: start;
     margin-bottom: 30px;
+    width: 100%;
 
     h4{
         color: var(--web-theme);
@@ -9,7 +10,7 @@
     }
 
     .donationSection{
-        padding: 20px 10px;
+        padding: 20px 0px;
         
         .inputRow{
             margin-bottom: 10px;
@@ -145,7 +146,7 @@ margin-top: 20%;
 transition:0.5s;
 }
 .tap-to-view{
-    color:#e83802;
+    color:#f45a2f;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -161,7 +162,7 @@ transition:0.5s;
   }
   @keyframes arrowup {
     0% {
-      transform: translateY(-50px)
+      transform: translateY(-20px)
     }
   
     100% {
@@ -171,7 +172,7 @@ transition:0.5s;
   
   @keyframes arrow {
     0% {
-      transform: translateX(-50px)
+      transform: translateX(-20px)
     }
   
     100% {

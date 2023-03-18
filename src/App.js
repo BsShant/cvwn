@@ -1,5 +1,5 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import "./App.css";
 import HomePage from "./Pages/homepage";
 import MenuBar from "./Components/Header/header.components";
 import Footer from "./Components/Footer/footer.component";
@@ -29,6 +29,9 @@ import {
   fetchingLandingAboutWithSpinnerStarts,
   fetchingLandingDonateWithSpinnerStarts,
   fetchingLandingHeroWithSpinnerStarts,
+  fetchingMemberWithSpinnerStarts,
+  fetchingPartnerWithSpinnerStarts,
+  fetchingLandingSliderWithSpinnerStarts,
 } from "./store/landingReducer/landingStore.actions";
 import { fetchingAboutWithSpinnerStarts } from "./store/aboutReducer/aboutStore.actions";
 import {
@@ -42,6 +45,7 @@ import {
   fetchingDonationWithSpinnerStarts,
   fetchingDonationHeroWithSpinnerStarts,
   fetchingVolunteerHeroWithSpinnerStarts,
+  fetchingVolunteerTypeWithSpinnerStarts,
 } from "./store/getInvolvedReducer/getInvolvedStore.actions";
 import {
   fetchingReportWithSpinnerStarts,
@@ -62,33 +66,85 @@ import ForgotPassword from "./protectedPages/login/forgotPassword";
 import RouteSuperComponent from "./Components/SuperRoute/SuperRoute";
 import ReactGA from "react-ga";
 import SettingPage from "./protectedPages/SettingPage/SettingPage";
+import Gallery from "./Pages/Gallery/Gallery";
+import CaseStoryPage from "./Pages/Resources/Case Story Report/case.study.report.component";
+import CaseStoryDescription from "./Pages/Resources/Case Story Report/CaseStudyDescription";
+import PublicationPage from "./Pages/Resources/Publication/announcement.components";
+import PublicationDescription from "./Pages/Resources/Publication/PublicationDescription";
+import AnnouncementDetail from "./Pages/Get Involved/Announcement/AnnouncementDetail";
 function App() {
   const authUser = useSelector((state) => state.authStore.authUser);
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(fetchingLandingHeroWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingLandingDonateWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingPartnerWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingAboutWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingCaseWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingAnnouncementWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingEventWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingProjectWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingArticleWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingReportWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingLandingAboutWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingLandingSliderWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingLandingHeroWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingVolunteerHeroWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingVolunteerWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingDonationWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingVolunteerTypeWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingDonationHeroWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingMemberWithSpinnerStarts());
+  }, []);
+  useEffect(() => {
+    dispatch(fetchingContactWithSpinnerStarts());
+  }, []);
+
+  useEffect(() => {
     AOS.init();
     ReactGA.initialize("UA-228812119-3");
     ReactGA.pageview(window.location.pathname + window.location.search);
-    dispatch(fetchingLandingHeroWithSpinnerStarts());
-    dispatch(fetchingLandingDonateWithSpinnerStarts());
-    dispatch(fetchingAboutWithSpinnerStarts());
-    dispatch(fetchingEventWithSpinnerStarts());
-    dispatch(fetchingProjectWithSpinnerStarts());
-    dispatch(fetchingReportWithSpinnerStarts());
-    dispatch(fetchingCaseWithSpinnerStarts());
-    dispatch(fetchingArticleWithSpinnerStarts());
-    dispatch(fetchingAnnouncementWithSpinnerStarts());
-    dispatch(fetchingVolunteerWithSpinnerStarts());
-    dispatch(fetchingDonationWithSpinnerStarts());
-    dispatch(fetchingDonationHeroWithSpinnerStarts())
-    dispatch(fetchingVolunteerHeroWithSpinnerStarts())
-    dispatch(fetchingLandingHeroWithSpinnerStarts());
-    dispatch(fetchingLandingAboutWithSpinnerStarts());
+
     dispatch(fetchingFooterAboutWithSpinnerStarts());
     dispatch(fetchingFooterLinksWithSpinnerStarts());
     dispatch(fetchingFooterContactWithSpinnerStarts());
     dispatch(fetchingRequestWithSpinnerStarts());
-    dispatch(fetchingContactWithSpinnerStarts());
   }, []);
   return (
     <div>
@@ -102,10 +158,11 @@ function App() {
         >
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<Aboutpage />} />
+          <Route path="/gallery" element={<Gallery />} />
 
           <Route path="/events" element={<Eventpage />} />
           <Route
-            path="/resources/annual_report"
+            path="/resources/annual-report"
             element={<AnnualReportPage />}
           />
           <Route path="/projects" element={<ProjectPage />} />
@@ -126,13 +183,29 @@ function App() {
             element={<CaseStudyDescription />}
           />
           <Route
+            path="/resources/case-story/case-story-description/:id"
+            element={<CaseStoryDescription />}
+          />
+          <Route
+            path="/resources/publication/publication-description/:id"
+            element={<PublicationDescription />}
+          />
+           <Route
+            path="/get-involved/announcement-detail/:id/:title"
+            element={<AnnouncementDetail />}
+          />
+
+          <Route
             path="/project/project-description/:id"
             element={<CaseStudyDescription />}
           />
+
           <Route
-            path="/resources/case_study_report"
+            path="/resources/case-study-report"
             element={<CaseStudyReportPage />}
           />
+          <Route path="/resources/case-story" element={<CaseStoryPage />} />
+          <Route path="/resources/publication" element={<PublicationPage />} />
           <Route path="/resources/article" element={<Articlepage />} />
           <Route
             path="/get-involved/announcement"

@@ -20,7 +20,6 @@ const ImageUpload = (props) => {
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
-        console.log(info.file, info.fileList);
       }
       if (status === "done") {
         setImageFetching(true);
@@ -30,7 +29,6 @@ const ImageUpload = (props) => {
       }
     },
     onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
     },
   };
   const updateImage = () => {
@@ -48,7 +46,7 @@ const ImageUpload = (props) => {
         message.success(`${props.imageSection} Updated Successfully.`);
       })
       .catch((error) => {
-        console.log(`Updating ${props.imageSection} Failed: `, error);
+        ""
         message.error(`Updating ${props.imageSection} Failed.`);
       });
   };
@@ -67,7 +65,7 @@ const ImageUpload = (props) => {
         message.success(`${img.image} file deleted successfully.`);
       })
       .catch((error) => {
-        console.log("Deleting Image failed: ", error);
+        ""
         message.error(`${img.image} file deletion failed.`);
       });
   };

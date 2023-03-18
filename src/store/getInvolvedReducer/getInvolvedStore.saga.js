@@ -21,6 +21,10 @@ import {
   fetchingDonationHeroSuccess,
   donationHeroSpinnerStops,
   donationHeroSpinnerStarts,
+  fetchingVolunteerTypeSuccess,
+  fetchingVolunteerTypeFailure,
+  volunteerTypeSpinnerStops,
+  volunteerTypeSpinnerStarts,
 } from "./getInvolvedStore.actions";
 import {
   fetchAnnouncement,
@@ -28,6 +32,7 @@ import {
   fetchDonate,
   fetchVolunteerHero,
   fetchDonateHero,
+  fetchVolunteerType,
 } from "../../utils/api-calls/getInvolvedCalls";
 import {
   START_FETCHING_ANNOUNCEMENT,
@@ -40,6 +45,8 @@ import {
   START_FETCHING_VOLUNTEER_HERO_WITH_SPINNER,
   START_FETCHING_DONATION_HERO_WITH_SPINNER,
   START_FETCHING_DONATION_HERO,
+  START_FETCHING_VOLUNTEER_TYPE,
+  START_FETCHING_VOLUNTEER_TYPE_WITH_SPINNER,
 } from "./getInvolvedStore.actionTypes";
 
 export function* announcementFetch() {
@@ -104,6 +111,41 @@ export function* startVolunteerFetchWithSpinner() {
   );
 }
 
+
+
+export function* volunteerTypeFetch() {
+  try {
+    let fetchData = yield fetchVolunteerType();
+    yield put(fetchingVolunteerTypeSuccess(fetchData.data));
+  } catch (error) {
+    yield put(fetchingVolunteerTypeFailure(error));
+  }
+}
+
+export function* volunteerTypeFetchWithSpinner() {
+  try {
+    yield put(volunteerTypeSpinnerStarts());
+    let fetchData = yield fetchVolunteerType();
+    yield put(fetchingVolunteerTypeSuccess(fetchData.data));
+    yield put(volunteerTypeSpinnerStops());
+  } catch (error) {
+    yield put(fetchingVolunteerTypeFailure(error));
+  }
+}
+
+export function* startVolunteerTypeFetch() {
+  yield takeLatest(START_FETCHING_VOLUNTEER_TYPE, volunteerTypeFetch);
+}
+
+export function* startVolunteerTypeFetchWithSpinner() {
+  yield takeLatest(
+    START_FETCHING_VOLUNTEER_TYPE_WITH_SPINNER,
+    volunteerTypeFetchWithSpinner
+  );
+}
+
+
+
 export function* volunteerHeroFetch() {
   try {
     let fetchData = yield fetchVolunteerHero();
@@ -138,7 +180,7 @@ export function* startVolunteerHeroFetchWithSpinner() {
 export function* donationFetch() {
   try {
     let fetchData = yield fetchDonate();
-    yield put(fetchingDonationSuccess(fetchData.data));
+    yield put(fetchingDonationSuccess(fetchData));
   } catch (error) {
     yield put(fetchingDonationFailure(error));
   }
@@ -148,7 +190,7 @@ export function* donationFetchWithSpinner() {
   try {
     yield put(donationSpinnerStarts());
     let fetchData = yield fetchDonate();
-    yield put(fetchingDonationSuccess(fetchData.data));
+    yield put(fetchingDonationSuccess(fetchData));
     yield put(donationSpinnerStops());
   } catch (error) {
     yield put(fetchingDonationFailure(error));
@@ -206,6 +248,8 @@ export function* getInvolvedMode() {
     call(startAnnouncementFetchWithSpinner),
     call(startVolunteerFetch),
     call(startVolunteerFetchWithSpinner),
+    call(startVolunteerTypeFetch),
+    call(startVolunteerTypeFetchWithSpinner),
     call(startVolunteerHeroFetch),
     call(startVolunteerHeroFetchWithSpinner),
     call(startDonationFetch),

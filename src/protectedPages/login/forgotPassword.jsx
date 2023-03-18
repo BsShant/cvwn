@@ -1,15 +1,13 @@
+import { Button, Form, Input, message } from "antd";
 import React from "react";
 import { useDispatch } from "react-redux";
-import "./login.css";
-import { authProcessStarts } from "../../store/authStore/auth.action";
 import { server } from "../../utils/fetch";
-import { Form, Input, Button, Checkbox, message } from "antd";
+import "./login.css";
 const ForgotPassword = () => {
   const dispatch = useDispatch();
 
   const onFinish = async (values) => {
     const key = "updatable";
-    console.log(values);
     message.loading({ content: "Loading...", key });
     try {
       const res = await fetch(`${server}/auth/forgotPassword`, {
@@ -18,18 +16,16 @@ const ForgotPassword = () => {
         body: JSON.stringify(values),
       });
       const data = await res.json();
-      console.log(data);
       if (data) {
         message.success({ content: data.message, key, duration: 2 });
       }
     } catch (error) {
-      console.log(error);
       message.error({ content: "The operation failed", key, duration: 2 });
     }
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    ""
   };
 
   return (

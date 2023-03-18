@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export default function VolunteerComponent(props) {
-  const { image, name, role, fb, insta, twitter } = props;
+  const { image, name, role, fb, insta, twitter, address } = props;
   return (
     <div className="volnt-box">
       <div className="image-container">
@@ -19,8 +19,9 @@ export default function VolunteerComponent(props) {
         <h5>{name}</h5>
 
         <div className="post">{role}</div>
+        <div className="post">{address}</div>
 
-        <div class="items">
+        {/* <div class="items">
           <a href={fb} target="_blank">
             <i className="fab fa-facebook-f facebook"></i>
           </a>
@@ -28,10 +29,9 @@ export default function VolunteerComponent(props) {
             <i className="fab fa-instagram instagram"></i>
           </a>
           <a href={twitter} target="_blank">
-            {" "}
             <i className="fab fa-twitter twitter"></i>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

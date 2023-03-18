@@ -21,7 +21,7 @@
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-analytics-charts": "^1.2.13",
-    "react-bootstrap": "^2.2.3",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "^17.0.2",
     "react-draft-wysiwyg": "^1.14.7",
     "react-ga": "^3.3.0",

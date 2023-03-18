@@ -1,4 +1,3 @@
-
 import { message, Select } from "antd";
 import React, { useEffect, useState } from "react";
 import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
@@ -39,16 +38,12 @@ const ReportData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingReportStarts());
-        console.log(`Annual Report ${props.updateData ? "Updated" : "Added"}`);
         message.success(
           `Annual Report ${props.updateData ? "Updated" : "Added"}!`
         );
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Annual Report Failed`
-        );
         message.error(
           `${
             props.updateData ? "Updating" : "Adding"

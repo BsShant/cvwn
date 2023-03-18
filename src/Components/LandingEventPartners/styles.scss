@@ -1,0 +1,37 @@
+.landing-event-partner-container {
+  // background-image: url("https://img.fotocommunity.com/orange-building-w-window-d22730ac-c629-4b9a-9330-64f7dbd91736.jpg?width=1000");
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  // background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    content: ""
+  }
+
+  .landing-partner-heading {
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: left;
+    color: #f45a2f;
+    margin-bottom: 20px;
+  }
+
+  .landing-partner-body {
+  }
+}

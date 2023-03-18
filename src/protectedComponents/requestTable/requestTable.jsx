@@ -11,7 +11,6 @@ const RequestTable = () => {
   let url = `${server}/request`;
   const dispatch = useDispatch();
   const request = useSelector((state) => state.eventStore.request);
-  console.log("request",request)
   const [requestEditModalVisible, setRequestEditModalVisible] =
     useState(false);
   const [selectedRequest, setRequestDonation] = useState({});
@@ -30,11 +29,9 @@ const RequestTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingRequestStarts());
-        console.log("Deleteing Request Success");
         message.success("Request Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Request Failed: ", error);
         message.error("Request Deletion Failed!");
       });
   };

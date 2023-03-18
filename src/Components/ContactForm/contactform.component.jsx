@@ -35,7 +35,6 @@ function ContactForm() {
       }
       const data = await res.json();
     } catch (error) {
-      console.log("Error sending contact: ", error);
       message.error("The submission failed! Please try again later.");
     }
   };
@@ -48,6 +47,9 @@ function ContactForm() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            width: "100%",
+            overflow: "hidden",
+            margin: "auto",
           }}
         >
           <div className="col-md-6 col-sm-0">
@@ -58,7 +60,7 @@ function ContactForm() {
               style={{
                 height: "3px",
                 width: "20%",
-                background: "#e83802",
+                background: "#f45a2f",
                 opacity: "1",
               }}
             ></hr>

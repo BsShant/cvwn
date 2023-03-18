@@ -28,11 +28,9 @@ const ProjectTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingProjectStarts());
-        console.log("Deleteing Project Success");
         message.success("Project Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Project Failed: ", error);
         message.error("Project Deletion Failed!");
       });
   };
@@ -45,21 +43,7 @@ const ProjectTable = () => {
         <div className="category-table-name">{text}</div>
       ),
     },
-    {
-      title: "Start",
-      dataIndex: "start",
-      key: "start",
-    },
-    {
-      title: "End",
-      dataIndex: "end",
-      key: "end",
-    },
-    {
-      title: "Duration",
-      dataIndex: "duration",
-      key: "duration",
-    },
+
     {
       title: "Edit",
       key: "edit",

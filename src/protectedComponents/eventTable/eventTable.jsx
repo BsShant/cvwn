@@ -11,7 +11,6 @@ const EventTable = () => {
   let url = `${server}/event`;
   const dispatch = useDispatch();
   const event = useSelector((state) => state.eventStore.event);
-  console.log("ececc", event)
   const [eventEditModalVisible, setEventEditModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState({});
   const tableItemEdit = (record) => {
@@ -29,11 +28,9 @@ const EventTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingEventStarts());
-        console.log("Deleteing Event Success");
         message.success("Event Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Event Failed: ", error);
         message.error("Event Deletion Failed!");
       });
   };

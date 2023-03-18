@@ -31,21 +31,16 @@ export default function EventDescription() {
         <div className="main-contents">
           <div className="inner-main-contents">
             <div className="row ongoing-event-row">
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div
+                className="col-lg-6 col-md-6 col-sm-12 col-12"
+                style={{ padding: "0" }}
+              >
                 <Image
                   src={`${myEvent ? `${server}/${myEvent.image}` : ""}`}
                   style={{ objectFit: "cover", height: "360px", width: "100%" }}
                 />
               </div>
-              <div
-                className="col-lg-6 col-md-6 col-sm-12 col-12"
-                style={{
-                  paddingLeft: "40px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12 ongoing-text">
                 <div
                   className="head"
                   style={{
@@ -54,7 +49,7 @@ export default function EventDescription() {
                     textAlign: "left",
                   }}
                 >
-                  <h5 style={{ color: "orangered" }}>
+                  <h5 style={{ color: "#f45a2f" }}>
                     {myEvent ? myEvent.title : ""}
                   </h5>
                 </div>
@@ -93,7 +88,7 @@ export default function EventDescription() {
                     {myEvent ? myEvent.location : ""}
                   </div>
                 </div>
-                {myEvent && myEvent.status === "upcoming" ? (
+                {myEvent && myEvent.status != "completed" ? (
                   <div className="JoinusButton">
                     <button
                       onClick={() => setShowJoin(true)}
@@ -115,7 +110,7 @@ export default function EventDescription() {
         </div>
       </div>
 
-      {myEvent && myEvent.status === "completed" ? (
+      {myEvent && myEvent.status !== "upcoming" ? (
         <EventCompleted myEvent={myEvent} />
       ) : null}
     </div>

@@ -80,7 +80,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  color: orangered;
+  color: #f45a2f;
   font-size: 50px !important;
   margin-top: 20px;
 }
@@ -91,9 +91,9 @@
   margin-top: 10px;
 }
 .joinButton {
-  background-color: rgb(232, 56, 2);
+  background-color: #f45a2f;
   color: white;
-  border: 2px solid var(--web-theme);
+  border: 2px solid #f45a2f;
   padding: 7px 10px 8px 10px;
   transition: 1s;
   /* margin-bottom:5%; */
@@ -110,14 +110,14 @@
 }
 form input {
   margin-bottom: 15px;
-  border: 1px solid #e83802;
+  border: 1px solid #f45a2f;
   border-radius: 5px;
   height: 30px;
   font-size: 12px;
   padding-left: 4px;
 }
 /* textarea {
-  border: 1px solid #e83802;
+  border: 1px solid #f45a2f;
   border-radius: 5px;
   font-size: 12px;
   padding-left: 4px;
@@ -137,11 +137,11 @@ form input {
   margin-top: -45%;
   object-fit: cover;
   box-shadow: 0px 3px 6px 1px grey;
-  border: 4px solid #e83802;
+  border: 4px solid #f45a2f;
 }
 
 h1 {
-  color: #e83802;
+  color: #f45a2f;
   font-size: 65px;
   font-weight: 400;
   display: flex;

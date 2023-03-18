@@ -16,7 +16,6 @@ import { server } from "../../../utils/fetch";
 
 export default function AnnualReportPage() {
   const report = useSelector((state) => state.resourceStore.report);
-  console.log(report);
   return (
     <div className="annualReport">
       <h2>Annual Reports</h2>

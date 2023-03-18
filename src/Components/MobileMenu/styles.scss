@@ -1,0 +1,111 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+  background-color: white;
+  height: 80vh;
+  width: 300px;
+  z-index: 100;
+  display: none;
+  overflow-y: scroll;
+  @media (max-width: 992px) {
+    display: flex;
+  }
+  .cross {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 23px;
+    color: #f45a2f;
+    cursor: pointer;
+  }
+  .mobile-menu-container {
+    margin-top: 50px;
+    .ant-menu-item {
+      .ant-menu-title-content {
+        a {
+          font-size: 16px !important;
+          color: black !important;
+          text-transform: capitalize !important;
+          &:hover {
+            color: #f45a2f !important;
+          }
+        }
+      }
+      &:hover {
+        a {
+          color: #f45a2f !important;
+        }
+      }
+      &:active {
+        background-color: #f45a2f7a;
+      }
+    }
+    .ant-menu-sub {
+      .ant-menu-item {
+        text-align: center;
+        .ant-menu-title-content {
+          a {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+    .ant-menu-submenu {
+      .ant-menu-submenu-arrow {
+        color: #f45a2f !important;
+        font-size: 30px !important;
+      }
+      .ant-menu-submenu-title {
+        padding: 0 !important;
+        &:active {
+          background-color: #f45a2f7a;
+        }
+        .ant-menu-title-content {
+          font-size: 16px !important;
+          font-size: 16px !important;
+          color: black !important;
+        }
+        &:hover {
+          .ant-menu-title-content {
+            color: #f45a2f !important;
+          }
+        }
+      }
+    }
+    .ant-menu-item-selected {
+      .ant-menu-title-content {
+        a {
+          color: #f45a2f !important;
+        }
+      }
+    }
+  }
+}
+.mobileOn {
+  transform: translateY(0);
+}
+.mobileOff {
+  transform: translateY(-90vh);
+}
+
+.hamburger-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  top: 0;
+  left: 0;
+  @media (min-width: 992px) {
+    display: none!important;
+  }
+}
+.hamburgerOn {
+  display: flex;
+}
+.hamburgerOff {
+  display: none;
+}

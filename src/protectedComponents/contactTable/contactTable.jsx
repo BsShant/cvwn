@@ -29,11 +29,9 @@ const ContactTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingContactStarts());
-        console.log("Deleteing Fund Raiser Success");
         message.success("Fund Raiser Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Fund Raiser Failed: ", error);
         message.error("Fund Raiser Deletion Failed!");
       });
   };
@@ -52,31 +50,18 @@ const ContactTable = () => {
       key: "subject",
     },
     {
-      title: "Phone",
-      dataIndex: "phone",
-      key: "phone",
-    },
-    {
       title: "Email",
       dataIndex: "email",
       key: "email",
     },
+    
+   
     {
-      title: "Status",
-      dataIndex: "status",
-      key: "status",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
-    },
-    {
-      title: "Edit",
-      key: "edit",
+      title: "View",
+      key: "view",
       render: (text, record) => (
         <button className="table-button" onClick={() => tableItemEdit(record)}>
-          Set Seen
+          View
         </button>
       ),
       responsive: ["lg"],

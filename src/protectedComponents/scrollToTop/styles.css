@@ -94,9 +94,9 @@ a:hover .cursor {
   margin-bottom: 10px;
 }
 .otp-button button {
-  background-color: #1496d1;
+  background-color: #f45a2f;
   color: white;
-  border: 1px solid #1496d1;
+  border: 1px solid #f45a2f;
   height: 40px;
   width: 140px;
   display: flex;
@@ -128,7 +128,7 @@ a:hover .cursor {
   font-family: roboto;
 }
 .register {
-  color: #1496d1;
+  color: #f45a2f;
   cursor: pointer;
   margin-left: 10px;
   font-family: roboto;

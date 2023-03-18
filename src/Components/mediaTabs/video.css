@@ -2,7 +2,7 @@
 }
 .video-gallery {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .gallery-video-container {
     margin-bottom: 20px;

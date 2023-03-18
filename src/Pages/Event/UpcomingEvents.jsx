@@ -3,8 +3,11 @@ import ReactOwlCarousel from "react-owl-carousel";
 import { useSelector } from "react-redux";
 import EventCard from "../../Components/eventcardComponent/eventCard";
 import { server } from "../../utils/fetch";
-
+import { DatePicker } from "antd";
+import "./upcoming.scss";
 const UpcomingEvents = (props) => {
+  const { RangePicker } = DatePicker;
+
   const { status, heading } = props;
   const event = useSelector((state) => state.eventStore.event);
   const [upcoming, setUpcomingEvent] = useState(
@@ -19,12 +22,39 @@ const UpcomingEvents = (props) => {
       })
     );
   }, [event]);
+
+  function onDateChange(s) {
+    const newup = event.filter(
+      (nup) =>
+        new Date(nup.date).toDateString() == new Date(s).toDateString() &&
+        nup.status == status
+    );
+    setUpcomingEvent([...newup]);
+  }
+  {
+    /* <div className="col-md-6">
+          <div className="data-heading">Select Start And End Date</div>
+          <RangePicker onChange={(s, e) => onDateChange(s, e)} />
+        </div> */
+  }
   return (
     <>
-      {upcoming.length > 0 ? (
-        <div>
-          <h2 style={{ marginTop: "30px" }}>{heading}</h2>
-          <div className="">
+      <div className="upcoming-slider">
+        <div className="container" style={{ padding: "0" }}>
+          <div className="row up-top">
+            <div className="col-md-6">
+              <h2>{heading}</h2>
+            </div>
+            <div className="col-md-2" style={{marginLeft:"auto"}}>
+              <div className="date-sorter">
+                <div className="date-sort-heading">Select Date</div>
+                <DatePicker onChange={(s) => onDateChange(s)} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          {upcoming.length > 0 ? (
             <ReactOwlCarousel
               className="owl-theme"
               loop
@@ -33,18 +63,23 @@ const UpcomingEvents = (props) => {
               responsive={{
                 0: {
                   items: 1,
+                  margin: 30,
                 },
                 400: {
                   items: 1,
+                  margin: 30,
                 },
                 600: {
                   items: 1,
+                  margin: 30,
                 },
                 768: {
                   items: 2,
+                  margin: 30,
                 },
                 1000: {
                   items: 3,
+                  margin: 30,
                 },
               }}
             >
@@ -65,11 +100,11 @@ const UpcomingEvents = (props) => {
                 <div>No Data</div>
               )}
             </ReactOwlCarousel>
-          </div>
+          ) : (
+            <div className="upcoming-no-data">No Data</div>
+          )}
         </div>
-      ) : (
-        <div>No Data</div>
-      )}
+      </div>
     </>
   );
 };

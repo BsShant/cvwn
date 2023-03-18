@@ -10,6 +10,15 @@ export const fetchLandingHero = async () => {
   return landingHero;
 };
 
+export const fetchLandingSlider = async () => {
+  const res2 = await fetch(`${server}/landingSlider`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const landingSlider = await res2.json();
+
+  return landingSlider;
+};
 
 export const fetchLandingAbout = async () => {
   const res2 = await fetch(`${server}/landingAbout`, {
@@ -29,11 +38,39 @@ export const fetchLandingDonate = async () => {
     });
     const landingDonate = await res2.json();
     return landingDonate;
-    
   } catch (error) {
-    console.log("Fetching Landing Donate Failed: ", error)
+    console.log("Fetching Landing Donate Failed: ", error);
   }
-
 };
 
+export const fetchMember = async () => {
+  const res2 = await fetch(`${server}/member`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const member = await res2.json();
 
+  return member;
+};
+
+export const fetchPartner = async () => {
+  const res4 = await fetch(`${server}/partnerBg`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const partnerBg = await res4.json();
+  
+  const res2 = await fetch(`${server}/partner`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const partner = await res2.json();
+
+  const res3 = await fetch(`${server}/publication`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const publication = await res3.json();
+
+  return { partner, publication, partnerBg };
+};

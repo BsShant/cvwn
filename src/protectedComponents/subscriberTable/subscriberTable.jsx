@@ -41,11 +41,9 @@ const SubscriberTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingContactStarts());
-        console.log("Deleteing Subscriber Success");
         message.success("Subscriber Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Subscriber Failed: ", error);
         message.error("SubscriberDeletion Failed!");
       });
   };
@@ -66,11 +64,11 @@ const SubscriberTable = () => {
     },
 
     {
-      title: "Edit",
-      key: "edit",
+      title: "View",
+      key: "view",
       render: (text, record) => (
         <button className="table-button" onClick={() => tableItemEdit(record)}>
-          Edit
+          View
         </button>
       ),
       responsive: ["lg"],

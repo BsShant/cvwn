@@ -29,8 +29,6 @@ const LandingAbout = () => {
   }, [landingAbout]);
   const landingAboutTitleRef = useRef(null);
   const landingAboutDetailRef = useRef(null);
-  console.log("landign about", landingAbout);
-
   const updateDatabase = () => {
     fetch(url, {
       method: "PUT",
@@ -42,11 +40,9 @@ const LandingAbout = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingLandingAboutStarts());
-        console.log(`Landing About Section Updated!`);
         message.success(`Landing About Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Landing About Section Failed!! : `, error);
         message.success(`Updating Landing About Section Failed!!`);
       });
   };

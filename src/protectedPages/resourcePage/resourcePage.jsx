@@ -12,11 +12,17 @@ import ArticleData from "../../protectedComponents/articleData/articleData";
 import ArticleTable from "../../protectedComponents/articleTable/articleTable";
 import ReportData from "../../protectedComponents/reportData/reportData";
 import ReportTable from "../../protectedComponents/reportTable/reportTable";
+import CaseStoryData from "../../protectedComponents/caseStoryData/caseStoryData";
+import PublicationData from "../../protectedComponents/publicationData/publicationData";
+import PublicationTable from "../../protectedComponents/publicationTable/publicationTable";
+import CaseStoryTable from "../../protectedComponents/caseStoryTable/caseStoryTable";
 const ResourcePage = () => {
   const eventRef = useNav("Resource");
   const [ReportModalVisible, setReportModalVisible] = useState(false);
   const [CaseModalVisible, setCaseModalVisible] = useState(false);
   const [articleModalVisible, setArticleModalVisible] = useState(false);
+  const [CaseStoryModalVisible, setCaseStoryModalVisible] = useState(false);
+  const [PublicationModalVisible, setPublicationModalVisible] = useState(false);
 
   return (
     <div ref={eventRef} id="ResourceContainer">
@@ -73,6 +79,42 @@ const ResourcePage = () => {
               <CaseStudyData url={`${server}/case`} method="POST" />
             </DataInputModal>
             <CaseStudyTable />
+          </div>
+
+          <div className="admin-inner-section">
+            <div className="admin-sub-heading">Case Story</div>
+
+            <button
+              className="choose-button"
+              onClick={() => setCaseStoryModalVisible(true)}
+            >
+              Add Case Story
+            </button>
+            <DataInputModal
+              setDataModalVisible={setCaseStoryModalVisible}
+              dataModalVisible={CaseStoryModalVisible}
+            >
+              <CaseStoryData url={`${server}/caseStory`} method="POST" />
+            </DataInputModal>
+            <CaseStoryTable />
+          </div>
+
+          <div className="admin-inner-section">
+            <div className="admin-sub-heading">Publication</div>
+
+            <button
+              className="choose-button"
+              onClick={() => setPublicationModalVisible(true)}
+            >
+              Add Publication
+            </button>
+            <DataInputModal
+              setDataModalVisible={setPublicationModalVisible}
+              dataModalVisible={PublicationModalVisible}
+            >
+              <PublicationData url={`${server}/publication`} method="POST" />
+            </DataInputModal>
+            <PublicationTable />
           </div>
         </div>
       </div>

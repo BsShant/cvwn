@@ -17,7 +17,13 @@ export const fetchCase = async () => {
   });
   const study = await res2.json();
 
-  return study;
+  const res3 = await fetch(`${server}/caseStory`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const story = await res3.json();
+
+  return { study, story };
 };
 
 export const fetchArticle = async () => {
@@ -30,14 +36,12 @@ export const fetchArticle = async () => {
   return article;
 };
 
-
 export const fetchLoanType = async () => {
-    const res2 = await fetch(`${server}/loanType`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
-    const loanType = await res2.json();
-  
-    return loanType;
-  };
-  
+  const res2 = await fetch(`${server}/loanType`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const loanType = await res2.json();
+
+  return loanType;
+};

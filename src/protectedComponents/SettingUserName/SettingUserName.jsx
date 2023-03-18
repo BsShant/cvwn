@@ -36,11 +36,11 @@ const SettingUserName = () => {
       .then((res) => res.json())
       .then((data) => {
         // dispatch(fetchingLandingHeroStarts());
-        console.log(`Username Updated!`);
+        ""
         message.success(`Username Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Username Failed!! : `, error);
+        ""
         message.error(`Updating Username Failed!!`);
       });
   };

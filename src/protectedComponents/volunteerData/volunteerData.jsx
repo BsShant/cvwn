@@ -12,23 +12,37 @@ import ImageSelect from "../imageSelect/ImageSelect";
 
 const VolunteerData = (props) => {
   const dispatch = useDispatch();
+  const { Option } = Select;
+  const volunteerType = useSelector(
+    (state) => state.getInvolvedStore.volunteerType
+  );
   const [volunteerValues, setVolunteerValues] = useState({
     name: "",
     image: "",
     role: "",
-    facebook: "",
-    insta: "",
-    twitter: "",
+    facebook: "https://facebook.com",
+    insta: "https://insta.com",
+    twitter: "https://twitter.com",
+    rank: "",
+    type: "",
+    address: "",
   });
-
   useEffect(() => {
     setVolunteerValues({
       name: props.updateData ? props.updateData.name : "",
       role: props.updateData ? props.updateData.role : "",
       image: props.updateData ? props.updateData.image : "",
-      facebook: props.updateData ? props.updateData.facebook : "",
-      twitter: props.updateData ? props.updateData.twitter : "",
-      insta: props.updateData ? props.updateData.insta : "",
+      type: props.updateData ? props.updateData.type : "",
+      address: props.updateData ? props.updateData.address : "",
+
+      facebook: props.updateData
+        ? props.updateData.facebook
+        : "https://insta.com",
+      twitter: props.updateData
+        ? props.updateData.twitter
+        : "https://insta.com",
+      insta: props.updateData ? props.updateData.insta : "https://insta.com",
+      rank: props.updateData ? props.updateData.rank : "",
     });
   }, [props.updateData]);
   const addData = () => {
@@ -38,7 +52,10 @@ const VolunteerData = (props) => {
       !volunteerValues.image ||
       !volunteerValues.facebook ||
       !volunteerValues.twitter ||
-      !volunteerValues.insta
+      !volunteerValues.insta ||
+      !volunteerValues.rank ||
+      !volunteerValues.type ||
+      !volunteerValues.address
     ) {
       return message.error("Please insert required values!");
     }
@@ -56,23 +73,38 @@ const VolunteerData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingVolunteerStarts());
-        console.log(`Volunteer ${props.updateData ? "Updated" : "Added"}`);
-        message.success(`Volunteer ${props.updateData ? "Updated" : "Added"}!`);
+        message.success(`Team ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Volunteer Failed`
-        );
         message.error(
-          `${props.updateData ? "Updating" : "Adding"} New Volunteer Failed!`
+          `${props.updateData ? "Updating" : "Adding"} New Team Failed!`
         );
       });
   };
-
+  function onChange(value) {
+    setVolunteerValues((prev) => ({ ...prev, type: value }));
+  }
   return (
     <div>
       <div className="row">
+        <div className="col-md-6">
+          <div className="data-heading">Team Type</div>
+          <Select
+            // defaultValue={volunteerValues.type}
+            placeholder="Select Team Type"
+            onChange={onChange}
+          >
+            {volunteerType.map((status, index) => {
+              ""
+              return (
+                <Option key={index} value={status.name}>
+                  {status.name.replaceAll("-", " ").toLocaleUpperCase()}
+                </Option>
+              );
+            })}
+          </Select>
+        </div>
         <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={volunteerValues}
@@ -92,7 +124,26 @@ const VolunteerData = (props) => {
             title="Role"
           />
         </div>
+
         <div className="col-md-6">
+          <AdminModalTextArea
+            textAreaValue={volunteerValues}
+            onTextAreaValueChange={setVolunteerValues}
+            textName="address"
+            name="VolunteerAddress"
+            title="Address"
+          />
+        </div>
+        <div className="col-md-6">
+          <AdminModalTextArea
+            textAreaValue={volunteerValues}
+            onTextAreaValueChange={setVolunteerValues}
+            textName="rank"
+            name="VolunteerRank"
+            title="Rank"
+          />
+        </div>
+        {/* <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={volunteerValues}
             onTextAreaValueChange={setVolunteerValues}
@@ -100,8 +151,8 @@ const VolunteerData = (props) => {
             name="VolunteerFacebook"
             title="Facebook"
           />
-        </div>
-        <div className="col-md-6">
+        </div> */}
+        {/* <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={volunteerValues}
             onTextAreaValueChange={setVolunteerValues}
@@ -109,8 +160,8 @@ const VolunteerData = (props) => {
             name="VolunteerTwitter"
             title="Twitter"
           />
-        </div>
-        <div className="col-md-6">
+        </div> */}
+        {/* <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={volunteerValues}
             onTextAreaValueChange={setVolunteerValues}
@@ -118,8 +169,8 @@ const VolunteerData = (props) => {
             name="VolunteerInsta"
             title="Insta"
           />
-        </div>
-        <div className="image-select-heading">Select Volunteer Image</div>
+        </div> */}
+        <div className="image-select-heading">Select Team Image</div>
         <ImageSelect
           myImage={volunteerValues.image}
           setMyImage={setVolunteerValues}

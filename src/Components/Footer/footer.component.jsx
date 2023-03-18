@@ -272,6 +272,13 @@ export default function Footer() {
                   {" "}
                   <i className="fab fa-twitter twittericon" />
                 </a>
+                <a
+                  href={footerLinks ? `${footerLinks.youtube}` : ""}
+                  target="_blank"
+                >
+                  {" "}
+                  <i class="fab fa-youtube youtubeicon" ></i>
+                </a>
               </div>
 
               {/* <i className='fab fa-facebook-f facebookicon'/>  */}

@@ -25,6 +25,11 @@ const ProtectedNav = (props) => {
       scrollToId: "AboutContainer",
     },
     {
+      navLinkId: "Gallery",
+      name: "Gallery Page",
+      scrollToId: "GalleryContainer",
+    },
+    {
       navLinkId: "Project",
       name: "Project Page",
       scrollToId: "ProjectContainer",

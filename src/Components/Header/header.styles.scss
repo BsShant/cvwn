@@ -1,7 +1,6 @@
 .menu-bar {
   background: white;
   color: black;
-  max-height: 200px;
   .menu-row {
     height: 115px;
     max-width: 100%;
@@ -18,7 +17,7 @@
         padding: 0;
         object-fit: cover;
         width: 150px;
-        margin-left: -13% !important;
+        margin-left: -21% !important;
         height: 100%;
 
         .img-fluid {
@@ -46,7 +45,7 @@
           font-size: 14px;
         }
         :hover {
-          color: #f1592f;
+          color: #f45a2f;
 
           transition: 0.5s;
         }
@@ -59,7 +58,7 @@
           padding-right: 12px;
         }
         :hover {
-          color: #f1592f;
+          color: #f45a2f;
         }
       }
 
@@ -214,5 +213,16 @@
 @media (max-width: 768px) {
   .menu-bar .menu-row .logo-section img {
     width: 130px;
+  }
+}
+
+.menu-bar .menu-toggle {
+  display: none;
+  font-size: 24px;
+  text-align: right;
+  cursor: pointer;
+  justify-content: flex-end;
+  @media (max-width: 992px) {
+    display: flex;
   }
 }

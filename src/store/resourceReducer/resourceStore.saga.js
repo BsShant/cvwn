@@ -61,7 +61,7 @@ export function* startReportFetchWithSpinner() {
 export function* caseFetch() {
   try {
     let fetchData = yield fetchCase();
-    yield put(fetchingCaseSuccess(fetchData.data));
+    yield put(fetchingCaseSuccess(fetchData));
   } catch (error) {
     yield put(fetchingCaseFailure(error));
   }
@@ -71,7 +71,7 @@ export function* caseFetchWithSpinner() {
   try {
     yield put(caseSpinnerStarts());
     let fetchData = yield fetchCase();
-    yield put(fetchingCaseSuccess(fetchData.data));
+    yield put(fetchingCaseSuccess(fetchData));
     yield put(caseSpinnerStops());
   } catch (error) {
     yield put(fetchingCaseFailure(error));

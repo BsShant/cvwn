@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 const ProtectedHeader = () => {
   const [selectedKey, setSelectedKey] = useState("");
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const menu = (
     <Menu
       className="headerDropdown"
@@ -36,8 +36,6 @@ const ProtectedHeader = () => {
       e.target !== "input.hideInput.showInput" ||
       e.target !== "svg.svg-inline--fa.fa-magnifying-glass"
     ) {
-      console.log("heror", e.target);
-
       setShowInput(false);
       window.removeEventListener("click", listenToClick);
     }
@@ -47,20 +45,20 @@ const ProtectedHeader = () => {
       window.addEventListener("click", listenToClick);
     }
   }, [showInput]);
-  console.log(showInput);
   return (
     <div className="protected-header">
-      <div className="admin-header-left">
-        <div className="admin-header-text">Dashboard</div>
-        <div className="admin-toggle">
-          <FontAwesomeIcon
-            icon={faBars}
-            onClick={() => setAdminSlider((prev) => !prev)}
-          />
+      <div className="container" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+        <div className="admin-header-left">
+          <div className="admin-header-text">Dashboard</div>
+          <div className="admin-toggle">
+            <FontAwesomeIcon
+              icon={faBars}
+              onClick={() => setAdminSlider((prev) => !prev)}
+            />
+          </div>
         </div>
-      </div>
-      <div className="admin-header-right">
-        {/* <div className="header-search">
+        <div className="admin-header-right">
+          {/* <div className="header-search">
           <FontAwesomeIcon
             icon={faSearch}
             onClick={() => {
@@ -75,15 +73,16 @@ const ProtectedHeader = () => {
             className={`hideInput ${showInput ? "showInput" : ""}`}
           />
         </div> */}
-        <div className="admin-user-icon">
-          <Dropdown
-            style={{ width: "50px" }}
-            overlay={menu}
-            trigger={["click"]}
-            placement="bottomRight"
-          >
-            <FontAwesomeIcon icon={faUserCircle} />
-          </Dropdown>
+          <div className="admin-user-icon">
+            <Dropdown
+              style={{ width: "50px" }}
+              overlay={menu}
+              trigger={["click"]}
+              placement="bottomRight"
+            >
+              <FontAwesomeIcon icon={faUserCircle} />
+            </Dropdown>
+          </div>
         </div>
       </div>
     </div>

@@ -6,10 +6,9 @@ import { server } from "../../utils/fetch";
 const videomap = [1, 2, 3, 4, 5, 6, 7, 8];
 const VideoTab = (props) => {
   const { myEvent } = props;
-  console.log(myEvent.mediaVideo, "dfdff")
   return (
     <div className="video-tab-container">
-      <div className="row video-gallery">
+      <div className="row video-gallery" style={{justifyContent:"flex-start"}}>
         {myEvent && myEvent.mediaVideo
           ? JSON.parse(myEvent.mediaVideo).map((video, index) => {
               return (

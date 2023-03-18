@@ -39,11 +39,9 @@ const LandingDonate = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingLandingDonateStarts());
-        console.log(`Landing Donate Section Updated!`);
         message.success(`Landing Donate Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Landing Donate Section Failed!! : `, error);
         message.success(`Updating Landing Donate Section Failed!!`);
       });
   };

@@ -18,21 +18,23 @@ const EventMediaData = (props) => {
   useEffect(() => {
     setEventValues({
       title: props.updateData ? props.updateData.title : "",
-      mediaImage:
-        props.updateData && props.updateData.mediaImage
-          ? JSON.parse(props.updateData.mediaImage)
-          : [],
-      mediaVideo:
-        props.updateData && props.updateData.mediaVideo
-          ? JSON.parse(props.updateData.mediaVideo)
-          : [],
+      mediaImage:[],
+      mediaVideo:[]
+      // mediaImage:
+      //   props.updateData && props.updateData.mediaImage
+      //     ? JSON.parse(props.updateData.mediaImage)
+      //     : [],
+      // mediaVideo:
+      //   props.updateData && props.updateData.mediaVideo
+      //     ? JSON.parse(props.updateData.mediaVideo)
+      //     : [],
     });
   }, [props.updateData]);
   const addData = () => {
     if (!eventValues.title || !eventValues.mediaImage) {
       return message.error("Please insert required values!");
     }
-    fetch(props.url, {
+        fetch(props.url, {
       method: props.method,
       headers: {
         "Content-Type": "application/json",
@@ -50,12 +52,10 @@ const EventMediaData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingEventStarts());
-        console.log(`Event ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Event ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(`${props.updateData ? "Updating" : "Adding"} Event Failed`);
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Event Failed!`
         );

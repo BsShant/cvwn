@@ -6,6 +6,9 @@
 
   .navBar {
     padding: 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
     .navbar {
       color: black;
       justify-content: flex-end;
@@ -52,6 +55,7 @@
         }
         .dropdown-menu {
           border: none;
+          padding: 0!important;
         }
       }
     }
@@ -74,7 +78,7 @@
 }
 .header-nav .dropdown-item {
   transition: 0s;
-  background-color: #f1592f;
+  background-color: #f45a2f;
   color: white;
   font-size: 15px !important;
   font-weight: 400;
@@ -117,14 +121,14 @@
 }
 
 @media (max-width: 992px) {
-    .navbar-expand-sm .navbar-collapse .header-nav {
+  .navbar-expand-sm .navbar-collapse .header-nav {
     display: none !important;
   }
- 
+
   .navbar-expand-sm .navbar-collapse {
     display: none !important;
   }
 }
-.navbar-toggler{
-    display: none!important;
+.navbar-toggler {
+  display: none !important;
 }

@@ -58,12 +58,10 @@ const EventData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingEventStarts());
-        console.log(`Event ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Event ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(`${props.updateData ? "Updating" : "Adding"} Event Failed`);
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Event Failed!`
         );
@@ -73,7 +71,6 @@ const EventData = (props) => {
     setEventValues((prev) => ({ ...prev, status: value }));
   }
   function onDateChange(e) {
-    console.log(e._d.toString());
     setEventValues((prev) => ({ ...prev, date: e }));
   }
   return (

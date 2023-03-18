@@ -8,7 +8,7 @@ import { server } from "../../utils/fetch";
 
 const ImageSelectMultiple = (props) => {
   const { Dragger } = Upload;
-  const { myImage, setMyImage, name } = props;
+  const { myImage, setMyImage, name, max } = props;
   const [images, setImages] = useState([]);
 
   const [imageFetching, setImageFetching] = useState(false);
@@ -19,7 +19,6 @@ const ImageSelectMultiple = (props) => {
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
-        console.log(info.file, info.fileList);
       }
       if (status === "done") {
         setImageFetching(true);
@@ -29,7 +28,6 @@ const ImageSelectMultiple = (props) => {
       }
     },
     onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
     },
   };
 
@@ -48,7 +46,7 @@ const ImageSelectMultiple = (props) => {
         message.success(`${img.image} file deleted successfully.`);
       })
       .catch((error) => {
-        console.log("Deleting Image failed: ", error);
+        ""
         message.error(`${img.image} file deletion failed.`);
       });
   };
@@ -84,6 +82,7 @@ const ImageSelectMultiple = (props) => {
                   <div className="image-list">
                     <img
                       onClick={() => {
+                        ""
                         if (myImage.includes(img.image)) {
                           for (let i = 0; i < myImage.length; i++) {
                             if (myImage[i] === img.image) {
@@ -96,10 +95,19 @@ const ImageSelectMultiple = (props) => {
                             }
                           }
                         } else {
-                          setMyImage((prev) => ({
-                            ...prev,
-                            [name]: [...myImage, img.image],
-                          }));
+                          if (max && myImage.length >= max) {
+                            let newImage = myImage;
+                            newImage.shift()
+                            setMyImage((prev) => ({
+                              ...prev,
+                              [name]: [...newImage, img.image],
+                            }));
+                          } else {
+                            setMyImage((prev) => ({
+                              ...prev,
+                              [name]: [...myImage, img.image],
+                            }));
+                          }
                         }
                       }}
                       src={`${server}/${img.image}`}

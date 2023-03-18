@@ -14,7 +14,7 @@ const FooterLinks = () => {
     facebook: "",
     insta: "",
     twitter: "",
-    // youtube: "",
+    youtube: "",
     // linkedIn: "",
   });
   const [footerLinksTextEdit, setFooterLinksEdit] = useState({
@@ -30,7 +30,7 @@ const FooterLinks = () => {
         facebook: footerLinks.facebook,
         twitter: footerLinks.twitter,
         // linkedIn: footerLinks.linkedIn,
-        // youtube: footerLinks.youtube,
+        youtube: footerLinks.youtube,
         insta: footerLinks.insta,
       });
     }
@@ -52,11 +52,9 @@ const FooterLinks = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingFooterLinksStarts());
-        console.log(`Footer Links Section Updated!`);
         message.success(`Footer Links Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Footer Links Section Failed!! : `, error);
         message.success(`Updating Footer Links Section Failed!!`);
       });
   };
@@ -108,7 +106,7 @@ const FooterLinks = () => {
               name="footerInsta"
             />
           </div>
-          {/* <div className="data-container">
+          <div className="data-container">
             <div className="data-heading">Youtube</div>
             <AdminTextArea
               textAreaRef={footerYoutubeRef}
@@ -121,6 +119,7 @@ const FooterLinks = () => {
               name="footerYoutube"
             />
           </div>
+          {/*}
           <div className="data-container">
             <div className="data-heading">LinkedIn</div>
             <AdminTextArea

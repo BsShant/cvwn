@@ -40,11 +40,9 @@ const DonateHero = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingDonationHeroStarts());
-        console.log(`Donate Hero Section Updated!`);
         message.success(`Donate Hero Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Donate Hero Section Failed!! : `, error);
         message.success(`Updating Donate Hero Section Failed!!`);
       });
   };

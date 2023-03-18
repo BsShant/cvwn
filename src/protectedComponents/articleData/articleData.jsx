@@ -56,14 +56,10 @@ const ArticleData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingArticleStarts());
-        console.log(`Article ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Article ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Article Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Article Failed!`
         );

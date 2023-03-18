@@ -21,7 +21,6 @@ const content = {
 
 class EditorConvertToHTML extends Component {
   onContentStateChange = (contentState) => {
-    console.log("contentState", contentState);
     this.props.setEditorState(contentState);
   };
   uploadImageCallBack = (file) => {
@@ -42,14 +41,11 @@ class EditorConvertToHTML extends Component {
         //     return this.props.logoutProcessStarts(data.user)
         //   }
 
-        console.log(data);
         if (data) {
-            console.log("data",data)
           message.success("The image upload succeded");
         }
         resolve({ data: { link: `${server}/${data.image}` } });
       } catch (error) {
-        console.log(error);
         message.error({ content: "The operation failed", key, duration: 2 });
         reject(error);
       }

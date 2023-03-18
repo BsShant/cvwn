@@ -6,9 +6,16 @@ import ImageUploadModal from "../../protectedComponents/imageUploadModal/ImageUp
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingAboutStarts } from "../../store/aboutReducer/aboutStore.actions";
 import { useNav } from "../../protectedComponents/UseNav/UseNav";
+import VolunteerData from "../../protectedComponents/volunteerData/volunteerData";
+import VolunteerTable from "../../protectedComponents/volunteerTable/volunteerTable";
+import DataInputModal from "../../protectedComponents/dataInputmodal/DataInputModal";
+import VolunteerTypeData from "../../protectedComponents/VolunteerTypeData/VolunteerTypeData";
+import VolunteerTypeTable from "../../protectedComponents/volunteerTypeTable/volunteerTable";
 const AboutPage = () => {
   let url = `${server}/about`;
   const AboutRef = useNav("About");
+  const [VolunteerModalVisible, setVolunteerModalVisible] = useState(false);
+  const [VolunteerTypeModalVisible, setVolunteerTypeModalVisible] = useState(false);
 
   const dispatch = useDispatch();
   const about = useSelector((state) => state.aboutStore.about);
@@ -59,18 +66,17 @@ const AboutPage = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingAboutStarts());
-        console.log(` About Page Updated!`);
         message.success(` About Page Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating  About Page Failed!! : `, error);
+        ""
         message.success(`Updating  About Page Failed!!`);
       });
   };
   return (
     <div ref={AboutRef} id="AboutContainer">
       <div className="container">
-        <div className="admin-header">Abouut Page Section</div>
+        <div className="admin-header">About Page Section</div>
         <div className="admin-box-container">
           <div className="row">
             <div className="col-md-12">
@@ -168,6 +174,40 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="admin-inner-section">
+          <div className="admin-sub-heading">Team Type</div>
+          <button
+            className="choose-button"
+            onClick={() => setVolunteerTypeModalVisible(true)}
+          >
+            Add Team Type
+          </button>
+          <DataInputModal
+            setDataModalVisible={setVolunteerTypeModalVisible}
+            dataModalVisible={VolunteerTypeModalVisible}
+          >
+          <VolunteerTypeData url={`${server}/volunteerType`} method="POST" />
+          </DataInputModal>
+        <VolunteerTypeTable />
+        </div>
+
+
+        <div className="admin-inner-section">
+          <div className="admin-sub-heading">Team</div>
+          <button
+            className="choose-button"
+            onClick={() => setVolunteerModalVisible(true)}
+          >
+            Add Team
+          </button>
+          <DataInputModal
+            setDataModalVisible={setVolunteerModalVisible}
+            dataModalVisible={VolunteerModalVisible}
+          >
+            <VolunteerData url={`${server}/volunteer`} method="POST" />
+          </DataInputModal>
+          <VolunteerTable />
         </div>
       </div>
     </div>

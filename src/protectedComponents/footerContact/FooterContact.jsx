@@ -44,11 +44,9 @@ const FooterContact = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingFooterContactStarts());
-        console.log(`Footer About Section Updated!`);
         message.success(`Footer About Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Footer About Section Failed!! : `, error);
         message.success(`Updating Footer About Section Failed!!`);
       });
   };

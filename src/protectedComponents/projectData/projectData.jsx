@@ -16,11 +16,10 @@ const ProductData = (props) => {
     para3: "",
     para4: "",
     image: [],
-    start: "",
-    end: "",
-    duration: "",
+    start: "2056/04/30",
+    end: "2156/04/30",
+    duration: "1 year",
   });
-  console.log("image", projectValues.image);
   useEffect(() => {
     setProjectValues({
       title: props.updateData ? props.updateData.title : "",
@@ -29,9 +28,9 @@ const ProductData = (props) => {
       para3: props.updateData ? props.updateData.para3 : "",
       para4: props.updateData ? props.updateData.para4 : "",
       image: props.updateData ? JSON.parse(props.updateData.image) : "",
-      start: props.updateData ? props.updateData.start : "",
-      end: props.updateData ? props.updateData.end : "",
-      duration: props.updateData ? props.updateData.duration : "",
+      start: props.updateData ? props.updateData.start : "2056/04/30",
+      end: props.updateData ? props.updateData.end : "2156/04/30",
+      duration: props.updateData ? props.updateData.duration : "1 year",
     });
   }, [props.updateData]);
   const addData = () => {
@@ -52,21 +51,21 @@ const ProductData = (props) => {
       },
       body: JSON.stringify(
         props.updateData
-          ? { ...projectValues, id: props.updateData.id, image: JSON.stringify(projectValues.image) }
+          ? {
+              ...projectValues,
+              id: props.updateData.id,
+              image: JSON.stringify(projectValues.image),
+            }
           : { ...projectValues, image: JSON.stringify(projectValues.image) }
       ),
     })
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingProjectStarts());
-        console.log(`Project ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Project ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Project Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Project Failed!`
         );
@@ -87,11 +86,11 @@ const ProductData = (props) => {
             title="Title"
           />
         </div>
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
           <div className="data-heading">Select Start And End Date</div>
           <RangePicker onChange={(s, e) => onDateChange(s, e)} />
-        </div>
-        <div className="col-md-6">
+        </div> */}
+        {/* <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={projectValues}
             onTextAreaValueChange={setProjectValues}
@@ -99,7 +98,7 @@ const ProductData = (props) => {
             name="projectDuration"
             title="Duration"
           />
-        </div>
+        </div> */}
         <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={projectValues}
@@ -141,7 +140,9 @@ const ProductData = (props) => {
         </div>
       </div>
 
-      <div className="image-select-heading">Select Project Image (You Can Select Multiple Images)</div>
+      <div className="image-select-heading">
+        Select Project Image (You Can Select Multiple Images)
+      </div>
       <ImageSelectMultiple
         myImage={projectValues.image}
         setMyImage={setProjectValues}

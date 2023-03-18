@@ -29,7 +29,6 @@ const EventMods = (props) => {
         },
         body: formdata,
       });
-      console.log(res);
       if (res.status == 200) {
         setShowJoin(false);
         message.success(
@@ -39,8 +38,6 @@ const EventMods = (props) => {
       const data = await res.json();
     } catch (error) {
       setShowJoin(false);
-
-      console.log("Error sending contact: ", error);
       message.error("The submission failed! Please try again later.");
     }
   };
@@ -117,7 +114,7 @@ const EventMods = (props) => {
                     name="message"
                     style={{
                       width: "100%",
-                      border: "1px solid #e83802",
+                      border: "1px solid #f45a2f",
                       borderRadius: "5px",
                       fontSize: "12px",
                       paddingLeft: "4px",

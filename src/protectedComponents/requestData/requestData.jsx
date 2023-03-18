@@ -48,14 +48,10 @@ const RequestData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingRequestStarts());
-        console.log(`Request ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Request ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Request Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Request Failed!`
         );

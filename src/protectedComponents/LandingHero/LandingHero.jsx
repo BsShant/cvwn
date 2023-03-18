@@ -38,11 +38,9 @@ const LandingHero = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingLandingHeroStarts());
-        console.log(`Landing Hero Section Updated!`);
         message.success(`Landing Hero Section Updated!`);
       })
       .catch((error) => {
-        console.log(`Updating Landing Hero Section Failed!! : `, error);
         message.success(`Updating Landing Hero Section Failed!!`);
       });
   };

@@ -57,16 +57,12 @@ const CaseStudyData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingCaseStarts());
-        console.log(`Case Study ${props.updateData ? "Updated" : "Added"}`);
         message.success(
           `Case Study ${props.updateData ? "Updated" : "Added"}!`
         );
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Case Study Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Case Study Failed!`
         );
@@ -87,7 +83,7 @@ const CaseStudyData = (props) => {
         </div>
       </div>
 
-      <div className="image-select-heading">Select Case Studt Image</div>
+      <div className="image-select-heading">Select Case Study Image</div>
       <ImageSelect
         myImage={caseStudyValues.image}
         setMyImage={setCaseStudyValues}

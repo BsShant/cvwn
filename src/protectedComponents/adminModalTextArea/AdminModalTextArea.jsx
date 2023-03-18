@@ -12,6 +12,7 @@ const AdminModalTextArea = (props) => {
       <div className="data-box admin-modal-text-box">
         <textarea
           autoFocus
+          readOnly={props.readOnly}
           value={textAreaValue[textName]}
           onChange={(e) => onTextAreaChange(e)}
           type="text"

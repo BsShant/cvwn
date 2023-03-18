@@ -1,11 +1,11 @@
 .forget-password{
     text-decoration: none;
     font-size: 14px;
-    color:orangered;
+    color:#f45a2f;
 }
 .new-acc{
     text-decoration: none;
-    color: orangered;
+    color: #f45a2f;
 }
 .new-account{
     /* margin-bottom: 25px; */
@@ -25,7 +25,7 @@
 .login-into{
     margin-bottom: 25px;
     display: flex;
-    color:orangered;
+    color:#f45a2f;
 
     justify-content: flex-start;
     font-size: 21px;

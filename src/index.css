@@ -53,3 +53,9 @@ code {
   font-family: nova-thin;
   src: url("./assets/fonts/Proxima-Nova-Alt-Thin.otf");
 }
+.main-btn{
+  width:"auto"!important
+}
+.main-btnn{
+  width:"auto"!important
+}

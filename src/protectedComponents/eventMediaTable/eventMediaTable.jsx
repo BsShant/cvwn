@@ -12,7 +12,7 @@ const EventMediaTable = () => {
   let url = `${server}/event/eventMedia`;
   const dispatch = useDispatch();
   const event = useSelector((state) => state.eventStore.event).filter(
-    (eve) => eve.status === "completed"
+    (eve) => eve.status != "upcoming"
   );
   const [eventEditModalVisible, setEventEditModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState({});

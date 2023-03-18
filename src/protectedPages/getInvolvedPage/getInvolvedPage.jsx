@@ -12,13 +12,18 @@ import VolunteerTable from "../../protectedComponents/volunteerTable/volunteerTa
 import VolunteerData from "../../protectedComponents/volunteerData/volunteerData";
 import VolunteerHero from "../../protectedComponents/VolunteerHero/VolunteerHero";
 import DonateHero from "../../protectedComponents/DonateHero/DonateHero";
+import EsewaCred from "../../protectedComponents/EsewaCred/EsewaCred";
+import Khalti from "../../protectedComponents/KhaltiCred/KhaltiCred";
+import BankCred from "../../protectedComponents/BankCred/BankCred";
+import DonationInfoData from "../../protectedComponents/donationInfoData/DonationInfoData";
+import DonationInfoTable from "../../protectedComponents/donationInfoTable/DonationInfoTable";
 const GetInvolvedPage = () => {
   const articleRef = useNav("GetInvolved");
   const [announcementModalVisible, setAnnouncementModalVisible] =
     useState(false);
 
-  const [VolunteerModalVisible, setVolunteerModalVisible] = useState(false);
   const [DonateModalVisible, setDonateModalVisible] = useState(false);
+  const [DonationInfoModalVisible, setDonationInfoModalVisible] = useState(false);
 
   return (
     <div ref={articleRef} id="GetInvolvedContainer">
@@ -42,42 +47,51 @@ const GetInvolvedPage = () => {
             <AnnouncementTable />
           </div>
 
+          {/* <VolunteerHero /> */}
+
+          <DonateHero />
+
+          {/* <EsewaCred />
+          <Khalti />
+          <BankCred /> */}
           <div className="admin-inner-section">
-            <div className="admin-sub-heading">Volunteer</div>
+            <div className="admin-sub-heading">Donation Info</div>
             <button
               className="choose-button"
-              onClick={() => setVolunteerModalVisible(true)}
+              onClick={() => setDonationInfoModalVisible(true)}
             >
-              Add Volunteer
+              Add Donation Info
             </button>
             <DataInputModal
-              setDataModalVisible={setVolunteerModalVisible}
-              dataModalVisible={VolunteerModalVisible}
+              setDataModalVisible={setDonationInfoModalVisible}
+              dataModalVisible={DonationInfoModalVisible}
+              view={true}
             >
-              <VolunteerData url={`${server}/volunteer`} method="POST" />
+              <DonationInfoData
+                view={true}
+                url={`${server}/donationInfo`}
+                method="POST"
+              />
             </DataInputModal>
-            <VolunteerTable />
+            <DonationInfoTable />
           </div>
-          <VolunteerHero />
 
           <div className="admin-inner-section">
             <div className="admin-sub-heading">Donation</div>
-            <button
-              className="choose-button"
-              onClick={() => setDonateModalVisible(true)}
-            >
-              Add Donation
-            </button>
+
             <DataInputModal
               setDataModalVisible={setDonateModalVisible}
               dataModalVisible={DonateModalVisible}
+              view={true}
             >
-              <DonationData url={`${server}/donation`} method="POST" />
+              <DonationData
+                view={true}
+                url={`${server}/donation`}
+                method="POST"
+              />
             </DataInputModal>
             <DonationTable />
           </div>
-
-          <DonateHero />
         </div>
       </div>
     </div>

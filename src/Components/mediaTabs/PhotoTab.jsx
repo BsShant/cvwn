@@ -18,6 +18,7 @@ const PhotoTab = (props) => {
                       objectFit: "cover",
                       width: "100%",
                       height: "200px",
+                      
                     }}
                   />
                 </div>

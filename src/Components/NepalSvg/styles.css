@@ -1,0 +1,17 @@
+svg {
+  pointer-events: none;
+}
+
+path {
+  pointer-events: auto;
+}
+polygon {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.pvlumbini:hover {
+  fill: green;
+}
+polygon:hover{
+    fill: black;
+}

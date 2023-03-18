@@ -30,6 +30,15 @@ export const fetchVolunteerHero = async () => {
   return volunteerHero;
 };
 
+export const fetchVolunteerType = async () => {
+  const res2 = await fetch(`${server}/volunteerType`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const volunteerType = await res2.json();
+
+  return volunteerType;
+};
 
 
 export const fetchDonate = async () => {
@@ -38,7 +47,13 @@ export const fetchDonate = async () => {
     headers: { "Content-Type": "application/json" },
   });
   const donate = await res2.json();
-  return donate;
+
+  const res3 = await fetch(`${server}/donationInfo`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const donateInfo = await res3.json();
+  return {donate, donateInfo};
 };
 
 

@@ -29,6 +29,12 @@ import {
   FETCHING_VOLUNTEER_HERO_SUCCESS,
   START_FETCHING_VOLUNTEER_HERO_WITH_SPINNER,
   START_FETCHING_VOLUNTEER_HERO,
+  START_FETCHING_VOLUNTEER_TYPE,
+  START_FETCHING_VOLUNTEER_TYPE_WITH_SPINNER,
+  FETCHING_VOLUNTEER_TYPE_SUCCESS,
+  FETCHING_VOLUNTEER_TYPE_FAILURE,
+  VOLUNTEER_TYPE_SPINNER_STARTS,
+  VOLUNTEER_TYPE_SPINNER_STOPS,
 } from "./getInvolvedStore.actionTypes";
 
 export const fetchingAnnouncementStarts = () => {
@@ -136,6 +142,53 @@ export const volunteerHeroSpinnerStops = () => {
     type: VOLUNTEER_HERO_SPINNER_STOPS,
   };
 };
+
+
+
+
+
+export const fetchingVolunteerTypeStarts = () => {
+  return {
+    type: START_FETCHING_VOLUNTEER_TYPE,
+  };
+};
+
+export const fetchingVolunteerTypeWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_VOLUNTEER_TYPE_WITH_SPINNER,
+  };
+};
+
+export const fetchingVolunteerTypeSuccess = (data) => {
+  return {
+    type: FETCHING_VOLUNTEER_TYPE_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingVolunteerTypeFailure = (error) => {
+  return {
+    type: FETCHING_VOLUNTEER_TYPE_FAILURE,
+    payload: error,
+  };
+};
+
+export const volunteerTypeSpinnerStarts = () => {
+  return {
+    type: VOLUNTEER_TYPE_SPINNER_STARTS,
+  };
+};
+export const volunteerTypeSpinnerStops = () => {
+  return {
+    type: VOLUNTEER_TYPE_SPINNER_STOPS,
+  };
+};
+
+
+
+
+
+
+
 
 export const fetchingDonationStarts = () => {
   return {

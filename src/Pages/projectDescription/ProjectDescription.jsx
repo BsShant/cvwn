@@ -28,11 +28,11 @@ function ProjectDescription() {
           <div className="projectSection">
             <div className="projectTitle">
               <h3> {myProject ? myProject.title : ""}</h3>
-              <h4>
+              {/* <h4>
                 {myProject ? myProject.duration : ""} (
                 {myProject ? myProject.start : ""} to{" "}
                 {myProject ? myProject.end : ""})
-              </h4>
+              </h4> */}
             </div>
 
             <div className="project-paragraph">

@@ -8,6 +8,7 @@ export default function CustomButton({ children, ...props }) {
         className="myButton"
         onClick={() => props.onSubmit()}
         type="submit"
+        {...props}
       >
         {children}
       </button>

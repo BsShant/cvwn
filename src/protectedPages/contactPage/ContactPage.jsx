@@ -11,7 +11,7 @@ const ContactPage = () => {
   const [contactModalVisible, setContactModalVisible] = useState(false);
 
   return (
-    <div ref={contactRef} id="ContactContainer">
+    <div ref={contactRef} id="ContactUsContainer">
       <div className="container">
         <div className="admin-fund-raiser-inner-section">
           <div className="admin-header">Contact Page</div>

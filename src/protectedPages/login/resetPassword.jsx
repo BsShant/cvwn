@@ -28,7 +28,6 @@ const ResetPassword = (props) => {
         body: JSON.stringify(values),
       });
       const data = await res.json();
-      console.log(data);
       if (data) {
         message.success({ content: data.message, key, duration: 2 });
       }
@@ -36,7 +35,6 @@ const ResetPassword = (props) => {
         setPasswordChanged(true);
       }
     } catch (error) {
-      console.log(error);
       message.error({ content: "The operation failed", key, duration: 2 });
     }
   };

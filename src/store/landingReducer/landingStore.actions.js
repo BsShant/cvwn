@@ -1,14 +1,32 @@
 import {
   FETCHING_LANDING_ABOUT_FAILURE,
   FETCHING_LANDING_ABOUT_SUCCESS,
+  FETCHING_LANDING_SLIDER_FAILURE,
+  FETCHING_LANDING_SLIDER_SUCCESS,
+  FETCHING_MEMBER_FAILURE,
+  FETCHING_MEMBER_SUCCESS,
+  FETCHING_PARTNER_FAILURE,
+  FETCHING_PARTNER_SUCCESS,
   FETCHING_TEAM_FAILURE,
   FETCHING_TEAM_SUCCESS,
   FETCHING_TESTIMONIAL_FAILURE,
   FETCHING_TESTIMONIAL_SUCCESS,
   LANDING_ABOUT_SPINNER_STARTS,
   LANDING_ABOUT_SPINNER_STOPS,
+  LANDING_SLIDER_SPINNER_STARTS,
+  LANDING_SLIDER_SPINNER_STOPS,
+  MEMBER_SPINNER_STARTS,
+  MEMBER_SPINNER_STOPS,
+  PARTNER_SPINNER_STARTS,
+  PARTNER_SPINNER_STOPS,
   START_FETCHING_LANDING_ABOUT,
   START_FETCHING_LANDING_ABOUT_WITH_SPINNER,
+  START_FETCHING_LANDING_SLIDER,
+  START_FETCHING_LANDING_SLIDER_WITH_SPINNER,
+  START_FETCHING_MEMBER,
+  START_FETCHING_MEMBER_WITH_SPINNER,
+  START_FETCHING_PARTNER,
+  START_FETCHING_PARTNER_WITH_SPINNER,
   START_FETCHING_TEAM,
   START_FETCHING_TEAM_WITH_SPINNER,
   START_FETCHING_TESTIMONIAL,
@@ -65,6 +83,41 @@ export const landingHeroSpinnerStarts = () => {
 export const landingHeroSpinnerStops = () => {
   return {
     type: LANDING_HERO_SPINNER_STOPS,
+  };
+};
+
+export const fetchingLandingSliderStarts = () => {
+  return {
+    type: START_FETCHING_LANDING_SLIDER,
+  };
+};
+export const fetchingLandingSliderWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_LANDING_SLIDER_WITH_SPINNER,
+  };
+};
+
+export const fetchingLandingSliderSuccess = (data) => {
+  return {
+    type: FETCHING_LANDING_SLIDER_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingLandingSliderFailure = (error) => {
+  return {
+    type: FETCHING_LANDING_SLIDER_FAILURE,
+    payload: error,
+  };
+};
+
+export const landingSliderSpinnerStarts = () => {
+  return {
+    type: LANDING_SLIDER_SPINNER_STARTS,
+  };
+};
+export const landingSliderSpinnerStops = () => {
+  return {
+    type: LANDING_SLIDER_SPINNER_STOPS,
   };
 };
 
@@ -205,5 +258,75 @@ export const testimonialSpinnerStarts = () => {
 export const testimonialSpinnerStops = () => {
   return {
     type: TESTIMONIAL_SPINNER_STOPS,
+  };
+};
+
+export const fetchingMemberStarts = () => {
+  return {
+    type: START_FETCHING_MEMBER,
+  };
+};
+export const fetchingMemberWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_MEMBER_WITH_SPINNER,
+  };
+};
+
+export const fetchingMemberSuccess = (data) => {
+  return {
+    type: FETCHING_MEMBER_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingMemberFailure = (error) => {
+  return {
+    type: FETCHING_MEMBER_FAILURE,
+    payload: error,
+  };
+};
+
+export const memberSpinnerStarts = () => {
+  return {
+    type: MEMBER_SPINNER_STARTS,
+  };
+};
+export const memberSpinnerStops = () => {
+  return {
+    type: MEMBER_SPINNER_STOPS,
+  };
+};
+
+export const fetchingPartnerStarts = () => {
+  return {
+    type: START_FETCHING_PARTNER,
+  };
+};
+export const fetchingPartnerWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_PARTNER_WITH_SPINNER,
+  };
+};
+
+export const fetchingPartnerSuccess = (data) => {
+  return {
+    type: FETCHING_PARTNER_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingPartnerFailure = (error) => {
+  return {
+    type: FETCHING_PARTNER_FAILURE,
+    payload: error,
+  };
+};
+
+export const partnerSpinnerStarts = () => {
+  return {
+    type: PARTNER_SPINNER_STARTS,
+  };
+};
+export const partnerSpinnerStops = () => {
+  return {
+    type: PARTNER_SPINNER_STOPS,
   };
 };

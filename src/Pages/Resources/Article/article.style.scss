@@ -36,7 +36,7 @@
       color: black;
       margin-top: 10px;
       margin-bottom: 5px;
-      height: 45px;
+      height: 40px;
     }
     .article-detail {
       cursor: pointer;
@@ -54,7 +54,7 @@
     }
   }
   .main-btnn {
-    background-color: #e83802;
+    background-color: #f45a2f;
     color: white;
     border: 2px solid var(--web-theme);
     padding: 7px 10px 8px 10px;
@@ -87,7 +87,7 @@
     }
   }
   // &:hover {
-  //   border: 1px solid #e83802;
+  //   border: 1px solid #f45a2f;
   // }
 }
 @media (max-width: 992px) {

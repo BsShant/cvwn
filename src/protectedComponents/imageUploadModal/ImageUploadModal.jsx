@@ -19,7 +19,7 @@ const ImageUploadModal = (props) => {
                 width={1000}
                 bodyStyle={{padding: "40px"}}
             >
-                <ImageUpload imageSection={props.imageSection} name={props.name} url={props.url} setVisible={setVisible}/>
+                <ImageUpload simple={props.simple? true: false} imageSection={props.imageSection} name={props.name} url={props.url} setVisible={setVisible}/>
             </Modal>
         </div>
     )

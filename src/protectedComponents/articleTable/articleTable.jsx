@@ -28,11 +28,9 @@ const ArticleTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingArticleStarts());
-        console.log("Deleteing Article Success");
         message.success("Article Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Article Failed: ", error);
         message.error("Article Deletion Failed!");
       });
   };

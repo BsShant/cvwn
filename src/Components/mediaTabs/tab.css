@@ -8,16 +8,16 @@
 }
 
 .media-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: orangered;
+  color: #f45a2f;
   text-shadow: 0 0 0.25px currentColor;
 }
 .media-tab .ant-tabs-tab-btn:hover {
-  color: orangered !important;
+  color: #f45a2f !important;
 }
 
 .media-tab .ant-tabs-ink-bar {
-  background: orangered !important;
+  background: #f45a2f !important;
 }
 .media-tab .ant-tabs-tab:hover {
-  color: orangered;
+  color: #f45a2f;
 }

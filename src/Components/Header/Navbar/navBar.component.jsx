@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./navBar.styles.scss";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Nav, NavDropdown, NavItem } from "react-bootstrap";
+import MobileMenu from "../../MobileMenu/MobileMenu";
 
 export default function NavBar() {
   const [resource, setResource] = useState(false);
@@ -34,106 +35,139 @@ export default function NavBar() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse header-nav" id="navbarNavDropdown ">
-                <Nav>
-                  <NavItem>
-                    <Link
-                      className="nav-link"
-                      id="navbarDropdownMenuLink"
-                      to="/"
-                      aria-expanded="false"
-                    >
-                      Home
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link
-                      className="nav-link"
-                      id="navbarDropdownMenuLink"
-                      to="/about"
-                      aria-expanded="false"
-                    >
-                      About
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link
-                      className="nav-link"
-                      id="navbarDropdownMenuLink"
-                      to="/projects"
-                      aria-expanded="false"
-                    >
-                      Projects
-                    </Link>
-                  </NavItem>
-
-                  <NavItem>
-                    <Link
-                      className="nav-link"
-                      id="navbarDropdownMenuLink"
-                      to="/events"
-                      aria-expanded="false"
-                    >
-                      Events
-                    </Link>
-                  </NavItem>
-                  <NavDropdown
-                    show={resource}
-                    onMouseEnter={showResourceDropdown}
-                    onMouseLeave={hideResourceDropdown}
-                    title="Resources"
-                    id="nav-dropdown"
+            <div
+              className="collapse navbar-collapse header-nav"
+              id="navbarNavDropdown "
+            >
+              <Nav>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/"
+                    aria-expanded="false"
                   >
-                    <NavDropdown.Item eventKey="4.1">
-                      <Link
-                        className="dropdown-item"
-                        id="navbarDropdownMenuLink"
-                        to="/resources/annual_report "
-                        aria-expanded="false"
-                      >
-                        Annual Report
-                      </Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.2">
-                      <Link
-                        className="dropdown-item"
-                        id="navbarDropdownMenuLink"
-                        to="/resources/case_study_report  "
-                        aria-expanded="false"
-                      >
-                        Case Studies Report
-                      </Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.3">
-                      <Link
-                        className="dropdown-item"
-                        id="navbarDropdownMenuLink"
-                        to="/resources/article"
-                        aria-expanded="false"
-                      >
-                        Article
-                      </Link>
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="Get Involved"
-                    id="nav-dropdown"
-                    show={getInvolved}
-                    onMouseEnter={showGetInvolvedDropdown}
-                    onMouseLeave={hideGetInvolvedDropdown}
+                    Home
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/about"
+                    aria-expanded="false"
                   >
-                    <NavDropdown.Item eventKey="4.1">
-                      <Link
-                        className="dropdown-item a"
-                        id="navbarDropdownMenuLink"
-                        to="/get-involved/announcement "
-                        aria-expanded="false"
-                      >
-                        Announcement
-                      </Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.2">
+                    About
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/gallery"
+                    aria-expanded="false"
+                  >
+                    Gallery
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/projects"
+                    aria-expanded="false"
+                  >
+                    Projects
+                  </Link>
+                </NavItem>
+
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/events"
+                    aria-expanded="false"
+                  >
+                    Events
+                  </Link>
+                </NavItem>
+                <NavDropdown
+                  show={resource}
+                  onMouseEnter={showResourceDropdown}
+                  onMouseLeave={hideResourceDropdown}
+                  title="Resources"
+                  id="nav-dropdown"
+                >
+                  <NavDropdown.Item eventKey="4.1">
+                    <Link
+                      className="dropdown-item"
+                      id="navbarDropdownMenuLink"
+                      to="/resources/annual-report "
+                      aria-expanded="false"
+                    >
+                      Annual Report
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.2">
+                    <Link
+                      className="dropdown-item"
+                      id="navbarDropdownMenuLink"
+                      to="/resources/case-study-report  "
+                      aria-expanded="false"
+                    >
+                      Case Studies Report
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.3">
+                    <Link
+                      className="dropdown-item"
+                      id="navbarDropdownMenuLink"
+                      to="/resources/case-story"
+                      aria-expanded="false"
+                    >
+                      Case Story
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.4">
+                    <Link
+                      className="dropdown-item"
+                      id="navbarDropdownMenuLink"
+                      to="/resources/publication"
+                      aria-expanded="false"
+                    >
+                     Publication
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey="4.5">
+                    <Link
+                      className="dropdown-item"
+                      id="navbarDropdownMenuLink"
+                      to="/resources/article"
+                      aria-expanded="false"
+                    >
+                      Article
+                    </Link>
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                <NavDropdown
+                  title="Get Involved"
+                  id="nav-dropdown"
+                  show={getInvolved}
+                  onMouseEnter={showGetInvolvedDropdown}
+                  onMouseLeave={hideGetInvolvedDropdown}
+                >
+                  <NavDropdown.Item eventKey="4.1">
+                    <Link
+                      className="dropdown-item a"
+                      id="navbarDropdownMenuLink"
+                      to="/get-involved/announcement "
+                      aria-expanded="false"
+                    >
+                      Announcement
+                    </Link>
+                  </NavDropdown.Item>
+                  {/* <NavDropdown.Item eventKey="4.2">
                       <Link
                         className="dropdown-item"
                         id="navbarDropdownMenuLink"
@@ -142,33 +176,34 @@ export default function NavBar() {
                       >
                         Volunteer
                       </Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item eventKey="4.3">
-                      <Link
-                        className="dropdown-item"
-                        id="navbarDropdownMenuLink"
-                        to="/get-involved/donate "
-                        aria-expanded="false"
-                      >
-                        Donate
-                      </Link>
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavItem>
+                    </NavDropdown.Item> */}
+                  <NavDropdown.Item eventKey="4.3">
                     <Link
-                      className="nav-link"
+                      className="dropdown-item"
                       id="navbarDropdownMenuLink"
-                      to="/contact"
+                      to="/get-involved/donate "
                       aria-expanded="false"
                     >
-                      Contact
+                      Donate
                     </Link>
-                  </NavItem>
-                </Nav>
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    id="navbarDropdownMenuLink"
+                    to="/contact"
+                    aria-expanded="false"
+                  >
+                    Contact
+                  </Link>
+                </NavItem>
+              </Nav>
             </div>
           </nav>
         </div>
       </div>
+      <MobileMenu />
     </div>
   );
 }

@@ -12,18 +12,18 @@
         margin-bottom: 10px;
         padding: 8px 10px;
         font-size: 10px;
-        border: 1px solid #e83802;
+        border: 1px solid #f45a2f;
 
         border-radius: 5px;
         width: 100%;
       }
       input[type="text"]:focus {
         outline: none;
-        border: 1.5px solid var(--web-theme); /* oranges! yey */
+        border: 1.5px solid var(--web-theme); /* #f45a2fs! yey */
       }
       input[type="email"]:focus {
         outline: none;
-        border: 1.5px solid var(--web-theme); /* oranges! yey */
+        border: 1.5px solid var(--web-theme); /* #f45a2fs! yey */
       }
     }
 
@@ -34,7 +34,7 @@
       padding-top: 10px;
 
       padding-left: 10px;
-      border: 1px solid #e83802;
+      border: 1px solid #f45a2f;
       border-radius: 5px;
     }
     .textAreazcont {
@@ -42,7 +42,7 @@
     }
     textarea[type="text"]:focus {
       outline: none;
-      border: 1.5px solid var(--web-theme); /* oranges! yey */
+      border: 1.5px solid var(--web-theme); /* #f45a2fs! yey */
     }
   }
 }
@@ -58,7 +58,7 @@ iframe {
 
 .map-bg {
   position: absolute;
-  background-color: orangered;
+  background-color: #f45a2f;
   top: -55px;
   left: 425px;
   z-index: 1;
@@ -66,7 +66,7 @@ iframe {
   height: 55%;
 }
 .map-container {
-  // background-color: #e83802;
+  // background-color: #f45a2f;
   // margin-top: -15%;
   /* margin: 10%; */
   // padding-right: 50px;
@@ -98,7 +98,7 @@ iframe {
 // hr{
 //     height: 3px!important;
 //     width: 20%;
-//     background: #e83802;
+//     background: #f45a2f;
 //     opacity: 1;
 // }
 @media (max-width: 460px) {

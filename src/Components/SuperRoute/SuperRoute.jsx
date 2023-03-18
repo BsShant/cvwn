@@ -13,7 +13,6 @@ import Admin from "../../protectedPages/admin/Admin";
 
 const RouteSuperComponent = (props) => {
   const authUser = useSelector((state) => state.authStore.authUser);
-  console.log("authuser", authUser);
   const location = useLocation();
   const navigate = useNavigate();
   if (!authUser) {

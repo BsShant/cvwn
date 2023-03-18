@@ -22,7 +22,7 @@ export default function EventCard(props) {
                     <div className='col-lg-7 col-md-7 col-sm-7 col-6'>
                         <div className='Carousel-detail'>
                             <div className='title'>
-                                <h5 style={{color:"orangered"}}>{title}</h5>
+                                <h5 style={{color:"#f45a2f"}}>{title}</h5>
                             </div>
                             <div className='footer'>
                                 {/* <span><i className='fas fa-globe px-2' />{sponsor}</span> */}

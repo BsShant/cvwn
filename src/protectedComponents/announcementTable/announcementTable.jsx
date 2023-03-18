@@ -33,11 +33,9 @@ const AnnouncementTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingAnnouncementStarts());
-        console.log("Deleteing Annopuncement Success");
         message.success("Annopuncement Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Annopuncement Failed: ", error);
         message.error("Annopuncement Deletion Failed!");
       });
   };

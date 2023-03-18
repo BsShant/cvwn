@@ -1,28 +1,33 @@
-.copyright-section{
-    background-color: #1B1B1B;
-    
+.copyright-section {
+  background-color: #1b1b1b;
 
-    .text-section{
-        text-align: center;
-        color: white;
-        align-content: center;
-        
-        
+  .text-section {
+    text-align: center;
+    color: white;
+    align-content: center;
 
-        p{
-            font-size: 15px;
-            padding: 30px 0;
-            margin-bottom: 0;
+    p {
+      font-size: 15px;
+      padding: 30px 0;
+      margin-bottom: 0;
+      a {
+        color: orangered;
+        text-decoration: none;
+        &:hover {
+          color: orangered;
+          text-decoration: none;
         }
+      }
     }
+  }
 }
 
-@media(max-width:790px){
-    .text-section{
-        p{
-            font-size: 12px;  
-            
-            text-align: center;
-        }
+@media (max-width: 790px) {
+  .text-section {
+    p {
+      font-size: 12px;
+
+      text-align: center;
     }
+  }
 }

@@ -16,15 +16,18 @@ export default function AnnouncementPage() {
         <div style={{ margin: "auto", textAlign: "left" }}>
           <h2>OUR ANNOUNCEMENTS</h2>
         </div>
-        <div className="col announcementCol">
+        <div className="row announcementCol">
           {announcement.length > 0
             ? announcement.map((announce) => {
                 return (
-                  <div className="row-lg-12 row-md-12 col-sm-12 announcementRow">
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-6 announcementRow">
                     <Announcement
                       title={announce.title}
                       detail={announce.detail}
                       date={announce.date}
+                      file={announce.file}
+                      id={announce.id}
+                      image={announce.image}
                     />
                   </div>
                 );

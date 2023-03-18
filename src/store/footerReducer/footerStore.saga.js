@@ -57,7 +57,7 @@ export function* startFooterAboutFetchWithSpinner() {
 export function* footerLinksFetch() {
   try {
     let fetchData = yield fetchFooterLinks();
-    yield put(fetchingFooterLinksSuccess(fetchData.data));
+    yield put(fetchingFooterLinksSuccess(fetchData));
   } catch (error) {
     yield put(fetchingFooterLinksFailure(error));
   }
@@ -67,7 +67,7 @@ export function* footerLinksFetchWithSpinner() {
   try {
     yield put(footerLinksSpinnerStarts());
     let fetchData = yield fetchFooterLinks();
-    yield put(fetchingFooterLinksSuccess(fetchData.data));
+    yield put(fetchingFooterLinksSuccess(fetchData));
     yield put(footerLinksSpinnerStops());
   } catch (error) {
     yield put(fetchingFooterLinksFailure(error));

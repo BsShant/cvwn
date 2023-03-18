@@ -9,9 +9,10 @@ export default function Eventpage() {
   const [showJoin, setShowJoin] = useState(false);
   return (
     <div className="eventCarousel container">
-      <OngoingEvent showJoin={showJoin} setShowJoin={setShowJoin} />
-      <UpcomingEvents heading="Completed Events" status="completed" />
+      {/* <OngoingEvent showJoin={showJoin} setShowJoin={setShowJoin} /> */}
+      <UpcomingEvents heading="Ongoing Events" status="ongoing" />
       <UpcomingEvents heading="Upcoming Events" status="upcoming" />
+      <UpcomingEvents heading="Completed Events" status="completed" />
     </div>
   );
 }

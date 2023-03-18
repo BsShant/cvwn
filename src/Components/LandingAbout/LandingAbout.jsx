@@ -1,12 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { server } from "../../utils/fetch";
 import "./styles.scss";
 const LandingAbout = () => {
   const landingAbout = useSelector((state) => state.landingStore.landingAbout);
 
   return (
-    <div className="landing-about-section">
+    <div
+      className="landing-about-section"
+      style={{
+        backgroundImage: `url(${landingAbout ? `${server}/${landingAbout.image}` : ""})`,
+      }}
+    >
       <div className="container">
         <div className="landing-about-inner-section">
           <div className="landing-about-us-text">

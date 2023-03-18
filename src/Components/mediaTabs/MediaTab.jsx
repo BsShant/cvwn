@@ -7,7 +7,7 @@ import './tab.css'
 const { TabPane } = Tabs;
 
 const onChange = (key) => {
-  console.log(key);
+  ""
 };
 
 const MediaTab = (props) => (

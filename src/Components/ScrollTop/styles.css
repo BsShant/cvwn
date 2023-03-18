@@ -1,6 +1,6 @@
 .preloader-container {
   background-color: white;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   transition: all 500ms ease-in-out;
@@ -8,6 +8,8 @@
   top: 0;
   left: 0;
   z-index: 2000;
+  justify-content: center;
+  align-items: center;
 }
 
 .preloader-remover {
@@ -16,4 +18,30 @@
 
 .preloader-none{
     display: none;
+}
+
+.image-loader{
+  width: 200px;
+  animation-name: imageBlink;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.image-loader img{
+  width: 100%;
+
+}
+@keyframes imageBlink {
+  from{
+    opacity: 1;
+    /* transform: scale(1); */
+  }
+  to{
+    opacity: 0;
+    /* transform: scale(0); */
+
+  }
+  
 }

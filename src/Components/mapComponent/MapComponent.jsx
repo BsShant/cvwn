@@ -77,7 +77,7 @@ export default SimpleMap;
 //        lng: store.longitude
 //      }}
 
-//      onClick={() => console.log("Event Hanlder Called")} />
+//      onClick={() => ""} />
 //     })
 //   }
 

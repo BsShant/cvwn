@@ -81,6 +81,8 @@ const Dashboard = () => {
                         options={{
                           sortAscending: false,
                           sortColumn: 1,
+                          page: 'enable',
+                          pageSize: 5
                         }}
                       />
                     </div>

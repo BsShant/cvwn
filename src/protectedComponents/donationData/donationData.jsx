@@ -4,10 +4,9 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingArticleStarts } from "../../store/resourceReducer/resourceStore.actions";
-import {
-  fetchingDonationStarts,
-} from "../../store/getInvolvedReducer/getInvolvedStore.actions";
+import { fetchingDonationStarts } from "../../store/getInvolvedReducer/getInvolvedStore.actions";
 import ImageSelect from "../imageSelect/ImageSelect";
+import { server } from "../../utils/fetch";
 
 const DonationData = (props) => {
   const dispatch = useDispatch();
@@ -55,14 +54,10 @@ const DonationData = (props) => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingDonationStarts());
-        console.log(`Donation ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Donation ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
       })
       .catch((error) => {
-        console.log(
-          `${props.updateData ? "Updating" : "Adding"} Donation Failed`
-        );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Donation Failed!`
         );
@@ -74,6 +69,7 @@ const DonationData = (props) => {
       <div className="row">
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={donationValues}
             onTextAreaValueChange={setDonationValues}
             textName="name"
@@ -83,6 +79,7 @@ const DonationData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={donationValues}
             onTextAreaValueChange={setDonationValues}
             textName="email"
@@ -92,6 +89,7 @@ const DonationData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={donationValues}
             onTextAreaValueChange={setDonationValues}
             textName="country"
@@ -101,6 +99,7 @@ const DonationData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={donationValues}
             onTextAreaValueChange={setDonationValues}
             textName="address"
@@ -110,6 +109,7 @@ const DonationData = (props) => {
         </div>
         <div className="col-md-6">
           <AdminModalTextArea
+            readOnly={true}
             textAreaValue={donationValues}
             onTextAreaValueChange={setDonationValues}
             textName="phone"
@@ -117,16 +117,28 @@ const DonationData = (props) => {
             title="Phone"
           />
         </div>
-        <div className="image-select-heading">Select Donation Image</div>
-        <ImageSelect
+        <div className="image-select-heading"> Donation Image</div>
+        <img
+          src={`${server}/${donationValues.image}`}
+          style={{
+            width: "80%",
+            aspectRatio: "5/4",
+            marginTop: "50px",
+            objectFit: "cover",
+          }}
+          alt=""
+        />
+        {/* <ImageSelect
           myImage={donationValues.image}
           setMyImage={setDonationValues}
           name="image"
-        />
+        /> */}
       </div>
-      <button className="update-button" onClick={() => addData()}>
-        {props.updateData ? "Update" : "Add"}
-      </button>
+      {/* {!props.view ? (
+        <button className="update-button" onClick={() => addData()}>
+          {props.updateData ? "Update" : "Add"}
+        </button>
+      ) : null} */}
     </div>
   );
 };

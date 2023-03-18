@@ -1,0 +1,9 @@
+.heroSliderContainer{
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}

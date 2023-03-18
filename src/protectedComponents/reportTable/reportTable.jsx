@@ -28,11 +28,9 @@ const ReportTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingReportStarts());
-        console.log("Deleteing Annual Report Success");
         message.success("Annual Report Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Annual Report Failed: ", error);
         message.error("Annual Report Deletion Failed!");
       });
   };

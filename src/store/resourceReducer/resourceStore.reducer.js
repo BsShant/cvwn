@@ -1,5 +1,4 @@
 import {
-
   FETCHING_CASE_FAILURE,
   FETCHING_CASE_SUCCESS,
   FETCHING_ARTICLE_FAILURE,
@@ -19,6 +18,7 @@ const INITIAL_STATE = {
   reportSpinner: false,
   reportError: null,
   case: [],
+  caseStory: [],
   caseSpinner: false,
   caseError: null,
   article: [],
@@ -52,7 +52,8 @@ export const resourceReducer = (state = INITIAL_STATE, action) => {
     case FETCHING_CASE_SUCCESS:
       return {
         ...state,
-        case: action.payload,
+        case: action.payload.study.data,
+        caseStory: action.payload.story.data,
       };
     case FETCHING_CASE_FAILURE:
       return {

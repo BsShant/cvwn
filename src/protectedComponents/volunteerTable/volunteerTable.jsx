@@ -29,12 +29,10 @@ const VolunteerTable = () => {
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchingVolunteerStarts());
-        console.log("Deleteing Volunteer Success");
-        message.success("Volunteer Deleted!");
+        message.success("Team Deleted!");
       })
       .catch((error) => {
-        console.log("Deleteing Volunteer Failed: ", error);
-        message.error("Volunteer Deletion Failed!");
+        message.error("Team Deletion Failed!");
       });
   };
   const columns = [
@@ -55,22 +53,24 @@ const VolunteerTable = () => {
       title: "Role",
       dataIndex: "role",
       key: "role",
+      responsive: ["lg"],
     },
     {
-      title: "Facebook",
-      dataIndex: "facebook",
-      key: "facebook",
+      title: "Rank",
+      dataIndex: "rank",
+      key: "rank",
+      responsive: ["lg"],
+      sortOrder: "ascend",
+
+      sorter: (a, b) => a.rank - b.rank,
     },
-    {
-      title: "Twitterinsta",
-      dataIndex: "twitter",
-      key: "twitter",
-    },
-    {
-      title: "Insta",
-      dataIndex: "insta",
-      key: "insta",
-    },
+    // {
+    //   title: "Facebook",
+    //   dataIndex: "facebook",
+    //   key: "facebook",
+    //   responsive: ["lg"],
+
+    // },
 
     {
       title: "Edit",

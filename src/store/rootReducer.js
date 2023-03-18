@@ -14,7 +14,6 @@ import { contactReducer } from "./contactReducer/contactStore.reducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: [],
 };
 const rootReducer = combineReducers({
   authStore: authReducer,

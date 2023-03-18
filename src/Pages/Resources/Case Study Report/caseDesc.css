@@ -9,17 +9,19 @@
   }
   .case-description-inner img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    height: auto!important;
     margin: auto;
     display: flex;
     justify-content: center;
-    aspect-ratio: 5/3;
     margin-bottom: 30px;
+    max-width: 100%!important;
+    max-height: 350px!important;
+    object-fit: contain;
+
   }
   
   .case-desc-heading {
-      color: orangered;
+      color: #f45a2f;
       font-size: 28px;
       font-weight: bold;
       text-transform: capitalize;
@@ -27,8 +29,15 @@
   }
   .case-desc-detail {
       font-size: 16px;
+   
   }
-  
+  .case-desc-detail img{
+    width: 80%!important;
+    margin: auto!important;
+    object-fit: contain;
+    max-height: 350px!important;
+    max-width: 100%;
+  }
   @media (max-width: 768px) {
     .case-description-inner {
       width: 100% !important;

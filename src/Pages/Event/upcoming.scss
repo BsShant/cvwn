@@ -1,0 +1,26 @@
+.up-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.upcoming-slider {
+  .item {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+.upcoming-no-data {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-transform: uppercase;
+}

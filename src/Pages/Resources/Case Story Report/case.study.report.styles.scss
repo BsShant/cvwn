@@ -1,0 +1,111 @@
+.case-card {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  // width: 260px;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding-bottom: 8px;
+  border: 1px solid transparent;
+  transition: all 500ms ease-in-out;
+  box-shadow: 1px 1px 10px #c4c3c3;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  .case-image {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  .case-texts {
+    padding: 0px 10px;
+    margin-bottom: 15px;
+    .case-header {
+      font-size: 16px;
+      font-weight: bold;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      display: -webkit-box !important;
+      overflow: hidden !important;
+      line-height: 1.2;
+      color: black;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      height: 40px;
+    }
+    .case-detail {
+      cursor: pointer;
+      height: 58px;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      display: -webkit-box !important;
+      overflow: hidden !important;
+      line-height: 1.5;
+      font-size: 13px;
+      font-weight: normal;
+      color: black;
+    }
+  }
+  .main-btnn {
+    background-color: #f45a2f;
+    color: white;
+    border: 2px solid var(--web-theme);
+    padding: 7px 10px 8px 10px;
+    transition: 1s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      background-color: #531401;
+      border: 2px solid var(--web-theme);
+      transition: 1s;
+    }
+  }
+  .case-bottom {
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 10px;
+    .from {
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .to {
+      line-height: 1.5;
+      font-size: 13px;
+    }
+  }
+  // &:hover {
+  //   border: 1px solid #f45a2f;
+  // }
+}
+@media (max-width: 992px) {
+  .case-card {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .case-page-header {
+    text-align: center;
+  }
+}
+.case-page-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+.caseStudyPage{
+  min-height: 80vh;
+  padding: 20px 0 60px;
+
+}

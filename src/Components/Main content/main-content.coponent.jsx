@@ -21,17 +21,20 @@ export default function MainContent() {
             <div className="col-lg-12 col-md-12">
               <h2>Our Projects</h2>
               <div className="row">
-                {project.map((pro, index) => {
-                  return (
-                    <div className="col-lg-6 col-md-6 col-sm-6">
-                      <ProjectCard
-                        title={pro.title}
-                        image={`${server}/${JSON.parse(pro.image)[0]}`}
-                        id={pro.id}
-                      />
-                    </div>
-                  );
-                })}
+                {project
+                  .sort((a, b) => new Date(b.date) - new Date(a.date))
+                  .slice(0, 2)
+                  .map((pro, index) => {
+                    return (
+                      <div className="col-lg-6 col-md-6 col-sm-6">
+                        <ProjectCard
+                          title={pro.title}
+                          image={`${server}/${JSON.parse(pro.image)[0]}`}
+                          id={pro.id}
+                        />
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>

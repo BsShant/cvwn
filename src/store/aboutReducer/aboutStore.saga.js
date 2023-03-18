@@ -7,7 +7,7 @@ export function* aboutFetch(){
 
     try {
         let fetchData = yield fetchAbout();
-        yield put(fetchingAboutSuccess(fetchData.data))
+        yield put(fetchingAboutSuccess(fetchData))
     } catch (error) {
         yield put(fetchingAboutFailure(error))
     }
@@ -18,7 +18,7 @@ export function* aboutFetchWithSpinner(){
     try {
         yield put(aboutSpinnerStarts())
         let fetchData = yield fetchAbout();
-        yield put(fetchingAboutSuccess(fetchData.data))
+        yield put(fetchingAboutSuccess(fetchData))
         yield put(aboutSpinnerStops())
 
     } catch (error) {
